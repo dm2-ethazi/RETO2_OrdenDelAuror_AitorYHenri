@@ -1,0 +1,15 @@
+
+{
+  "traducciones": [
+    {"clave": "titulo", "valor": "THE ARCANE CIPHER"},
+    {"clave": "jugar", "valor": "PLAY"},
+    {"clave": "instrucciones", "valor": "INSTRUCTIONS"},
+    {"clave": "idioma", "valor": "LANGUAGE"},
+    {"clave": "salir", "valor": "EXIT"},
+    {"clave": "confirmar_salida", "valor": "Are you sure you want to exit?"},
+    {"clave": "cancelar", "valor": "CANCEL"},
+    {"clave": "espanol", "valor": "SPANISH"},
+    {"clave": "euskera", "valor": "BASQUE"},
+    {"clave": "ingles", "valor": "ENGLISH"}
+  ]
+}
