@@ -23,7 +23,7 @@
     },
     {
       "clave": "confirmar_salida",
-      "valor": "Are you sure you want to exit?"
+      "valor": "ARE YOU SURE YOU WANT TO EXIT?"
     },
     {
       "clave": "cancelar",
@@ -43,11 +43,15 @@
     },
     {
       "clave": "texto_instrucciones",
-      "valor": "Welcome to The Arcane Cipher.\n\n- Collect the codes carried by the pigeons.\n- These codes are encrypted and describe the enemy's weak points.\n- Solve them to damage the enemy, but be careful not to make a mistake, or you'll pay the price!\n- Pay attention to the encryption type of each code; they will become more difficult as the enemy's health decreases.\n- Decipher enough codes to defeat the enemy before it reaches the castle.\n\nGood luck, wizard!"
+      "valor": "Welcome to The Arcane Cipher.\n\n- Collect the codes carried by the pigeons.\n- These codes are encrypted and describe the enemy's weak points.\n- Solve them to damage the enemy, but be careful not to fail, or you will pay the price!\n- Pay attention to the encryption type of each code. They become harder as the enemy loses health.\n- Decipher enough codes to defeat the enemy before it reaches the castle.\n\nGood luck, wizard!"
     },
     {
       "clave": "volver",
       "valor": "BACK"
+    },
+    {
+      "clave": "confirmar_volver",
+      "valor": "RETURN TO THE MAIN MENU?"
     }
   ]
 }

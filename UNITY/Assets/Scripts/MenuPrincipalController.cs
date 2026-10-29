@@ -1,6 +1,6 @@
 
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class MenuPrincipalController : MonoBehaviour
 {
@@ -13,8 +13,9 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private GameObject panelConfirmarSalida;
     [SerializeField] private GameObject panelSeleccionIdioma;
     [SerializeField] private GameObject panelInstrucciones;
+    [SerializeField] private GameObject panelConfirmarVolver;
 
-    [Header("Textos del menu principal")]
+    [Header("Textos del menu")]
     [SerializeField] private TMP_Text textoTitulo;
     [SerializeField] private TMP_Text textoJugar;
     [SerializeField] private TMP_Text textoInstrucciones;
@@ -22,11 +23,10 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private TMP_Text textoSalir;
 
     [Header("Textos de confirmacion de salida")]
-    [SerializeField] private TMP_Text textoConfirmacion;
-    [SerializeField] private TMP_Text textoConfirmarSalir;
-    [SerializeField] private TMP_Text textoCancelarSalir;
+    [SerializeField] private TMP_Text textoConfirmarSalida;
+    [SerializeField] private TMP_Text textoCancelar;
 
-    [Header("Textos del panel de idiomas")]
+    [Header("Textos de seleccion de idioma")]
     [SerializeField] private TMP_Text textoEspanol;
     [SerializeField] private TMP_Text textoEuskera;
     [SerializeField] private TMP_Text textoIngles;
@@ -35,9 +35,13 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private TMP_Text textoContenidoInstrucciones;
     [SerializeField] private TMP_Text textoVolver;
 
+    [Header("Textos de confirmacion de volver")]
+    [SerializeField] private TMP_Text textoConfirmarVolver;
+    [SerializeField] private TMP_Text textoSalirMenu;
+    [SerializeField] private TMP_Text textoCancelarVolver;
+
     private void Start()
     {
-        // Mostrar el menu principal al iniciar
         if (contenedorMenuPrincipal != null)
             contenedorMenuPrincipal.SetActive(true);
 
@@ -56,22 +60,24 @@ public class MenuPrincipalController : MonoBehaviour
         if (panelInstrucciones != null)
             panelInstrucciones.SetActive(false);
 
+        if (panelConfirmarVolver != null)
+            panelConfirmarVolver.SetActive(false);
+
         ActualizarTextos();
     }
 
-    // BOTON JUGAR
     public void Jugar()
     {
+        if (panelConfirmarVolver != null)
+            panelConfirmarVolver.SetActive(false);
+
         if (contenedorMenuPrincipal != null)
             contenedorMenuPrincipal.SetActive(false);
 
         if (contenedorMinijuego != null)
             contenedorMinijuego.SetActive(true);
-
-        Debug.Log("Entrando al minijuego");
     }
 
-    // BOTON INSTRUCCIONES
     public void MostrarInstrucciones()
     {
         if (contenedorMenu != null)
@@ -85,11 +91,10 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (panelInstrucciones != null)
             panelInstrucciones.SetActive(true);
-        else
-            Debug.LogError("No se ha asignado PanelInstrucciones.");
+
+        ActualizarTextos();
     }
 
-    // BOTON VOLVER DE INSTRUCCIONES
     public void VolverAlMenu()
     {
         if (panelInstrucciones != null)
@@ -103,29 +108,29 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (contenedorMenu != null)
             contenedorMenu.SetActive(true);
+
+        ActualizarTextos();
     }
 
-    // BOTON SALIR: MOSTRAR CONFIRMACION
     public void MostrarConfirmacion()
     {
         if (contenedorMenu != null)
             contenedorMenu.SetActive(false);
 
-        if (panelSeleccionIdioma != null)
-            panelSeleccionIdioma.SetActive(false);
-
         if (panelInstrucciones != null)
             panelInstrucciones.SetActive(false);
 
+        if (panelSeleccionIdioma != null)
+            panelSeleccionIdioma.SetActive(false);
+
         if (panelConfirmarSalida != null)
             panelConfirmarSalida.SetActive(true);
+
+        ActualizarTextos();
     }
 
-    // CONFIRMAR SALIDA
     public void ConfirmarSalir()
     {
-        Debug.Log("Cerrando el juego...");
-
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -133,7 +138,6 @@ public class MenuPrincipalController : MonoBehaviour
 #endif
     }
 
-    // CANCELAR SALIDA
     public void CancelarSalir()
     {
         if (panelConfirmarSalida != null)
@@ -141,9 +145,10 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (contenedorMenu != null)
             contenedorMenu.SetActive(true);
+
+        ActualizarTextos();
     }
 
-    // BOTON IDIOMA
     public void MostrarSeleccionIdioma()
     {
         if (contenedorMenu != null)
@@ -157,37 +162,37 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (panelSeleccionIdioma != null)
             panelSeleccionIdioma.SetActive(true);
-        else
-            Debug.LogError("No se ha asignado PanelSeleccionIdioma.");
+
+        ActualizarTextos();
     }
 
-    // SELECCION DE IDIOMA
     public void SeleccionarEspanol()
     {
-        SeleccionarIdioma("es");
+        CambiarIdioma("es");
     }
 
     public void SeleccionarEuskera()
     {
-        SeleccionarIdioma("eu");
+        CambiarIdioma("eu");
     }
 
     public void SeleccionarIngles()
     {
-        SeleccionarIdioma("en");
+        CambiarIdioma("en");
     }
 
-    private void SeleccionarIdioma(string idioma)
+    private void CambiarIdioma(string idioma)
     {
         if (GestorIdiomas.Instancia == null)
         {
-            Debug.LogError("No existe un GestorIdiomas activo en la escena.");
+            Debug.LogError("No se encuentra GestorIdiomas.");
             return;
         }
 
         GestorIdiomas.Instancia.CambiarIdioma(idioma);
         ActualizarTextos();
 
+        // Cierra el selector y vuelve al menu
         if (panelSeleccionIdioma != null)
             panelSeleccionIdioma.SetActive(false);
 
@@ -195,47 +200,73 @@ public class MenuPrincipalController : MonoBehaviour
             contenedorMenu.SetActive(true);
     }
 
-    // ACTUALIZAR TEXTOS SEGUN EL IDIOMA
-    private void ActualizarTextos()
+    public void MostrarConfirmacionVolver()
     {
-        if (GestorIdiomas.Instancia == null)
-        {
-            Debug.LogWarning("No existe un GestorIdiomas activo.");
-            return;
-        }
+        ActualizarTextos();
 
-        // Menu principal
+        if (panelConfirmarVolver != null)
+            panelConfirmarVolver.SetActive(true);
+    }
+
+    public void ConfirmarVolverAlMenu()
+    {
+        if (panelConfirmarVolver != null)
+            panelConfirmarVolver.SetActive(false);
+
+        if (contenedorMinijuego != null)
+            contenedorMinijuego.SetActive(false);
+
+        if (contenedorMenuPrincipal != null)
+            contenedorMenuPrincipal.SetActive(true);
+
+        if (contenedorMenu != null)
+            contenedorMenu.SetActive(true);
+
+        ActualizarTextos();
+    }
+
+    public void CancelarVolverAlMenu()
+    {
+        if (panelConfirmarVolver != null)
+            panelConfirmarVolver.SetActive(false);
+    }
+
+    public void ActualizarTextos()
+    {
         AsignarTexto(textoTitulo, "titulo");
         AsignarTexto(textoJugar, "jugar");
         AsignarTexto(textoInstrucciones, "instrucciones");
         AsignarTexto(textoIdioma, "idioma");
         AsignarTexto(textoSalir, "salir");
 
-        // Confirmacion de salida
-        AsignarTexto(textoConfirmacion, "confirmar_salida");
-        AsignarTexto(textoConfirmarSalir, "salir");
-        AsignarTexto(textoCancelarSalir, "cancelar");
+        AsignarTexto(textoConfirmarSalida, "confirmar_salida");
+        AsignarTexto(textoCancelar, "cancelar");
 
-        // Panel de idiomas
         AsignarTexto(textoEspanol, "espanol");
         AsignarTexto(textoEuskera, "euskera");
         AsignarTexto(textoIngles, "ingles");
 
-        // Panel de instrucciones
         AsignarTexto(
             textoContenidoInstrucciones,
             "texto_instrucciones"
         );
 
         AsignarTexto(textoVolver, "volver");
+
+        // Textos del pergamino de confirmacion del minijuego
+        AsignarTexto(textoConfirmarVolver, "confirmar_volver");
+        AsignarTexto(textoSalirMenu, "salir");
+        AsignarTexto(textoCancelarVolver, "cancelar");
     }
 
-    private void AsignarTexto(TMP_Text componente, string clave)
+    private void AsignarTexto(TMP_Text texto, string clave)
     {
-        if (componente != null && GestorIdiomas.Instancia != null)
-        {
-            componente.text =
-                GestorIdiomas.Instancia.ObtenerTexto(clave);
-        }
+        if (texto == null)
+            return;
+
+        if (GestorIdiomas.Instancia == null)
+            return;
+
+        texto.text = GestorIdiomas.Instancia.ObtenerTexto(clave);
     }
 }

@@ -12,21 +12,21 @@ public class GestorIdiomas : MonoBehaviour
     [SerializeField] private TextAsset textosEuskera;
     [SerializeField] private TextAsset textosIngles;
 
-    private const string CLAVE_IDIOMA = "IdiomaSeleccionado";
+    public string IdiomaActual { get; private set; } = "es";
 
     private Dictionary<string, string> traducciones =
         new Dictionary<string, string>();
 
-    public string IdiomaActual { get; private set; } = "es";
+    private const string CLAVE_IDIOMA = "IdiomaSeleccionado";
 
     [Serializable]
     private class ArchivoTraducciones
     {
-        public EntradaTraduccion[] traducciones;
+        public Traduccion[] traducciones;
     }
 
     [Serializable]
-    private class EntradaTraduccion
+    private class Traduccion
     {
         public string clave;
         public string valor;
@@ -41,91 +41,115 @@ public class GestorIdiomas : MonoBehaviour
         }
 
         Instancia = this;
-        DontDestroyOnLoad(gameObject);
 
-        IdiomaActual = PlayerPrefs.GetString(CLAVE_IDIOMA, "es");
+        string idiomaGuardado =
+            PlayerPrefs.GetString(CLAVE_IDIOMA, "es");
 
-        CargarIdioma(IdiomaActual);
+        CargarIdioma(idiomaGuardado);
     }
 
     public void CambiarIdioma(string idioma)
     {
         if (idioma != "es" && idioma != "eu" && idioma != "en")
         {
-            Debug.LogWarning("Idioma no válido: " + idioma);
+            Debug.LogWarning(
+                "Idioma no reconocido: " + idioma
+            );
             return;
         }
 
-        CargarIdioma(idioma);
+        if (CargarIdioma(idioma))
+        {
+            PlayerPrefs.SetString(CLAVE_IDIOMA, idioma);
+            PlayerPrefs.Save();
+        }
+    }
 
-        IdiomaActual = idioma;
-        PlayerPrefs.SetString(CLAVE_IDIOMA, idioma);
-        PlayerPrefs.Save();
+    private bool CargarIdioma(string idioma)
+    {
+        TextAsset archivo = ObtenerArchivoIdioma(idioma);
+
+        if (archivo == null)
+        {
+            Debug.LogError(
+                "No se ha asignado el JSON del idioma: " + idioma
+            );
+            return false;
+        }
+
+        try
+        {
+            ArchivoTraducciones datos =
+                JsonUtility.FromJson<ArchivoTraducciones>(
+                    archivo.text
+                );
+
+            if (datos == null || datos.traducciones == null)
+            {
+                Debug.LogError(
+                    "El JSON no tiene el formato esperado: " +
+                    archivo.name
+                );
+                return false;
+            }
+
+            Dictionary<string, string> nuevasTraducciones =
+                new Dictionary<string, string>();
+
+            foreach (Traduccion traduccion in datos.traducciones)
+            {
+                if (traduccion == null ||
+                    string.IsNullOrEmpty(traduccion.clave))
+                {
+                    continue;
+                }
+
+                nuevasTraducciones[traduccion.clave] =
+                    traduccion.valor ?? "";
+            }
+
+            traducciones = nuevasTraducciones;
+            IdiomaActual = idioma;
+
+            Debug.Log("Idioma cargado: " + idioma);
+            return true;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(
+                "Error al cargar las traducciones: " + e.Message
+            );
+            return false;
+        }
+    }
+
+    private TextAsset ObtenerArchivoIdioma(string idioma)
+    {
+        switch (idioma)
+        {
+            case "es":
+                return textosEspanol;
+
+            case "eu":
+                return textosEuskera;
+
+            case "en":
+                return textosIngles;
+
+            default:
+                return textosEspanol;
+        }
     }
 
     public string ObtenerTexto(string clave)
     {
         if (traducciones.TryGetValue(clave, out string valor))
-        {
             return valor;
-        }
 
         Debug.LogWarning(
-            "No se ha encontrado la traducción para la clave: " + clave
+            "No existe la traduccion para la clave: " + clave
         );
 
-        return "[" + clave + "]";
-    }
-
-    private void CargarIdioma(string idioma)
-    {
-        TextAsset archivo;
-
-        switch (idioma)
-        {
-            case "eu":
-                archivo = textosEuskera;
-                break;
-
-            case "en":
-                archivo = textosIngles;
-                break;
-
-            default:
-                archivo = textosEspanol;
-                break;
-        }
-
-        if (archivo == null)
-        {
-            Debug.LogError(
-                "No se ha asignado el archivo JSON del idioma: " + idioma
-            );
-            return;
-        }
-
-        ArchivoTraducciones datos =
-            JsonUtility.FromJson<ArchivoTraducciones>(archivo.text);
-
-        if (datos == null || datos.traducciones == null)
-        {
-            Debug.LogError(
-                "El formato JSON no es válido: " + archivo.name
-            );
-            return;
-        }
-
-        traducciones.Clear();
-
-        foreach (EntradaTraduccion entrada in datos.traducciones)
-        {
-            if (entrada != null &&
-                !string.IsNullOrWhiteSpace(entrada.clave))
-            {
-                traducciones[entrada.clave] = entrada.valor ?? "";
-            }
-        }
-
-        Debug.Log("Idioma cargado correctamente: " + idioma);
+        return clave;
     }
 }

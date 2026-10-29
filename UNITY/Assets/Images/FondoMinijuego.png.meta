@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad30d0de269e6b54da2ba3cc6cc49b20
+guid: 94bf9b3d6828072428b846ed1160cc20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2638998453905360323
-    second: "Guardi\xE1n m\xE1gico ante el castillo lunar_0"
+      213: -3035421351228906980
+    second: "Castillo m\xE1gico bajo la luna_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Guardi\xE1n m\xE1gico ante el castillo lunar_0"
+      name: "Castillo m\xE1gico bajo la luna_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3a7a2063e4606bd0800000000000000
-      internalID: -2638998453905360323
+      spriteID: c126d580d5400e5d0800000000000000
+      internalID: -3035421351228906980
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Guardi\xE1n m\xE1gico ante el castillo lunar_0": -2638998453905360323
+      "Castillo m\xE1gico bajo la luna_0": -3035421351228906980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

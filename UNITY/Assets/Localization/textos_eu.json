@@ -23,7 +23,7 @@
     },
     {
       "clave": "confirmar_salida",
-      "valor": "Ziur zaude irten nahi duzula?"
+      "valor": "ZIUR ZAUDE IRTEERAKO?"
     },
     {
       "clave": "cancelar",
@@ -43,11 +43,15 @@
     },
     {
       "clave": "texto_instrucciones",
-      "valor": "Ongi etorri The Arcane Cipher-era.\n\n- Lortu usoek ekartzen dituzten kodeak.\n- Kode horiek zifratuta daude eta etsaiaren puntu ahulak deskribatzen dituzte.\n- Ebatzi kodeak etsaia zauritzeko, baina kontuz ibili huts ez egiteko, bestela ondorioak jasango dituzu!\n- Kontuan izan kode bakoitzaren zifratze mota; etsaiak zenbat eta bizitza gutxiago izan, orduan eta zailagoak izango dira.\n- Deszifratu nahikoa kode etsaia garaitzeko, gaztelura iritsi aurretik.\n\nZorte on, azti!"
+      "valor": "Ongi etorri The Arcane Cipher-era.\n\n- Bildu usoek ekartzen dituzten kodeak.\n- Kodeak zifratuta daude eta etsaiaren ahulguneak deskribatzen dituzte.\n- Ebatzi kodeak etsaia zauritzeko, baina kontuz ibili huts ez egiteko!\n- Kontuan izan kode bakoitzaren zifratze mota. Etsaia bizitza gutxiago duen heinean, kodeak zailagoak izango dira.\n- Ebatzi behar adina kode etsaia gaztelura iritsi baino lehen garaitzeko.\n\nZorte on, azti!"
     },
     {
       "clave": "volver",
-      "valor": "ITZULI"
+      "valor": "ATZERA"
+    },
+    {
+      "clave": "confirmar_volver",
+      "valor": "MENU NAGUSIRA ITZULI?"
     }
   ]
 }

@@ -23,7 +23,7 @@
     },
     {
       "clave": "confirmar_salida",
-      "valor": "¿Seguro que quieres salir?"
+      "valor": "¿SEGURO QUE QUIERES SALIR?"
     },
     {
       "clave": "cancelar",
@@ -43,11 +43,15 @@
     },
     {
       "clave": "texto_instrucciones",
-      "valor": "Bienvenido a The Arcane Cipher.\n\n- Consigue códigos que llevan las palomas.\n- Estos están cifrados y describen los puntos débiles del enemigo.\n- Resuélvelos para hacerle daño, pero ¡ten cuidado de no fallar o lo pagarás!\n- Ten en cuenta el tipo de cifrado que tiene cada código; estos serán más difíciles cuanto menos vida tenga el enemigo.\n- Descifra los códigos suficientes para derrotar al enemigo antes de que llegue al castillo.\n\n¡Buena suerte, mago!"
+      "valor": "Bienvenido a The Arcane Cipher.\n\n- Consigue códigos que llevan las palomas.\n- Estos están cifrados y describen los puntos débiles del enemigo.\n- Resuélvelos para hacerle daño, pero ¡ten cuidado de no fallar o lo pagarás!\n- Ten en cuenta el tipo de cifrado que tiene cada código. Serán más difíciles cuanto menos vida tenga el enemigo.\n- Descifra los códigos suficientes para derrotar al enemigo antes de que llegue al castillo.\n\n¡Buena suerte, mago!"
     },
     {
       "clave": "volver",
       "valor": "VOLVER"
+    },
+    {
+      "clave": "confirmar_volver",
+      "valor": "¿SALIR AL MENÚ PRINCIPAL?"
     }
   ]
 }
