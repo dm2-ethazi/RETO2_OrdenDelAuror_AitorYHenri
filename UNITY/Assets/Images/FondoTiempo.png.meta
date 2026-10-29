@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 8b624a2ef32d67f419a3f9410c8e944b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2080224134583550740
+    second: "Marco HUD fant\xE1stico dorado y azul_0"
+  - first:
+      213: 8921571086534198931
+    second: "Marco HUD fant\xE1stico dorado y azul_1"
+  - first:
+      213: -8810146030366875429
+    second: "Marco HUD fant\xE1stico dorado y azul_2"
+  - first:
+      213: 3697647911541894001
+    second: "Marco HUD fant\xE1stico dorado y azul_3"
+  - first:
+      213: 8687686221937878455
+    second: "Marco HUD fant\xE1stico dorado y azul_4"
+  - first:
+      213: -3001428819851213105
+    second: "Marco HUD fant\xE1stico dorado y azul_5"
+  - first:
+      213: -2085041469899294912
+    second: "Marco HUD fant\xE1stico dorado y azul_6"
+  - first:
+      213: 8526655591463671804
+    second: "Marco HUD fant\xE1stico dorado y azul_7"
+  - first:
+      213: -1013677603775062783
+    second: "Marco HUD fant\xE1stico dorado y azul_8"
+  - first:
+      213: 1826006580235639642
+    second: "Marco HUD fant\xE1stico dorado y azul_9"
+  - first:
+      213: 8621158019535206844
+    second: "Marco HUD fant\xE1stico dorado y azul_10"
+  - first:
+      213: -1523400471081497422
+    second: "Marco HUD fant\xE1stico dorado y azul_11"
+  - first:
+      213: 8844736010776217785
+    second: "Marco HUD fant\xE1stico dorado y azul_12"
+  - first:
+      213: -2203306328716704635
+    second: "Marco HUD fant\xE1stico dorado y azul_13"
+  - first:
+      213: -3852176689351827841
+    second: "Marco HUD fant\xE1stico dorado y azul_14"
+  - first:
+      213: -3344996892866650133
+    second: "Marco HUD fant\xE1stico dorado y azul_15"
+  - first:
+      213: -1975927031458695890
+    second: "Marco HUD fant\xE1stico dorado y azul_16"
+  - first:
+      213: -7500837819001767079
+    second: "Marco HUD fant\xE1stico dorado y azul_17"
+  - first:
+      213: -366472821564768990
+    second: "Marco HUD fant\xE1stico dorado y azul_18"
+  - first:
+      213: 6247097305492996596
+    second: "Marco HUD fant\xE1stico dorado y azul_19"
+  - first:
+      213: 2089426234393466808
+    second: "Marco HUD fant\xE1stico dorado y azul_20"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_0"
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 18
+        width: 2106
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecf3fccb2f8123e0800000000000000
+      internalID: -2080224134583550740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_1"
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 610
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396444b72a9cfcb70800000000000000
+      internalID: 8921571086534198931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_2"
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 608
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd02aa01dd21cb580800000000000000
+      internalID: -8810146030366875429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_3"
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 626
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b6bef3f2fa05330800000000000000
+      internalID: 3697647911541894001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_4"
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 595
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5a9aae69cd09870800000000000000
+      internalID: 8687686221937878455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_5"
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 612
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6062ef368c856d0800000000000000
+      internalID: -3001428819851213105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_6"
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 609
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047b1b484d17013e0800000000000000
+      internalID: -2085041469899294912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_7"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 572
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf75a439514c45670800000000000000
+      internalID: 8526655591463671804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_8"
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 601
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dd73e0791bee1f0800000000000000
+      internalID: -1013677603775062783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_9"
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 588
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b98746f47475910800000000000000
+      internalID: 1826006580235639642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_10"
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 586
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9f7eaba8184a770800000000000000
+      internalID: 8621158019535206844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_11"
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 578
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc4686c75bcbdae0800000000000000
+      internalID: -1523400471081497422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_12"
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 602
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b80c665a80deba70800000000000000
+      internalID: 8844736010776217785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_13"
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 578
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584887151984c61e0800000000000000
+      internalID: -2203306328716704635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_14"
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 579
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ed423f5b15a8ac0800000000000000
+      internalID: -3852176689351827841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_15"
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 112
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befd5e96c0f2491d0800000000000000
+      internalID: -3344996892866650133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_16"
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 120
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25ffc375d81494e0800000000000000
+      internalID: -1975927031458695890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_17"
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 116
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b7598aebba7e790800000000000000
+      internalID: -7500837819001767079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_18"
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 83
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22dfbc219e60aeaf0800000000000000
+      internalID: -366472821564768990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_19"
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 79
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1c53b96e522b650800000000000000
+      internalID: 6247097305492996596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Marco HUD fant\xE1stico dorado y azul_20"
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 71
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7976507122ffc10800000000000000
+      internalID: 2089426234393466808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Marco HUD fant\xE1stico dorado y azul_0": -2080224134583550740
+      "Marco HUD fant\xE1stico dorado y azul_1": 8921571086534198931
+      "Marco HUD fant\xE1stico dorado y azul_10": 8621158019535206844
+      "Marco HUD fant\xE1stico dorado y azul_11": -1523400471081497422
+      "Marco HUD fant\xE1stico dorado y azul_12": 8844736010776217785
+      "Marco HUD fant\xE1stico dorado y azul_13": -2203306328716704635
+      "Marco HUD fant\xE1stico dorado y azul_14": -3852176689351827841
+      "Marco HUD fant\xE1stico dorado y azul_15": -3344996892866650133
+      "Marco HUD fant\xE1stico dorado y azul_16": -1975927031458695890
+      "Marco HUD fant\xE1stico dorado y azul_17": -7500837819001767079
+      "Marco HUD fant\xE1stico dorado y azul_18": -366472821564768990
+      "Marco HUD fant\xE1stico dorado y azul_19": 6247097305492996596
+      "Marco HUD fant\xE1stico dorado y azul_2": -8810146030366875429
+      "Marco HUD fant\xE1stico dorado y azul_20": 2089426234393466808
+      "Marco HUD fant\xE1stico dorado y azul_3": 3697647911541894001
+      "Marco HUD fant\xE1stico dorado y azul_4": 8687686221937878455
+      "Marco HUD fant\xE1stico dorado y azul_5": -3001428819851213105
+      "Marco HUD fant\xE1stico dorado y azul_6": -2085041469899294912
+      "Marco HUD fant\xE1stico dorado y azul_7": 8526655591463671804
+      "Marco HUD fant\xE1stico dorado y azul_8": -1013677603775062783
+      "Marco HUD fant\xE1stico dorado y azul_9": 1826006580235639642
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
