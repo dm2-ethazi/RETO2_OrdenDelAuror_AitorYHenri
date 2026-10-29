@@ -1,0 +1,15 @@
+[project]
+name = "OrdenDelAuror"
+version = "0.1.0"
+description = "Cifrado con python"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=9.2.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
