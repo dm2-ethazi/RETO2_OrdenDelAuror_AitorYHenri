@@ -183,69 +183,10 @@ Si la rama es `main` o `develop`, el hook cancela la operación. En las demás r
 
 La protección del servidor sigue dependiendo de los rulesets de GitHub.
 
-## 8. Commits realizados
 
-### 8.1. Configuración inicial de CI/CD
 
-Mensaje utilizado:
 
-```text
-CHORE: configurar pipeline CI/CD inicial
-```
-
-### 8.2. Configuración de pre-commit
-
-Mensaje utilizado:
-
-```text
-CHORE: configura hooks pre-commit
-```
-
-El segundo commit quedó registrado con el identificador abreviado:
-
-```text
-feb36299
-```
-
-Ambos cambios se han trabajado en la rama `feature/ci-cd`.
-
-## 9. Comandos utilizados
-
-### Consultar el estado del repositorio
-
-```powershell
-git status
-```
-
-### Consultar las ramas
-
-```powershell
-git branch
-git branch -r
-```
-
-### Preparar y guardar los cambios de configuración
-
-```powershell
-git add .pre-commit-config.yaml
-git commit -m "chore: configura hooks pre-commit"
-```
-
-### Subir la rama a GitHub
-
-```powershell
-git push origin feature/ci-cd
-```
-
-El último envío comprobado devolvió:
-
-```text
-Everything up-to-date
-```
-
-Esto indica que la rama local y la remota estaban sincronizadas en ese momento.
-
-## 10. Tareas pendientes
+## Tareas pendientes
 
 - [ ] Corregir las rutas del workflow de GitHub Actions.
 - [ ] Comprobar que los tests de Python se ejecutan correctamente.
