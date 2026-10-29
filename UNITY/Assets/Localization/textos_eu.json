@@ -1,0 +1,53 @@
+
+{
+  "traducciones": [
+    {
+      "clave": "titulo",
+      "valor": "THE ARCANE CIPHER"
+    },
+    {
+      "clave": "jugar",
+      "valor": "JOLASTU"
+    },
+    {
+      "clave": "instrucciones",
+      "valor": "ARGIBIDEAK"
+    },
+    {
+      "clave": "idioma",
+      "valor": "HIZKUNTZA"
+    },
+    {
+      "clave": "salir",
+      "valor": "IRTEN"
+    },
+    {
+      "clave": "confirmar_salida",
+      "valor": "Ziur zaude irten nahi duzula?"
+    },
+    {
+      "clave": "cancelar",
+      "valor": "UTZI"
+    },
+    {
+      "clave": "espanol",
+      "valor": "GAZTELANIA"
+    },
+    {
+      "clave": "euskera",
+      "valor": "EUSKARA"
+    },
+    {
+      "clave": "ingles",
+      "valor": "INGELESA"
+    },
+    {
+      "clave": "texto_instrucciones",
+      "valor": "Ongi etorri The Arcane Cipher-era.\n\n- Lortu usoek ekartzen dituzten kodeak.\n- Kode horiek zifratuta daude eta etsaiaren puntu ahulak deskribatzen dituzte.\n- Ebatzi kodeak etsaia zauritzeko, baina kontuz ibili huts ez egiteko, bestela ondorioak jasango dituzu!\n- Kontuan izan kode bakoitzaren zifratze mota; etsaiak zenbat eta bizitza gutxiago izan, orduan eta zailagoak izango dira.\n- Deszifratu nahikoa kode etsaia garaitzeko, gaztelura iritsi aurretik.\n\nZorte on, azti!"
+    },
+    {
+      "clave": "volver",
+      "valor": "ITZULI"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+
+{
+  "traducciones": [
+    {
+      "clave": "titulo",
+      "valor": "THE ARCANE CIPHER"
+    },
+    {
+      "clave": "jugar",
+      "valor": "PLAY"
+    },
+    {
+      "clave": "instrucciones",
+      "valor": "INSTRUCTIONS"
+    },
+    {
+      "clave": "idioma",
+      "valor": "LANGUAGE"
+    },
+    {
+      "clave": "salir",
+      "valor": "EXIT"
+    },
+    {
+      "clave": "confirmar_salida",
+      "valor": "Are you sure you want to exit?"
+    },
+    {
+      "clave": "cancelar",
+      "valor": "CANCEL"
+    },
+    {
+      "clave": "espanol",
+      "valor": "SPANISH"
+    },
+    {
+      "clave": "euskera",
+      "valor": "BASQUE"
+    },
+    {
+      "clave": "ingles",
+      "valor": "ENGLISH"
+    },
+    {
+      "clave": "texto_instrucciones",
+      "valor": "Welcome to The Arcane Cipher.\n\n- Collect the codes carried by the pigeons.\n- These codes are encrypted and describe the enemy's weak points.\n- Solve them to damage the enemy, but be careful not to make a mistake, or you'll pay the price!\n- Pay attention to the encryption type of each code; they will become more difficult as the enemy's health decreases.\n- Decipher enough codes to defeat the enemy before it reaches the castle.\n\nGood luck, wizard!"
+    },
+    {
+      "clave": "volver",
+      "valor": "BACK"
+    }
+  ]
+}

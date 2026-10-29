@@ -1,0 +1,53 @@
+
+{
+  "traducciones": [
+    {
+      "clave": "titulo",
+      "valor": "THE ARCANE CIPHER"
+    },
+    {
+      "clave": "jugar",
+      "valor": "JUGAR"
+    },
+    {
+      "clave": "instrucciones",
+      "valor": "INSTRUCCIONES"
+    },
+    {
+      "clave": "idioma",
+      "valor": "IDIOMA"
+    },
+    {
+      "clave": "salir",
+      "valor": "SALIR"
+    },
+    {
+      "clave": "confirmar_salida",
+      "valor": "¿Seguro que quieres salir?"
+    },
+    {
+      "clave": "cancelar",
+      "valor": "CANCELAR"
+    },
+    {
+      "clave": "espanol",
+      "valor": "CASTELLANO"
+    },
+    {
+      "clave": "euskera",
+      "valor": "EUSKERA"
+    },
+    {
+      "clave": "ingles",
+      "valor": "INGLÉS"
+    },
+    {
+      "clave": "texto_instrucciones",
+      "valor": "Bienvenido a The Arcane Cipher.\n\n- Consigue códigos que llevan las palomas.\n- Estos están cifrados y describen los puntos débiles del enemigo.\n- Resuélvelos para hacerle daño, pero ¡ten cuidado de no fallar o lo pagarás!\n- Ten en cuenta el tipo de cifrado que tiene cada código; estos serán más difíciles cuanto menos vida tenga el enemigo.\n- Descifra los códigos suficientes para derrotar al enemigo antes de que llegue al castillo.\n\n¡Buena suerte, mago!"
+    },
+    {
+      "clave": "volver",
+      "valor": "VOLVER"
+    }
+  ]
+}
