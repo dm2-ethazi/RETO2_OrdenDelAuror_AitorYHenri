@@ -23,7 +23,8 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private TMP_Text textoSalir;
 
     [Header("Textos de confirmacion de salida")]
-    [SerializeField] private TMP_Text textoConfirmarSalida;
+    [SerializeField] private TMP_Text textoMensajeConfirmarSalida;
+    [SerializeField] private TMP_Text textoBotonConfirmarSalida;
     [SerializeField] private TMP_Text textoCancelar;
 
     [Header("Textos de seleccion de idioma")]
@@ -192,7 +193,6 @@ public class MenuPrincipalController : MonoBehaviour
         GestorIdiomas.Instancia.CambiarIdioma(idioma);
         ActualizarTextos();
 
-        // Cierra el selector y vuelve al menu
         if (panelSeleccionIdioma != null)
             panelSeleccionIdioma.SetActive(false);
 
@@ -233,27 +233,31 @@ public class MenuPrincipalController : MonoBehaviour
 
     public void ActualizarTextos()
     {
+        // Menu principal
         AsignarTexto(textoTitulo, "titulo");
         AsignarTexto(textoJugar, "jugar");
         AsignarTexto(textoInstrucciones, "instrucciones");
         AsignarTexto(textoIdioma, "idioma");
         AsignarTexto(textoSalir, "salir");
 
-        AsignarTexto(textoConfirmarSalida, "confirmar_salida");
+        // Confirmacion de salida
+        AsignarTexto(textoMensajeConfirmarSalida, "confirmar_salida");
+        AsignarTexto(textoBotonConfirmarSalida, "salir");
         AsignarTexto(textoCancelar, "cancelar");
 
+        // Seleccion de idioma
         AsignarTexto(textoEspanol, "espanol");
         AsignarTexto(textoEuskera, "euskera");
         AsignarTexto(textoIngles, "ingles");
 
+        // Instrucciones
         AsignarTexto(
             textoContenidoInstrucciones,
             "texto_instrucciones"
         );
-
         AsignarTexto(textoVolver, "volver");
 
-        // Textos del pergamino de confirmacion del minijuego
+        // Confirmacion para volver desde el minijuego
         AsignarTexto(textoConfirmarVolver, "confirmar_volver");
         AsignarTexto(textoSalirMenu, "salir");
         AsignarTexto(textoCancelarVolver, "cancelar");

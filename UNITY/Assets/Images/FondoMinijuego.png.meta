@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 94bf9b3d6828072428b846ed1160cc20
+guid: 081809c8297ab5545a7881dd97bc7aff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3035421351228906980
-    second: "Castillo m\xE1gico bajo la luna_0"
+      213: 5466835604729593384
+    second: Castillo lunar entre bosques y cascadas_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Castillo m\xE1gico bajo la luna_0"
+      name: Castillo lunar entre bosques y cascadas_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1983
-        height: 793
+        width: 2048
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c126d580d5400e5d0800000000000000
-      internalID: -3035421351228906980
+      spriteID: 82e7d59940a1edb40800000000000000
+      internalID: 5466835604729593384
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Castillo m\xE1gico bajo la luna_0": -3035421351228906980
+      Castillo lunar entre bosques y cascadas_0: 5466835604729593384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
