@@ -1,5 +1,7 @@
 from utilities.general_utils import index_letra, obtener_letra, lenght_chars
 
+__author__ = "Henri Tejada"
+
 def encrypt_text(text, key):
     """
     Funcion que encripta un texto dado usando una clave mediante el metodo de cifrado Vigenere

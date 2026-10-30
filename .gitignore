@@ -3,3 +3,4 @@ __pycache__/
 OrdenDelAuror.egg-info/
 .venv/
 uv.lock
+.pytest_cache/
