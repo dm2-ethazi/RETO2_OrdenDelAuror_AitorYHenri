@@ -1,6 +1,7 @@
 import sys
 
-caracteres = "abcdefghijklmnñopqrstuvwxyz1234567890<,.->;:_´ç{}¨`+[]^*º\ª!·$%&/()=?¿|@#~€¬áéíóúàèìòùäëïöüABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ"
+caracteres = ("abcdefghijklmnñopqrstuvwxyz1234567890<,.->;:_´ç{}¨`+[]^*º\ª!·$%&/()=?¿|@#~€¬áéíóúàèìòùäëïöüABCDEFGHIJKL"
+              "MNÑOPQRSTUVWXYZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ")
 
 __author__ = "Henri Tejada"
 
@@ -23,6 +24,10 @@ def func_salir():
     sys.exit()
 
 def lenght_chars():
+    """
+        Funcion que devuelve la cantidad de caracteres compatibles con el cifrado
+    :return: Cantidad de caracteres compatibles con el cifrado
+    """
     return len(caracteres)
 
 def index_letra(letra):
@@ -31,6 +36,8 @@ def index_letra(letra):
     :param letra: letra de la que se quiere obtener el indice
     :return: indice de la letra
     """
+    if not letra in caracteres:
+        raise ValueError(f'Carácter {letra} no compatible con el cifrado')
     return caracteres.index(letra)
 
 
@@ -40,4 +47,6 @@ def obtener_letra(index):
     :param index: Indice de la letra que se quiere obtener
     :return: letra que corresponde al indice
     """
+    if index < 0 or index > lenght_chars():
+        raise ValueError(f'El indice debe ser mayor o igual a 0 y menor o igual a {lenght_chars()}')
     return caracteres[index]

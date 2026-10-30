@@ -26,10 +26,8 @@ def encrypt_text(text, key):
         else:
             text_index = index_letra(text[cont_text])
             key_index = index_letra(key_final[cont_index])
-
             encrypted_index = (text_index + key_index) % total_chars
-
-            encrypted_text +=obtener_letra(encrypted_index)
+            encrypted_text += obtener_letra(encrypted_index)
             cont_index+=1
         cont_text+=1
     return encrypted_text
@@ -59,12 +57,10 @@ def decrypt_text(text, key):
         else:
             text_index = index_letra(text[cont_text])
             key_index = index_letra(key_final[cont_index])
-
             if (text_index - key_index) >= 0:
                 decrypted_index = (text_index - key_index) % total_chars
             else:
                 decrypted_index = (text_index - key_index + total_chars) % total_chars
-
             decrypted_text +=obtener_letra(decrypted_index)
             cont_index+=1
         cont_text+=1

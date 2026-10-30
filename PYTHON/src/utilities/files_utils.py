@@ -1,6 +1,7 @@
 from pathlib import Path
 from tkinter import Tk, filedialog
 from utilities.encrypt_utils import encrypt_text, decrypt_text
+import os
 
 __author__ = "Henri Tejada"
 
@@ -29,10 +30,15 @@ def encrypt_file(key):
              open(salida, "w", encoding="utf-8") as salida_file:
 
             for linea in entrada:
-                print(f'Cifrando Linea: {cont_linea}')
-                salida_file.write(
-                    encrypt_text(linea.strip(), key) + "\n"
-                )
+
+                try:
+                    salida_file.write(
+                        encrypt_text(linea.strip(), key) + "\n"
+                    )
+                    print(f'Cifrando Linea: {cont_linea}')
+                except:
+                    raise ValueError(f'El archivo no se puede cifrar,debido a que la linea {cont_linea} '
+                                     f'tiene un carácter no valido, se ha detenido la operación')
                 cont_linea += 1
 
 
@@ -45,7 +51,7 @@ def decrypt_file(key):
     root.withdraw()
 
     ruta = filedialog.askopenfilename()
-
+    cont_linea=1
     if ruta:
         original = Path(ruta)
 
@@ -60,6 +66,12 @@ def decrypt_file(key):
              open(salida, "w", encoding="utf-8") as salida_file:
 
             for linea in entrada:
-                salida_file.write(
-                    decrypt_text(linea.strip(), key) + "\n"
-                )
+                try:
+                    salida_file.write(
+                        decrypt_text(linea.strip(), key) + "\n"
+                    )
+                    print(f'Descrifrando Linea: {cont_linea}')
+                except:
+                    raise ValueError(f'El archivo no se puede descifrar,debido a que la linea {cont_linea} '
+                                     f'tiene un carácter no valido, se ha detenido la operación')
+                cont_linea += 1
