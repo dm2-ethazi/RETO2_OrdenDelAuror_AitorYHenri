@@ -5,10 +5,11 @@ import os
 
 __author__ = "Henri Tejada"
 
-def encrypt_file(key):
+def encrypt_file(key,lang):
     """
         Funcion que cifra un archivo dado mediante el método Vigenere
     :param key: Clave con la que se cifra el archivo seleccionado
+    :param lang: idioma seleccionado por el usuario
     """
     root = Tk()
     root.withdraw()
@@ -19,7 +20,7 @@ def encrypt_file(key):
     if ruta:
         original = Path(ruta)
 
-        print(f'Cifrando archivo: {original.name}')
+        print(f'{lang.t("fl_utl_cifr_arch")}{original.name}')
 
         salida = (
             original.parent /
@@ -35,17 +36,18 @@ def encrypt_file(key):
                     salida_file.write(
                         encrypt_text(linea.strip(), key) + "\n"
                     )
-                    print(f'Cifrando Linea: {cont_linea}')
+                    print(f'{lang.t("fl_utl_cifr_line")}{cont_linea}')
                 except:
-                    raise ValueError(f'El archivo no se puede cifrar,debido a que la linea {cont_linea} '
-                                     f'tiene un carácter no valido, se ha detenido la operación')
+                    raise ValueError(f'{lang.t("fl_utl_cifr_error_char_pt1")}{cont_linea}'
+                                     f'{lang.t("fl_utl_cifr_error_char_pt2")}')
                 cont_linea += 1
 
 
-def decrypt_file(key):
+def decrypt_file(key,lang):
     """
         Funcion que descifra un archivo dado mediante el método Vigenere
     :param key: Clave con la que se descifra el archivo seleccionado
+    :param lang: idioma seleccionado por el usuario
     """
     root = Tk()
     root.withdraw()
@@ -55,7 +57,7 @@ def decrypt_file(key):
     if ruta:
         original = Path(ruta)
 
-        print(f'descifrando archivo: {original.name}')
+        print(f'{lang.t("fl_utl_descifr_arch")}{original.name}')
 
         salida = (
             original.parent /
@@ -70,8 +72,8 @@ def decrypt_file(key):
                     salida_file.write(
                         decrypt_text(linea.strip(), key) + "\n"
                     )
-                    print(f'Descrifrando Linea: {cont_linea}')
+                    print(f'{lang.t("fl_utl_descifr_line")}{cont_linea}')
                 except:
-                    raise ValueError(f'El archivo no se puede descifrar,debido a que la linea {cont_linea} '
-                                     f'tiene un carácter no valido, se ha detenido la operación')
+                    raise ValueError(f'{lang.t("fl_utl_descifr_error_char_pt1")}{cont_linea}'
+                                     f'{lang.t("fl_utl_descifr_error_char_pt2")}')
                 cont_linea += 1
