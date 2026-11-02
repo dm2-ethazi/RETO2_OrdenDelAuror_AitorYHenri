@@ -1,4 +1,4 @@
-from utilities.general_utils import index_letra, obtener_letra, lenght_chars
+from utilities.general_utils import index_letra, obtener_letra, length_chars
 
 __author__ = "Henri Tejada"
 
@@ -14,7 +14,7 @@ def encrypt_text(text, key,lang):
     length_key = len(key)
     key_final = key
 
-    total_chars = lenght_chars()
+    total_chars = length_chars()
     if length_key < length_text:
         while len(key_final) < length_text:
             key_final += key
@@ -45,7 +45,7 @@ def decrypt_text(text, key,lang):
     length_text = len(text)
     length_key = len(key)
     key_final = key
-    total_chars = lenght_chars()
+    total_chars = length_chars()
     if length_key < length_text:
         while len(key_final) < length_text:
             key_final += key

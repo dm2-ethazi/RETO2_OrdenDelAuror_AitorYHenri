@@ -1,5 +1,4 @@
 import sys
-
 __author__ = "Henri Tejada"
 
 caracteres = ("abcdefghijklmnñopqrstuvwxyz1234567890<,.->;:_´ç{}¨`+[]^*º\ª!·$%&/()=?¿|@#~€¬áéíóúàèìòùäëïöüABCDEFGHIJKL"
@@ -25,7 +24,7 @@ def func_salir(lang):
     print(lang.t("salir_msg"))
     sys.exit()
 
-def lenght_chars():
+def length_chars():
     """
         Funcion que devuelve la cantidad de caracteres compatibles con el cifrado
     :return: Cantidad de caracteres compatibles con el cifrado
@@ -51,8 +50,10 @@ def obtener_letra(index,lang):
     :param lang: idioma seleccionado por el usuario
     :return: letra que corresponde al indice
     """
-    if index < 0 or index > lenght_chars():
-        raise ValueError(f'{lang.t("gen_utl_index_inv")}{lenght_chars()}')
+    if (index < 0 or index > length_chars()) and lang.language=="eus":
+        raise ValueError(f'{lang.t("gen_utl_index_inv_pt1")}{length_chars()}{lang.t("gen_utl_index_inv_pt2")}')
+    elif index < 0 or index > length_chars():
+        raise ValueError(f'{lang.t("gen_utl_index_inv")}{length_chars()}')
     return caracteres[index]
 
 def elegir_idioma():
