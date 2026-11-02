@@ -1,7 +1,6 @@
 from pathlib import Path
 from tkinter import Tk, filedialog
 from utilities.encrypt_utils import encrypt_text, decrypt_text
-import os
 
 __author__ = "Henri Tejada"
 
@@ -34,7 +33,7 @@ def encrypt_file(key,lang):
 
                 try:
                     salida_file.write(
-                        encrypt_text(linea.strip(), key) + "\n"
+                        encrypt_text(linea.strip(), key,lang) + "\n"
                     )
                     print(f'{lang.t("fl_utl_cifr_line")}{cont_linea}')
                 except:
@@ -70,7 +69,7 @@ def decrypt_file(key,lang):
             for linea in entrada:
                 try:
                     salida_file.write(
-                        decrypt_text(linea.strip(), key) + "\n"
+                        decrypt_text(linea.strip(), key, lang) + "\n"
                     )
                     print(f'{lang.t("fl_utl_descifr_line")}{cont_linea}')
                 except:

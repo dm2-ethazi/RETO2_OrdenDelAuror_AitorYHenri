@@ -1,8 +1,8 @@
 {
   "menu_cifrar_text": "1. Cifrar texto",
   "menu_descifrar_text": "2. Descifrar texto",
-  "menu_cifrar_arch": "3. Cifrar Archivo",
-  "menu_descifrar_arch": "4. Descifrar Archivo",
+  "menu_cifrar_arch": "3. Cifrar archivo",
+  "menu_descifrar_arch": "4. Descifrar archivo",
   "menu_salir": "5. Salir",
   "menu_opcion": "Introduce una opción: ",
   "menu_texto": "Texto: ",

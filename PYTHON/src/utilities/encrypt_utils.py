@@ -20,6 +20,7 @@ def encrypt_text(text, key,lang):
             key_final += key
     cont_text = 0
     cont_index = 0
+    key_final = key_final.replace(" ","")
     encrypted_text=""
     while cont_text<length_text:
         if text[cont_text]==" ":
@@ -52,6 +53,7 @@ def decrypt_text(text, key,lang):
 
     cont_text = 0
     cont_index = 0
+    key_final = key_final.replace(" ","")
     decrypted_text=""
     while cont_text<length_text:
         if text[cont_text]==" ":
