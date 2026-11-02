@@ -31,11 +31,11 @@
     },
     {
       "clave": "espanol",
-      "valor": "SPANISH"
+      "valor": "ESPAÑOL"
     },
     {
       "clave": "euskera",
-      "valor": "BASQUE"
+      "valor": "EUSKARA"
     },
     {
       "clave": "ingles",
@@ -52,6 +52,50 @@
     {
       "clave": "confirmar_volver",
       "valor": "RETURN TO THE MAIN MENU?"
+    },
+    {
+      "clave": "confirmar_reiniciar",
+      "valor": "ARE YOU SURE YOU WANT TO RESTART?"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Shift"
+    },
+    {
+      "clave": "acertijo.placeholder",
+      "valor": "Enter your answer..."
+    },
+    {
+      "clave": "acertijo.confirmar",
+      "valor": "CONFIRM"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Shift"
+    },
+    {
+      "clave": "acertijo.vacia",
+      "valor": "Enter an answer."
+    },
+    {
+      "clave": "acertijo.correcta",
+      "valor": "Correct answer!"
+    },
+    {
+      "clave": "acertijo.incorrecta",
+      "valor": "Wrong answer. You lose one life."
+    },
+    {
+      "clave": "acertijo.derrota",
+      "valor": "The troll has been defeated!"
+    },
+    {
+      "clave": "boton_reiniciar",
+      "valor": "RESTART"
+    },
+    {
+      "clave": "boton_cancelar_reinicio",
+      "valor": "CANCEL"
     }
   ]
 }

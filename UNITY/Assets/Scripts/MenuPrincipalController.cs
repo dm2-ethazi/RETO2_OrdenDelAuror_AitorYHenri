@@ -7,6 +7,10 @@ public class MenuPrincipalController : MonoBehaviour
     [Header("Contenedores principales")]
     [SerializeField] private GameObject contenedorMenuPrincipal;
     [SerializeField] private GameObject contenedorMinijuego;
+    [SerializeField] private GameObject contenedorTroll;
+
+    [Header("Movimiento del troll")]
+    [SerializeField] private MovimientoTroll movimientoTroll;
 
     [Header("Paneles del menu")]
     [SerializeField] private GameObject contenedorMenu;
@@ -14,6 +18,8 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private GameObject panelSeleccionIdioma;
     [SerializeField] private GameObject panelInstrucciones;
     [SerializeField] private GameObject panelConfirmarVolver;
+    [SerializeField] private GameObject panelConfirmarReiniciar;
+    [SerializeField] private GameObject contenedorAcertijo;
 
     [Header("Textos del menu")]
     [SerializeField] private TMP_Text textoTitulo;
@@ -41,6 +47,18 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private TMP_Text textoSalirMenu;
     [SerializeField] private TMP_Text textoCancelarVolver;
 
+    [Header("Textos de confirmacion de reinicio")]
+    [SerializeField] private TMP_Text textoConfirmarReiniciar;
+
+    [Header("Textos de los botones de reinicio")]
+    [SerializeField] private TMP_Text textoBotonReiniciar;
+    [SerializeField] private TMP_Text textoBotonCancelarReinicio;
+
+    [Header("Referencias para reiniciar la partida")]
+    [SerializeField] private VidaTroll vidaTroll;
+    [SerializeField] private MovimientoPaloma movimientoPaloma;
+    [SerializeField] private GestorAcertijo gestorAcertijo;
+
     private void Start()
     {
         if (contenedorMenuPrincipal != null)
@@ -64,6 +82,15 @@ public class MenuPrincipalController : MonoBehaviour
         if (panelConfirmarVolver != null)
             panelConfirmarVolver.SetActive(false);
 
+        if (panelConfirmarReiniciar != null)
+            panelConfirmarReiniciar.SetActive(false);
+
+        if (contenedorTroll != null)
+            contenedorTroll.SetActive(false);
+
+        if (movimientoTroll != null)
+            movimientoTroll.DetenerMovimiento();
+
         ActualizarTextos();
     }
 
@@ -77,6 +104,20 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (contenedorMinijuego != null)
             contenedorMinijuego.SetActive(true);
+
+        if (contenedorTroll != null)
+            contenedorTroll.SetActive(true);
+        else
+            Debug.LogWarning(
+                "No se ha asignado ContenedorTroll en MenuPrincipalController."
+            );
+
+        if (movimientoTroll != null)
+            movimientoTroll.IniciarMovimiento();
+        else
+            Debug.LogWarning(
+                "No se ha asignado MovimientoTroll en MenuPrincipalController."
+            );
     }
 
     public void MostrarInstrucciones()
@@ -213,6 +254,33 @@ public class MenuPrincipalController : MonoBehaviour
         if (panelConfirmarVolver != null)
             panelConfirmarVolver.SetActive(false);
 
+        if (movimientoTroll != null)
+            movimientoTroll.ReiniciarMovimiento();
+
+        if (vidaTroll != null)
+            vidaTroll.ReiniciarVida();
+        else
+            Debug.LogWarning(
+                "No se ha asignado VidaTroll en MenuPrincipalController."
+            );
+
+        if (movimientoPaloma != null)
+            movimientoPaloma.ReiniciarPartida();
+        else
+            Debug.LogWarning(
+                "No se ha asignado MovimientoPaloma en MenuPrincipalController."
+            );
+
+        if (gestorAcertijo != null)
+            gestorAcertijo.ReiniciarAcertijo();
+        else
+            Debug.LogWarning(
+                "No se ha asignado GestorAcertijo en MenuPrincipalController."
+            );
+
+        if (contenedorTroll != null)
+            contenedorTroll.SetActive(false);
+
         if (contenedorMinijuego != null)
             contenedorMinijuego.SetActive(false);
 
@@ -231,44 +299,112 @@ public class MenuPrincipalController : MonoBehaviour
             panelConfirmarVolver.SetActive(false);
     }
 
+    public void MostrarConfirmacionReiniciar()
+    {
+        ActualizarTextos();
+
+        if (panelConfirmarReiniciar != null)
+            panelConfirmarReiniciar.SetActive(true);
+        else
+            Debug.LogWarning(
+                "No se ha asignado PanelConfirmarReiniciar."
+            );
+    }
+
+    public void ConfirmarReiniciar()
+    {
+        if (panelConfirmarReiniciar != null)
+            panelConfirmarReiniciar.SetActive(false);
+
+        if (movimientoTroll != null)
+            movimientoTroll.ReiniciarMovimiento();
+
+        if (vidaTroll != null)
+            vidaTroll.ReiniciarVida();
+        else
+            Debug.LogWarning(
+                "No se ha asignado VidaTroll en MenuPrincipalController."
+            );
+
+        if (movimientoPaloma != null)
+            movimientoPaloma.ReiniciarPartida();
+        else
+            Debug.LogWarning(
+                "No se ha asignado MovimientoPaloma en MenuPrincipalController."
+            );
+
+        if (gestorAcertijo != null)
+            gestorAcertijo.ReiniciarAcertijo();
+        else
+            Debug.LogWarning(
+                "No se ha asignado GestorAcertijo en MenuPrincipalController."
+            );
+
+        if (contenedorAcertijo != null)
+            contenedorAcertijo.SetActive(false);
+        else
+            Debug.LogWarning(
+                "No se ha asignado ContenedorAcertijo en MenuPrincipalController."
+            );
+    }
+
+    public void CancelarReiniciar()
+    {
+        if (panelConfirmarReiniciar != null)
+            panelConfirmarReiniciar.SetActive(false);
+    }
+
     public void ActualizarTextos()
     {
-        // Menu principal
+        // Menu principal.
         AsignarTexto(textoTitulo, "titulo");
         AsignarTexto(textoJugar, "jugar");
         AsignarTexto(textoInstrucciones, "instrucciones");
         AsignarTexto(textoIdioma, "idioma");
         AsignarTexto(textoSalir, "salir");
 
-        // Confirmacion de salida
+        // Confirmacion de salida.
         AsignarTexto(textoMensajeConfirmarSalida, "confirmar_salida");
         AsignarTexto(textoBotonConfirmarSalida, "salir");
         AsignarTexto(textoCancelar, "cancelar");
 
-        // Seleccion de idioma
+        // Seleccion de idioma.
         AsignarTexto(textoEspanol, "espanol");
         AsignarTexto(textoEuskera, "euskera");
         AsignarTexto(textoIngles, "ingles");
 
-        // Instrucciones
+        // Instrucciones.
         AsignarTexto(
             textoContenidoInstrucciones,
             "texto_instrucciones"
         );
         AsignarTexto(textoVolver, "volver");
 
-        // Confirmacion para volver desde el minijuego
+        // Confirmacion de volver al menu.
         AsignarTexto(textoConfirmarVolver, "confirmar_volver");
         AsignarTexto(textoSalirMenu, "salir");
         AsignarTexto(textoCancelarVolver, "cancelar");
+
+        // Confirmacion de reinicio.
+        AsignarTexto(
+            textoConfirmarReiniciar,
+            "confirmar_reiniciar"
+        );
+
+        // Botones de reinicio.
+        AsignarTexto(
+            textoBotonReiniciar,
+            "boton_reiniciar"
+        );
+        AsignarTexto(
+            textoBotonCancelarReinicio,
+            "boton_cancelar_reinicio"
+        );
     }
 
     private void AsignarTexto(TMP_Text texto, string clave)
     {
-        if (texto == null)
-            return;
-
-        if (GestorIdiomas.Instancia == null)
+        if (texto == null || GestorIdiomas.Instancia == null)
             return;
 
         texto.text = GestorIdiomas.Instancia.ObtenerTexto(clave);

@@ -31,7 +31,7 @@
     },
     {
       "clave": "espanol",
-      "valor": "GAZTELANIA"
+      "valor": "ESPAÑOL"
     },
     {
       "clave": "euskera",
@@ -39,7 +39,7 @@
     },
     {
       "clave": "ingles",
-      "valor": "INGELESA"
+      "valor": "ENGLISH"
     },
     {
       "clave": "texto_instrucciones",
@@ -52,6 +52,50 @@
     {
       "clave": "confirmar_volver",
       "valor": "MENU NAGUSIRA ITZULI?"
+    },
+    {
+      "clave": "confirmar_reiniciar",
+      "valor": "ZIUR BERRABIARAZI NAHI DUZULA?"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Desplazamendua"
+    },
+    {
+      "clave": "acertijo.placeholder",
+      "valor": "Idatzi zure erantzuna..."
+    },
+    {
+      "clave": "acertijo.confirmar",
+      "valor": "BAIEZTATU"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Desplazamendua"
+    },
+    {
+      "clave": "acertijo.vacia",
+      "valor": "Idatzi erantzun bat."
+    },
+    {
+      "clave": "acertijo.correcta",
+      "valor": "Erantzun zuzena!"
+    },
+    {
+      "clave": "acertijo.incorrecta",
+      "valor": "Erantzun okerra. Bizitza bat galdu duzu."
+    },
+    {
+      "clave": "acertijo.derrota",
+      "valor": "Trolla garaitua izan da!"
+    },
+    {
+      "clave": "boton_reiniciar",
+      "valor": "BERRABIARAZI"
+    },
+    {
+      "clave": "boton_cancelar_reinicio",
+      "valor": "UTZI"
     }
   ]
 }

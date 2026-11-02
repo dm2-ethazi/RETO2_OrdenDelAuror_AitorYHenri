@@ -8,6 +8,9 @@ public class VidaTroll : MonoBehaviour
 
     private int vidaActual;
 
+    // Permite consultar las vidas desde otros scripts.
+    public int VidaActual => vidaActual;
+
     private void Start()
     {
         vidaActual = corazones.Length;
@@ -20,6 +23,7 @@ public class VidaTroll : MonoBehaviour
             return;
 
         vidaActual--;
+
         ActualizarCorazones();
 
         if (vidaActual <= 0)
@@ -32,7 +36,10 @@ public class VidaTroll : MonoBehaviour
     {
         for (int i = 0; i < corazones.Length; i++)
         {
-            corazones[i].SetActive(i < vidaActual);
+            if (corazones[i] != null)
+            {
+                corazones[i].SetActive(i < vidaActual);
+            }
         }
     }
 

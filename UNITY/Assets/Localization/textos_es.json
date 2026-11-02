@@ -31,15 +31,15 @@
     },
     {
       "clave": "espanol",
-      "valor": "CASTELLANO"
+      "valor": "ESPAÑOL"
     },
     {
       "clave": "euskera",
-      "valor": "EUSKERA"
+      "valor": "EUSKARA"
     },
     {
       "clave": "ingles",
-      "valor": "INGLÉS"
+      "valor": "ENGLISH"
     },
     {
       "clave": "texto_instrucciones",
@@ -52,6 +52,50 @@
     {
       "clave": "confirmar_volver",
       "valor": "¿SALIR AL MENÚ PRINCIPAL?"
+    },
+    {
+      "clave": "confirmar_reiniciar",
+      "valor": "¿SEGURO QUE QUIERES REINICIAR?"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Desplazamiento"
+    },
+    {
+      "clave": "acertijo.placeholder",
+      "valor": "Escribe tu respuesta..."
+    },
+    {
+      "clave": "acertijo.confirmar",
+      "valor": "CONFIRMAR"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Desplazamiento"
+    },
+    {
+      "clave": "acertijo.vacia",
+      "valor": "Escribe una respuesta."
+    },
+    {
+      "clave": "acertijo.correcta",
+      "valor": "¡Respuesta correcta!"
+    },
+    {
+      "clave": "acertijo.incorrecta",
+      "valor": "Respuesta incorrecta. Pierdes una vida."
+    },
+    {
+      "clave": "acertijo.derrota",
+      "valor": "¡El troll ha sido derrotado!"
+    },
+    {
+      "clave": "boton_reiniciar",
+      "valor": "REINICIAR"
+    },
+    {
+      "clave": "boton_cancelar_reinicio",
+      "valor": "CANCELAR"
     }
   ]
 }
