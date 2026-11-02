@@ -51,7 +51,7 @@
     },
     {
       "clave": "confirmar_volver",
-      "valor": "¿SALIR AL MENÚ PRINCIPAL?"
+      "valor": "¿VOLVER AL MENÚ PRINCIPAL?"
     },
     {
       "clave": "confirmar_reiniciar",
@@ -68,10 +68,6 @@
     {
       "clave": "acertijo.confirmar",
       "valor": "CONFIRMAR"
-    },
-    {
-      "clave": "acertijo.desplazamiento",
-      "valor": "Desplazamiento"
     },
     {
       "clave": "acertijo.vacia",
@@ -96,6 +92,18 @@
     {
       "clave": "boton_cancelar_reinicio",
       "valor": "CANCELAR"
+    },
+    {
+      "clave": "derrota",
+      "valor": "¡DERROTA!"
+    },
+    {
+      "clave": "revancha",
+      "valor": "REVANCHA"
+    },
+    {
+      "clave": "menu_principal",
+      "valor": "MENÚ PRINCIPAL"
     }
   ]
 }

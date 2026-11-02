@@ -7,52 +7,64 @@ public class MenuPrincipalController : MonoBehaviour
     [Header("Contenedores principales")]
     [SerializeField] private GameObject contenedorMenuPrincipal;
     [SerializeField] private GameObject contenedorMinijuego;
+
+    [Header("Elementos del minijuego")]
+    [SerializeField] private GameObject contenedorBotonesInferiores;
+    [SerializeField] private GameObject contenedorBarraVida;
+    [SerializeField] private GameObject contenedorPaloma;
     [SerializeField] private GameObject contenedorTroll;
+    [SerializeField] private GameObject contenedorAcertijo;
 
     [Header("Movimiento del troll")]
     [SerializeField] private MovimientoTroll movimientoTroll;
 
-    [Header("Paneles del menu")]
+    [Header("Colisión de la puerta")]
+    [SerializeField] private CollisionPuerta collisionPuerta;
+
+    [Header("Paneles del menú")]
     [SerializeField] private GameObject contenedorMenu;
     [SerializeField] private GameObject panelConfirmarSalida;
     [SerializeField] private GameObject panelSeleccionIdioma;
     [SerializeField] private GameObject panelInstrucciones;
     [SerializeField] private GameObject panelConfirmarVolver;
     [SerializeField] private GameObject panelConfirmarReiniciar;
-    [SerializeField] private GameObject contenedorAcertijo;
+    [SerializeField] private GameObject panelDerrota;
 
-    [Header("Textos del menu")]
+    [Header("Textos del menú principal")]
     [SerializeField] private TMP_Text textoTitulo;
     [SerializeField] private TMP_Text textoJugar;
     [SerializeField] private TMP_Text textoInstrucciones;
     [SerializeField] private TMP_Text textoIdioma;
     [SerializeField] private TMP_Text textoSalir;
 
-    [Header("Textos de confirmacion de salida")]
+    [Header("Textos de confirmación de salida")]
     [SerializeField] private TMP_Text textoMensajeConfirmarSalida;
     [SerializeField] private TMP_Text textoBotonConfirmarSalida;
     [SerializeField] private TMP_Text textoCancelar;
 
-    [Header("Textos de seleccion de idioma")]
+    [Header("Textos de selección de idioma")]
     [SerializeField] private TMP_Text textoEspanol;
     [SerializeField] private TMP_Text textoEuskera;
     [SerializeField] private TMP_Text textoIngles;
 
-    [Header("Textos del panel de instrucciones")]
+    [Header("Textos de instrucciones")]
     [SerializeField] private TMP_Text textoContenidoInstrucciones;
     [SerializeField] private TMP_Text textoVolver;
 
-    [Header("Textos de confirmacion de volver")]
+    [Header("Textos de confirmación de volver")]
     [SerializeField] private TMP_Text textoConfirmarVolver;
     [SerializeField] private TMP_Text textoSalirMenu;
     [SerializeField] private TMP_Text textoCancelarVolver;
 
-    [Header("Textos de confirmacion de reinicio")]
+    [Header("Textos de confirmación de reinicio")]
     [SerializeField] private TMP_Text textoConfirmarReiniciar;
-
-    [Header("Textos de los botones de reinicio")]
     [SerializeField] private TMP_Text textoBotonReiniciar;
     [SerializeField] private TMP_Text textoBotonCancelarReinicio;
+
+    [Header("Textos del menú de derrota")]
+    [SerializeField] private TMP_Text textoDerrota;
+    [SerializeField] private TMP_Text textoBotonRevancha;
+    [SerializeField] private TMP_Text textoBotonMenuPrincipal;
 
     [Header("Referencias para reiniciar la partida")]
     [SerializeField] private VidaTroll vidaTroll;
@@ -60,6 +72,12 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private GestorAcertijo gestorAcertijo;
 
     private void Start()
+    {
+        MostrarMenuInicial();
+        ActualizarTextos();
+    }
+
+    private void MostrarMenuInicial()
     {
         if (contenedorMenuPrincipal != null)
             contenedorMenuPrincipal.SetActive(true);
@@ -70,6 +88,22 @@ public class MenuPrincipalController : MonoBehaviour
         if (contenedorMenu != null)
             contenedorMenu.SetActive(true);
 
+        OcultarPanelesSecundarios();
+
+        if (panelDerrota != null)
+            panelDerrota.SetActive(false);
+
+        if (movimientoTroll != null)
+            movimientoTroll.DetenerMovimiento();
+
+        if (collisionPuerta != null)
+            collisionPuerta.enabled = false;
+
+        OcultarElementosMinijuego();
+    }
+
+    private void OcultarPanelesSecundarios()
+    {
         if (panelConfirmarSalida != null)
             panelConfirmarSalida.SetActive(false);
 
@@ -84,20 +118,50 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (panelConfirmarReiniciar != null)
             panelConfirmarReiniciar.SetActive(false);
+    }
+
+    private void ActivarElementosMinijuego()
+    {
+        if (contenedorBotonesInferiores != null)
+            contenedorBotonesInferiores.SetActive(true);
+
+        if (contenedorBarraVida != null)
+            contenedorBarraVida.SetActive(true);
+
+        if (contenedorPaloma != null)
+            contenedorPaloma.SetActive(true);
+
+        if (contenedorTroll != null)
+            contenedorTroll.SetActive(true);
+
+        if (contenedorAcertijo != null)
+            contenedorAcertijo.SetActive(false);
+    }
+
+    private void OcultarElementosMinijuego()
+    {
+        if (contenedorBotonesInferiores != null)
+            contenedorBotonesInferiores.SetActive(false);
+
+        if (contenedorBarraVida != null)
+            contenedorBarraVida.SetActive(false);
+
+        if (contenedorPaloma != null)
+            contenedorPaloma.SetActive(false);
 
         if (contenedorTroll != null)
             contenedorTroll.SetActive(false);
 
-        if (movimientoTroll != null)
-            movimientoTroll.DetenerMovimiento();
-
-        ActualizarTextos();
+        if (contenedorAcertijo != null)
+            contenedorAcertijo.SetActive(false);
     }
 
     public void Jugar()
     {
-        if (panelConfirmarVolver != null)
-            panelConfirmarVolver.SetActive(false);
+        OcultarPanelesSecundarios();
+
+        if (panelDerrota != null)
+            panelDerrota.SetActive(false);
 
         if (contenedorMenuPrincipal != null)
             contenedorMenuPrincipal.SetActive(false);
@@ -105,19 +169,35 @@ public class MenuPrincipalController : MonoBehaviour
         if (contenedorMinijuego != null)
             contenedorMinijuego.SetActive(true);
 
-        if (contenedorTroll != null)
-            contenedorTroll.SetActive(true);
-        else
-            Debug.LogWarning(
-                "No se ha asignado ContenedorTroll en MenuPrincipalController."
-            );
+        ActivarElementosMinijuego();
+        ReiniciarElementosPartida();
 
-        if (movimientoTroll != null)
+        if (collisionPuerta != null)
+        {
+            collisionPuerta.enabled = true;
+            collisionPuerta.ReiniciarPartida();
+        }
+        else if (movimientoTroll != null)
+        {
             movimientoTroll.IniciarMovimiento();
-        else
-            Debug.LogWarning(
-                "No se ha asignado MovimientoTroll en MenuPrincipalController."
-            );
+        }
+
+        ActualizarTextos();
+    }
+
+    private void ReiniciarElementosPartida()
+    {
+        if (vidaTroll != null)
+            vidaTroll.ReiniciarVida();
+
+        if (movimientoPaloma != null)
+            movimientoPaloma.ReiniciarPartida();
+
+        if (gestorAcertijo != null)
+            gestorAcertijo.ReiniciarAcertijo();
+
+        if (contenedorAcertijo != null)
+            contenedorAcertijo.SetActive(false);
     }
 
     public void MostrarInstrucciones()
@@ -251,35 +331,32 @@ public class MenuPrincipalController : MonoBehaviour
 
     public void ConfirmarVolverAlMenu()
     {
-        if (panelConfirmarVolver != null)
-            panelConfirmarVolver.SetActive(false);
+        OcultarPanelesSecundarios();
+
+        if (panelDerrota != null)
+            panelDerrota.SetActive(false);
 
         if (movimientoTroll != null)
+            movimientoTroll.DetenerMovimiento();
+
+        ReiniciarElementosPartida();
+
+        if (collisionPuerta != null)
+        {
+            collisionPuerta.enabled = true;
+            collisionPuerta.ReiniciarPartida();
+
+            if (movimientoTroll != null)
+                movimientoTroll.DetenerMovimiento();
+
+            collisionPuerta.enabled = false;
+        }
+        else if (movimientoTroll != null)
+        {
             movimientoTroll.ReiniciarMovimiento();
+        }
 
-        if (vidaTroll != null)
-            vidaTroll.ReiniciarVida();
-        else
-            Debug.LogWarning(
-                "No se ha asignado VidaTroll en MenuPrincipalController."
-            );
-
-        if (movimientoPaloma != null)
-            movimientoPaloma.ReiniciarPartida();
-        else
-            Debug.LogWarning(
-                "No se ha asignado MovimientoPaloma en MenuPrincipalController."
-            );
-
-        if (gestorAcertijo != null)
-            gestorAcertijo.ReiniciarAcertijo();
-        else
-            Debug.LogWarning(
-                "No se ha asignado GestorAcertijo en MenuPrincipalController."
-            );
-
-        if (contenedorTroll != null)
-            contenedorTroll.SetActive(false);
+        OcultarElementosMinijuego();
 
         if (contenedorMinijuego != null)
             contenedorMinijuego.SetActive(false);
@@ -291,6 +368,8 @@ public class MenuPrincipalController : MonoBehaviour
             contenedorMenu.SetActive(true);
 
         ActualizarTextos();
+
+        Debug.Log("Partida reiniciada. Volviendo al menú principal.");
     }
 
     public void CancelarVolverAlMenu()
@@ -305,10 +384,6 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (panelConfirmarReiniciar != null)
             panelConfirmarReiniciar.SetActive(true);
-        else
-            Debug.LogWarning(
-                "No se ha asignado PanelConfirmarReiniciar."
-            );
     }
 
     public void ConfirmarReiniciar()
@@ -316,36 +391,26 @@ public class MenuPrincipalController : MonoBehaviour
         if (panelConfirmarReiniciar != null)
             panelConfirmarReiniciar.SetActive(false);
 
-        if (movimientoTroll != null)
-            movimientoTroll.ReiniciarMovimiento();
+        if (panelDerrota != null)
+            panelDerrota.SetActive(false);
 
-        if (vidaTroll != null)
-            vidaTroll.ReiniciarVida();
-        else
-            Debug.LogWarning(
-                "No se ha asignado VidaTroll en MenuPrincipalController."
-            );
+        if (contenedorMinijuego != null)
+            contenedorMinijuego.SetActive(true);
 
-        if (movimientoPaloma != null)
-            movimientoPaloma.ReiniciarPartida();
-        else
-            Debug.LogWarning(
-                "No se ha asignado MovimientoPaloma en MenuPrincipalController."
-            );
+        ActivarElementosMinijuego();
+        ReiniciarElementosPartida();
 
-        if (gestorAcertijo != null)
-            gestorAcertijo.ReiniciarAcertijo();
-        else
-            Debug.LogWarning(
-                "No se ha asignado GestorAcertijo en MenuPrincipalController."
-            );
+        if (collisionPuerta != null)
+        {
+            collisionPuerta.enabled = true;
+            collisionPuerta.ReiniciarPartida();
+        }
+        else if (movimientoTroll != null)
+        {
+            movimientoTroll.IniciarMovimiento();
+        }
 
-        if (contenedorAcertijo != null)
-            contenedorAcertijo.SetActive(false);
-        else
-            Debug.LogWarning(
-                "No se ha asignado ContenedorAcertijo en MenuPrincipalController."
-            );
+        ActualizarTextos();
     }
 
     public void CancelarReiniciar()
@@ -356,50 +421,41 @@ public class MenuPrincipalController : MonoBehaviour
 
     public void ActualizarTextos()
     {
-        // Menu principal.
+        // Menú principal
         AsignarTexto(textoTitulo, "titulo");
         AsignarTexto(textoJugar, "jugar");
         AsignarTexto(textoInstrucciones, "instrucciones");
         AsignarTexto(textoIdioma, "idioma");
         AsignarTexto(textoSalir, "salir");
 
-        // Confirmacion de salida.
+        // Confirmación de salida
         AsignarTexto(textoMensajeConfirmarSalida, "confirmar_salida");
         AsignarTexto(textoBotonConfirmarSalida, "salir");
         AsignarTexto(textoCancelar, "cancelar");
 
-        // Seleccion de idioma.
+        // Selección de idioma
         AsignarTexto(textoEspanol, "espanol");
         AsignarTexto(textoEuskera, "euskera");
         AsignarTexto(textoIngles, "ingles");
 
-        // Instrucciones.
-        AsignarTexto(
-            textoContenidoInstrucciones,
-            "texto_instrucciones"
-        );
+        // Instrucciones
+        AsignarTexto(textoContenidoInstrucciones, "texto_instrucciones");
         AsignarTexto(textoVolver, "volver");
 
-        // Confirmacion de volver al menu.
+        // Confirmación de volver al menú
         AsignarTexto(textoConfirmarVolver, "confirmar_volver");
         AsignarTexto(textoSalirMenu, "salir");
         AsignarTexto(textoCancelarVolver, "cancelar");
 
-        // Confirmacion de reinicio.
-        AsignarTexto(
-            textoConfirmarReiniciar,
-            "confirmar_reiniciar"
-        );
+        // Confirmación de reinicio
+        AsignarTexto(textoConfirmarReiniciar, "confirmar_reiniciar");
+        AsignarTexto(textoBotonReiniciar, "boton_reiniciar");
+        AsignarTexto(textoBotonCancelarReinicio, "boton_cancelar_reinicio");
 
-        // Botones de reinicio.
-        AsignarTexto(
-            textoBotonReiniciar,
-            "boton_reiniciar"
-        );
-        AsignarTexto(
-            textoBotonCancelarReinicio,
-            "boton_cancelar_reinicio"
-        );
+        // Menú de derrota
+        AsignarTexto(textoDerrota, "derrota");
+        AsignarTexto(textoBotonRevancha, "revancha");
+        AsignarTexto(textoBotonMenuPrincipal, "menu_principal");
     }
 
     private void AsignarTexto(TMP_Text texto, string clave)

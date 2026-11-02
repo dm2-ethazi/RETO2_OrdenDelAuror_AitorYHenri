@@ -70,10 +70,6 @@
       "valor": "BAIEZTATU"
     },
     {
-      "clave": "acertijo.desplazamiento",
-      "valor": "Desplazamendua"
-    },
-    {
       "clave": "acertijo.vacia",
       "valor": "Idatzi erantzun bat."
     },
@@ -96,6 +92,18 @@
     {
       "clave": "boton_cancelar_reinicio",
       "valor": "UTZI"
+    },
+    {
+      "clave": "derrota",
+      "valor": "GALDU DUZU!"
+    },
+    {
+      "clave": "revancha",
+      "valor": "BERRIRO JOKATU"
+    },
+    {
+      "clave": "menu_principal",
+      "valor": "MENU NAGUSIA"
     }
   ]
 }

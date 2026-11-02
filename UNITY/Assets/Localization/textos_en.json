@@ -70,10 +70,6 @@
       "valor": "CONFIRM"
     },
     {
-      "clave": "acertijo.desplazamiento",
-      "valor": "Shift"
-    },
-    {
       "clave": "acertijo.vacia",
       "valor": "Enter an answer."
     },
@@ -96,6 +92,18 @@
     {
       "clave": "boton_cancelar_reinicio",
       "valor": "CANCEL"
+    },
+    {
+      "clave": "derrota",
+      "valor": "DEFEAT!"
+    },
+    {
+      "clave": "revancha",
+      "valor": "REMATCH"
+    },
+    {
+      "clave": "menu_principal",
+      "valor": "MAIN MENU"
     }
   ]
 }

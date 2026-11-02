@@ -7,6 +7,14 @@ public class MovimientoTroll : MonoBehaviour
     [SerializeField] private float velocidad = 100f;
 
     private bool moviendose = false;
+    private float velocidadInicial;
+    private Vector3 posicionInicial;
+
+    private void Awake()
+    {
+        velocidadInicial = velocidad;
+        posicionInicial = transform.position;
+    }
 
     private void Update()
     {
@@ -31,6 +39,16 @@ public class MovimientoTroll : MonoBehaviour
 
     public void ReiniciarMovimiento()
     {
+        transform.position = posicionInicial;
+        velocidad = velocidadInicial;
+
+        // Dejar el troll preparado para volver a moverse.
         moviendose = false;
+    }
+
+    public void ReiniciarYEmpezarMovimiento()
+    {
+        ReiniciarMovimiento();
+        IniciarMovimiento();
     }
 }
