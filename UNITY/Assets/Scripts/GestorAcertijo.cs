@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using UnityEngine;
@@ -8,6 +9,10 @@ public class GestorAcertijo : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private VidaTroll vidaTroll;
     [SerializeField] private MovimientoPaloma movimientoPaloma;
+    [SerializeField] private MovimientoTroll movimientoTroll;
+
+    [Header("Efecto de explosion")]
+    [SerializeField] private Animator animacionExplosion;
 
     [Header("Contenedores")]
     [SerializeField] private GameObject contenedorAcertijo;
@@ -66,7 +71,7 @@ public class GestorAcertijo : MonoBehaviour
     {
         "KANPAIEK NAHASTEN DUTE",
         "ARRATOIEI BELDURRA DIE",
-        "IZOTZAREN IRRISTATZEN DA",
+        "IZOTZEAN IRRISTATZEN DA",
         "HAUTSAK EZ DIO ONDO IKUSTEN UZTEN"
     };
 
@@ -105,6 +110,7 @@ public class GestorAcertijo : MonoBehaviour
 
     private string fraseOriginal;
     private Coroutine corrutinaMensaje;
+    private Coroutine corrutinaExplosion;
     private bool inicializado;
     private bool respuestaProcesada;
 
@@ -113,6 +119,10 @@ public class GestorAcertijo : MonoBehaviour
         inicializado = true;
 
         OcultarMensajes();
+
+        if (animacionExplosion != null)
+            animacionExplosion.gameObject.SetActive(false);
+
         GenerarAcertijo();
     }
 
@@ -156,6 +166,36 @@ public class GestorAcertijo : MonoBehaviour
                 ? "+" + desplazamiento
                 : desplazamiento.ToString();
         }
+
+        // Traducir mensaje de respuesta correcta.
+        if (txtCorrecto != null)
+        {
+            TMP_Text textoCorrecto =
+                txtCorrecto.GetComponentInChildren<TMP_Text>(true);
+
+            if (textoCorrecto != null)
+            {
+                textoCorrecto.text =
+                    GestorIdiomas.Instancia.ObtenerTexto(
+                        "acertijo.correcto"
+                    );
+            }
+        }
+
+        // Traducir mensaje de respuesta incorrecta.
+        if (txtIncorrecto != null)
+        {
+            TMP_Text textoIncorrecto =
+                txtIncorrecto.GetComponentInChildren<TMP_Text>(true);
+
+            if (textoIncorrecto != null)
+            {
+                textoIncorrecto.text =
+                    GestorIdiomas.Instancia.ObtenerTexto(
+                        "acertijo.incorrecto"
+                    );
+            }
+        }
     }
 
     public void GenerarAcertijo()
@@ -172,8 +212,6 @@ public class GestorAcertijo : MonoBehaviour
             return;
         }
 
-        // Desplazamiento aleatorio entre -5 y +5,
-        // excluyendo -1, 0 y +1.
         do
         {
             desplazamiento = UnityEngine.Random.Range(-5, 6);
@@ -203,19 +241,15 @@ public class GestorAcertijo : MonoBehaviour
             return;
         }
 
-        // Elegir una frase aleatoria.
         fraseOriginal = frasesSeleccionadas[
             UnityEngine.Random.Range(0, frasesSeleccionadas.Length)
         ];
 
-        // Cifrar la frase.
         if (textoCifrado != null)
             textoCifrado.text = CifrarCesar(fraseOriginal);
 
-        // Mostrar el desplazamiento actual.
         ActualizarTextos();
 
-        // Limpiar la respuesta anterior.
         if (campoRespuesta != null)
             campoRespuesta.text = "";
 
@@ -339,8 +373,29 @@ public class GestorAcertijo : MonoBehaviour
         MostrarMensajeResultado(respuestaCorrecta);
 
         if (respuestaCorrecta)
+        {
+            // Respuesta correcta: el troll pierde una vida.
             vidaTroll.RecibirDano();
 
+            // Reproducir la explosion magica.
+            ReproducirExplosion();
+        }
+        else
+        {
+            // Respuesta incorrecta: el troll acelera.
+            if (movimientoTroll != null)
+            {
+                movimientoTroll.Acelerar();
+            }
+            else
+            {
+                Debug.LogError(
+                    "No se ha asignado MovimientoTroll en GestorAcertijo."
+                );
+            }
+        }
+
+        // Se mantiene la aceleracion original de la paloma.
         if (movimientoPaloma != null)
         {
             movimientoPaloma.AcelerarConfigurado();
@@ -362,6 +417,50 @@ public class GestorAcertijo : MonoBehaviour
         }
 
         CerrarAcertijo();
+    }
+
+    private void ReproducirExplosion()
+    {
+        if (animacionExplosion == null)
+        {
+            Debug.LogWarning(
+                "No se ha asignado la animacion de explosion."
+            );
+            return;
+        }
+
+        if (corrutinaExplosion != null)
+        {
+            StopCoroutine(corrutinaExplosion);
+            corrutinaExplosion = null;
+        }
+
+        animacionExplosion.gameObject.SetActive(true);
+
+        // Reiniciar la animacion desde el primer fotograma.
+        animacionExplosion.Play("ExplosionAnimation", 0, 0f);
+
+        corrutinaExplosion = StartCoroutine(
+            DesactivarExplosionAlTerminar()
+        );
+    }
+
+    private IEnumerator DesactivarExplosionAlTerminar()
+    {
+        yield return null;
+
+        float duracion = animacionExplosion
+            .GetCurrentAnimatorStateInfo(0).length;
+
+        if (duracion <= 0f)
+            duracion = 1f;
+
+        yield return new WaitForSeconds(duracion);
+
+        if (animacionExplosion != null)
+            animacionExplosion.gameObject.SetActive(false);
+
+        corrutinaExplosion = null;
     }
 
     private void MostrarMensajeResultado(bool respuestaCorrecta)
@@ -430,21 +529,19 @@ public class GestorAcertijo : MonoBehaviour
     }
 
     public void ReiniciarAcertijo()
-{
-    respuestaProcesada = false;
-    OcultarMensajes();
+    {
+        respuestaProcesada = false;
+        OcultarMensajes();
 
-    if (campoRespuesta != null)
-        campoRespuesta.text = "";
+        if (campoRespuesta != null)
+            campoRespuesta.text = "";
 
-    // Mantener cerrado el panel del acertijo tras reiniciar.
-    if (contenedorAcertijo != null)
-        contenedorAcertijo.SetActive(false);
+        if (contenedorAcertijo != null)
+            contenedorAcertijo.SetActive(false);
 
-    // Restaurar la paloma.
-    if (contenedorPaloma != null)
-        contenedorPaloma.SetActive(true);
+        if (contenedorPaloma != null)
+            contenedorPaloma.SetActive(true);
 
-    GenerarAcertijo();
-}
+        GenerarAcertijo();
+    }
 }

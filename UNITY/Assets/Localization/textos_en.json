@@ -104,6 +104,22 @@
     {
       "clave": "menu_principal",
       "valor": "MAIN MENU"
+    },
+    {
+      "clave": "victoria",
+      "valor": "VICTORY!"
+    },
+    {
+      "clave": "volver_a_jugar",
+      "valor": "PLAY AGAIN"
+    },
+    {
+        "clave": "acertijo.correcto",
+        "valor": "CORRECT!"
+    },
+    {
+        "clave": "acertijo.incorrecto",
+        "valor": "INCORRECT!"
     }
   ]
 }

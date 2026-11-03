@@ -18,10 +18,10 @@ public class MenuPrincipalController : MonoBehaviour
     [Header("Movimiento del troll")]
     [SerializeField] private MovimientoTroll movimientoTroll;
 
-    [Header("Colisión de la puerta")]
+    [Header("Colision de la puerta")]
     [SerializeField] private CollisionPuerta collisionPuerta;
 
-    [Header("Paneles del menú")]
+    [Header("Paneles del menu")]
     [SerializeField] private GameObject contenedorMenu;
     [SerializeField] private GameObject panelConfirmarSalida;
     [SerializeField] private GameObject panelSeleccionIdioma;
@@ -29,20 +29,21 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private GameObject panelConfirmarVolver;
     [SerializeField] private GameObject panelConfirmarReiniciar;
     [SerializeField] private GameObject panelDerrota;
+    [SerializeField] private GameObject panelVictoria;
 
-    [Header("Textos del menú principal")]
+    [Header("Textos del menu principal")]
     [SerializeField] private TMP_Text textoTitulo;
     [SerializeField] private TMP_Text textoJugar;
     [SerializeField] private TMP_Text textoInstrucciones;
     [SerializeField] private TMP_Text textoIdioma;
     [SerializeField] private TMP_Text textoSalir;
 
-    [Header("Textos de confirmación de salida")]
+    [Header("Textos de confirmacion de salida")]
     [SerializeField] private TMP_Text textoMensajeConfirmarSalida;
     [SerializeField] private TMP_Text textoBotonConfirmarSalida;
     [SerializeField] private TMP_Text textoCancelar;
 
-    [Header("Textos de selección de idioma")]
+    [Header("Textos de seleccion de idioma")]
     [SerializeField] private TMP_Text textoEspanol;
     [SerializeField] private TMP_Text textoEuskera;
     [SerializeField] private TMP_Text textoIngles;
@@ -51,20 +52,25 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private TMP_Text textoContenidoInstrucciones;
     [SerializeField] private TMP_Text textoVolver;
 
-    [Header("Textos de confirmación de volver")]
+    [Header("Textos de confirmacion de volver")]
     [SerializeField] private TMP_Text textoConfirmarVolver;
     [SerializeField] private TMP_Text textoSalirMenu;
     [SerializeField] private TMP_Text textoCancelarVolver;
 
-    [Header("Textos de confirmación de reinicio")]
+    [Header("Textos de confirmacion de reinicio")]
     [SerializeField] private TMP_Text textoConfirmarReiniciar;
     [SerializeField] private TMP_Text textoBotonReiniciar;
     [SerializeField] private TMP_Text textoBotonCancelarReinicio;
 
-    [Header("Textos del menú de derrota")]
+    [Header("Textos del menu de derrota")]
     [SerializeField] private TMP_Text textoDerrota;
     [SerializeField] private TMP_Text textoBotonRevancha;
     [SerializeField] private TMP_Text textoBotonMenuPrincipal;
+
+    [Header("Textos del menu de victoria")]
+    [SerializeField] private TMP_Text textoVictoria;
+    [SerializeField] private TMP_Text textoBotonVolverAJugar;
+    [SerializeField] private TMP_Text textoBotonMenuPrincipalVictoria;
 
     [Header("Referencias para reiniciar la partida")]
     [SerializeField] private VidaTroll vidaTroll;
@@ -92,6 +98,9 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (panelDerrota != null)
             panelDerrota.SetActive(false);
+
+        if (panelVictoria != null)
+            panelVictoria.SetActive(false);
 
         if (movimientoTroll != null)
             movimientoTroll.DetenerMovimiento();
@@ -162,6 +171,9 @@ public class MenuPrincipalController : MonoBehaviour
 
         if (panelDerrota != null)
             panelDerrota.SetActive(false);
+
+        if (panelVictoria != null)
+            panelVictoria.SetActive(false);
 
         if (contenedorMenuPrincipal != null)
             contenedorMenuPrincipal.SetActive(false);
@@ -336,6 +348,9 @@ public class MenuPrincipalController : MonoBehaviour
         if (panelDerrota != null)
             panelDerrota.SetActive(false);
 
+        if (panelVictoria != null)
+            panelVictoria.SetActive(false);
+
         if (movimientoTroll != null)
             movimientoTroll.DetenerMovimiento();
 
@@ -394,6 +409,9 @@ public class MenuPrincipalController : MonoBehaviour
         if (panelDerrota != null)
             panelDerrota.SetActive(false);
 
+        if (panelVictoria != null)
+            panelVictoria.SetActive(false);
+
         if (contenedorMinijuego != null)
             contenedorMinijuego.SetActive(true);
 
@@ -419,6 +437,35 @@ public class MenuPrincipalController : MonoBehaviour
             panelConfirmarReiniciar.SetActive(false);
     }
 
+    // Se ejecuta cuando el troll se queda sin vidas.
+    public void MostrarVictoria()
+    {
+        if (panelVictoria == null)
+        {
+            Debug.LogError("No se ha asignado el PanelVictoria en el Inspector.");
+            return;
+        }
+
+        if (movimientoTroll != null)
+            movimientoTroll.DetenerMovimiento();
+
+        if (collisionPuerta != null)
+            collisionPuerta.enabled = false;
+
+        OcultarPanelesSecundarios();
+
+        if (panelDerrota != null)
+            panelDerrota.SetActive(false);
+
+        OcultarElementosMinijuego();
+
+        ActualizarTextos();
+
+        panelVictoria.SetActive(true);
+
+        Debug.Log("¡Victoria! El troll se ha quedado sin vidas.");
+    }
+
     public void ActualizarTextos()
     {
         // Menú principal
@@ -442,7 +489,7 @@ public class MenuPrincipalController : MonoBehaviour
         AsignarTexto(textoContenidoInstrucciones, "texto_instrucciones");
         AsignarTexto(textoVolver, "volver");
 
-        // Confirmación de volver al menú
+        // Confirmación de volver
         AsignarTexto(textoConfirmarVolver, "confirmar_volver");
         AsignarTexto(textoSalirMenu, "salir");
         AsignarTexto(textoCancelarVolver, "cancelar");
@@ -456,11 +503,19 @@ public class MenuPrincipalController : MonoBehaviour
         AsignarTexto(textoDerrota, "derrota");
         AsignarTexto(textoBotonRevancha, "revancha");
         AsignarTexto(textoBotonMenuPrincipal, "menu_principal");
+
+        // Menú de victoria
+        AsignarTexto(textoVictoria, "victoria");
+        AsignarTexto(textoBotonVolverAJugar, "volver_a_jugar");
+        AsignarTexto(textoBotonMenuPrincipalVictoria, "menu_principal");
     }
 
     private void AsignarTexto(TMP_Text texto, string clave)
     {
-        if (texto == null || GestorIdiomas.Instancia == null)
+        if (texto == null)
+            return;
+
+        if (GestorIdiomas.Instancia == null)
             return;
 
         texto.text = GestorIdiomas.Instancia.ObtenerTexto(clave);

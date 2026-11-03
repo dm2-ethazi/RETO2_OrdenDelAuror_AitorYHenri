@@ -104,6 +104,22 @@
     {
       "clave": "menu_principal",
       "valor": "MENÚ PRINCIPAL"
+    },
+    {
+      "clave": "victoria",
+      "valor": "¡VICTORIA!"
+    },
+    {
+      "clave": "volver_a_jugar",
+      "valor": "VOLVER A JUGAR"
+    },
+    {
+        "clave": "acertijo.correcto",
+        "valor": "¡CORRECTO!"
+    },
+    {
+        "clave": "acertijo.incorrecto",
+        "valor": "¡INCORRECTO!"
     }
   ]
 }

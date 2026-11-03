@@ -6,14 +6,18 @@ public class VidaTroll : MonoBehaviour
     [Header("Corazones")]
     [SerializeField] private GameObject[] corazones;
 
-    private int vidaActual;
+    [Header("Controlador del menú")]
+    [SerializeField] private MenuPrincipalController menuPrincipalController;
 
-    // Permite consultar las vidas desde otros scripts.
+    private int vidaActual;
+    private bool victoriaMostrada;
+
     public int VidaActual => vidaActual;
 
     private void Start()
     {
         vidaActual = corazones.Length;
+        victoriaMostrada = false;
         ActualizarCorazones();
     }
 
@@ -26,9 +30,20 @@ public class VidaTroll : MonoBehaviour
 
         ActualizarCorazones();
 
-        if (vidaActual <= 0)
+        if (vidaActual <= 0 && !victoriaMostrada)
         {
+            victoriaMostrada = true;
+
             Debug.Log("¡El troll ha sido derrotado!");
+
+            if (menuPrincipalController != null)
+            {
+                menuPrincipalController.MostrarVictoria();
+            }
+            else
+            {
+                Debug.LogError("No se ha asignado MenuPrincipalController en VidaTroll.");
+            }
         }
     }
 
@@ -46,6 +61,7 @@ public class VidaTroll : MonoBehaviour
     public void ReiniciarVida()
     {
         vidaActual = corazones.Length;
+        victoriaMostrada = false;
         ActualizarCorazones();
     }
 }

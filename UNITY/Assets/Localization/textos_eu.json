@@ -104,6 +104,22 @@
     {
       "clave": "menu_principal",
       "valor": "MENU NAGUSIA"
+    },
+    {
+      "clave": "victoria",
+      "valor": "GARAIPENA!"
+    },
+    {
+      "clave": "volver_a_jugar",
+      "valor": "BERRIRO JOKATU"
+    },
+    {
+        "clave": "acertijo.correcto",
+        "valor": "ZUZENA!"
+    },
+    {
+        "clave": "acertijo.incorrecto",
+        "valor": "OKERRA!"
     }
   ]
 }
