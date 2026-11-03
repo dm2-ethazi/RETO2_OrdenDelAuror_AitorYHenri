@@ -1,4 +1,3 @@
-
 {
   "traducciones": [
     {
@@ -114,12 +113,44 @@
       "valor": "VOLVER A JUGAR"
     },
     {
-        "clave": "acertijo.correcto",
-        "valor": "¡CORRECTO!"
+      "clave": "acertijo.correcto",
+      "valor": "¡CORRECTO!"
     },
     {
-        "clave": "acertijo.incorrecto",
-        "valor": "¡INCORRECTO!"
+      "clave": "acertijo.incorrecto",
+      "valor": "¡INCORRECTO!"
+    },
+    {
+      "clave": "instrucciones.preparacion.titulo",
+      "valor": "PREPARACIÓN"
+    },
+    {
+      "clave": "instrucciones.preparacion.texto",
+      "valor": "Consigue un pergamino haciendo clic en las palomas mensajeras que van pasando. Al abrirlo, encontrarás un enigma que tendrás que resolver. ¡Cuantos más pergaminos consigas, más rápido volarán las palomas!"
+    },
+    {
+      "clave": "instrucciones.enigma.titulo",
+      "valor": "ENIGMA"
+    },
+    {
+      "clave": "instrucciones.enigma.texto",
+      "valor": "Resuelve el enigma utilizando el método de cifrado César. Aparecerá una palabra cifrada y debajo un número que indica cuántas posiciones se ha desplazado cada letra (siemple en alfabeto inglés). Descifra la palabra y confirma tu respuesta."
+    },
+    {
+      "clave": "instrucciones.resultado.titulo",
+      "valor": "RESULTADO"
+    },
+    {
+      "clave": "instrucciones.resultado.texto",
+      "valor": "Si aciertas el enigma, el enemigo perderá una vida y volverás a la fase de preparación con enigmas más difíciles. Si fallas, el enemigo no perderá ninguna vida y aumentará su velocidad de movimiento."
+    },
+    {
+      "clave": "instrucciones.utilidades.titulo",
+      "valor": "UTILIDADES"
+    },
+    {
+      "clave": "instrucciones.utilidades.texto",
+      "valor": "En el modo acertijo, tendrás un botón «ABC» que muestra u oculta un abecedario (el inglés) para ayudarte a resolver los enigmas. También puedes reiniciar o salir del minijuego en cualquier momento mediante los botones de la parte inferior izquierda. ¡Derrota al enemigo antes de que llegue a la puerta del castillo para ganar!"
     }
   ]
 }

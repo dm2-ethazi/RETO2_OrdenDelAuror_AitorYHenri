@@ -1,4 +1,3 @@
-
 {
   "traducciones": [
     {
@@ -114,12 +113,44 @@
       "valor": "BERRIRO JOKATU"
     },
     {
-        "clave": "acertijo.correcto",
-        "valor": "ZUZENA!"
+      "clave": "acertijo.correcto",
+      "valor": "ZUZENA!"
     },
     {
-        "clave": "acertijo.incorrecto",
-        "valor": "OKERRA!"
+      "clave": "acertijo.incorrecto",
+      "valor": "OKERRA!"
+    },
+    {
+      "clave": "instrucciones.preparacion.titulo",
+      "valor": "PRESTAKETA"
+    },
+    {
+      "clave": "instrucciones.preparacion.texto",
+      "valor": "Lortu pergamino bat igarotzen diren uso mezularietan klik eginez. Irekitzean, ebatzi beharko duzun asmakizun bat aurkituko duzu. Zenbat eta pergamino gehiago lortu, orduan eta azkarrago egingo dute hegan usoek!"
+    },
+    {
+      "clave": "instrucciones.enigma.titulo",
+      "valor": "ASMAKIZUNA"
+    },
+    {
+      "clave": "instrucciones.enigma.texto",
+      "valor": "Ebatzi asmakizuna Zesarren zifratze-metodoa erabiliz. Zifratutako hitz bat agertuko da, eta azpian zenbaki bat, letra bakoitza zenbat posizio mugitu den adierazteko (beti alfabeto ingelesean). Deszifratu hitza eta berretsi zure erantzuna."
+    },
+    {
+      "clave": "instrucciones.resultado.titulo",
+      "valor": "EMAITZA"
+    },
+    {
+      "clave": "instrucciones.resultado.texto",
+      "valor": "Asmakizuna zuzen asmatzen baduzu, etsaiak bizitza bat galduko du eta prestaketa-fasera itzuliko zara, asmakizun zailagoekin. Huts egiten baduzu, etsaiak ez du bizitzarik galduko eta mugitzeko abiadura handituko du."
+    },
+    {
+      "clave": "instrucciones.utilidades.titulo",
+      "valor": "TRESNAK"
+    },
+    {
+      "clave": "instrucciones.utilidades.texto",
+      "valor": "Asmakizun moduan, «ABC» botoi bat izango duzu, asmakizunak ebazten laguntzeko alfabetoa (ingelesa) erakutsi edo ezkutatzeko. Minijokoa edozein unetan berrabiarazi edo utzi dezakezu beheko ezkerreko aldeko botoiak erabiliz. Garaitu etsaia gazteluko ateraino iritsi baino lehen irabazteko!"
     }
   ]
 }

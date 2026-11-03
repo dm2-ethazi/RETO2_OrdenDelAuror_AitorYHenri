@@ -334,13 +334,50 @@ public class GestorAcertijo : MonoBehaviour
         return resultado;
     }
 
+    // Comprobar respuesta ignorando tildes, acentos y otras marcas.
     public bool ComprobarRespuesta(string respuesta)
     {
-        return !string.IsNullOrWhiteSpace(respuesta)
-            && respuesta.Trim().Equals(
-                fraseOriginal,
-                StringComparison.OrdinalIgnoreCase
-            );
+        if (string.IsNullOrWhiteSpace(respuesta))
+            return false;
+
+        string respuestaNormalizada =
+            QuitarMarcasDiacriticas(respuesta.Trim());
+
+        string fraseNormalizada =
+            QuitarMarcasDiacriticas(fraseOriginal.Trim());
+
+        return respuestaNormalizada.Equals(
+            fraseNormalizada,
+            StringComparison.OrdinalIgnoreCase
+        );
+    }
+
+    // Eliminar todas las marcas diacriticas Unicode.
+    private string QuitarMarcasDiacriticas(string texto)
+    {
+        string normalizado = texto.Normalize(
+            System.Text.NormalizationForm.FormD
+        );
+
+        System.Text.StringBuilder resultado =
+            new System.Text.StringBuilder();
+
+        foreach (char caracter in normalizado)
+        {
+            System.Globalization.UnicodeCategory categoria =
+                System.Globalization.CharUnicodeInfo.GetUnicodeCategory(caracter);
+
+            if (categoria != System.Globalization.UnicodeCategory.NonSpacingMark &&
+                categoria != System.Globalization.UnicodeCategory.SpacingCombiningMark &&
+                categoria != System.Globalization.UnicodeCategory.EnclosingMark)
+            {
+                resultado.Append(caracter);
+            }
+        }
+
+        return resultado.ToString().Normalize(
+            System.Text.NormalizationForm.FormC
+        );
     }
 
     public void ConfirmarRespuesta()

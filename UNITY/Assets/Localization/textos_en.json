@@ -1,4 +1,3 @@
-
 {
   "traducciones": [
     {
@@ -114,12 +113,44 @@
       "valor": "PLAY AGAIN"
     },
     {
-        "clave": "acertijo.correcto",
-        "valor": "CORRECT!"
+      "clave": "acertijo.correcto",
+      "valor": "CORRECT!"
     },
     {
-        "clave": "acertijo.incorrecto",
-        "valor": "INCORRECT!"
+      "clave": "acertijo.incorrecto",
+      "valor": "INCORRECT!"
+    },
+    {
+      "clave": "instrucciones.preparacion.titulo",
+      "valor": "PREPARATION"
+    },
+    {
+      "clave": "instrucciones.preparacion.texto",
+      "valor": "Collect a scroll by clicking on the messenger pigeons as they fly by. When you open it, you will find a riddle that you must solve. The more scrolls you collect, the faster the pigeons will fly!"
+    },
+    {
+      "clave": "instrucciones.enigma.titulo",
+      "valor": "RIDDLE"
+    },
+    {
+      "clave": "instrucciones.enigma.texto",
+      "valor": "Solve the riddle using the Caesar cipher. A coded word will appear, along with a number indicating how many positions each letter has been shifted (always on english alphabet). Decode the word and confirm your answer."
+    },
+    {
+      "clave": "instrucciones.resultado.titulo",
+      "valor": "RESULT"
+    },
+    {
+      "clave": "instrucciones.resultado.texto",
+      "valor": "If you solve the riddle correctly, the enemy will lose one life and you will return to the preparation phase with harder riddles. If you fail, the enemy will not lose any lives and its movement speed will increase."
+    },
+    {
+      "clave": "instrucciones.utilidades.titulo",
+      "valor": "UTILITIES"
+    },
+    {
+      "clave": "instrucciones.utilidades.texto",
+      "valor": "In riddle mode, you will have an «ABC» button that shows or hides an alphabet (the english one) to help you solve the riddles. You can also restart or leave the minigame at any time using the buttons in the bottom-left corner. Defeat the enemy before it reaches the castle gate to win!"
     }
   ]
 }

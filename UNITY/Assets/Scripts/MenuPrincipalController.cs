@@ -49,7 +49,18 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private TMP_Text textoIngles;
 
     [Header("Textos de instrucciones")]
-    [SerializeField] private TMP_Text textoContenidoInstrucciones;
+    [SerializeField] private TMP_Text textoTituloPreparacion;
+    [SerializeField] private TMP_Text textoPreparacion;
+
+    [SerializeField] private TMP_Text textoTituloEnigma;
+    [SerializeField] private TMP_Text textoEnigma;
+
+    [SerializeField] private TMP_Text textoTituloResultado;
+    [SerializeField] private TMP_Text textoResultado;
+
+    [SerializeField] private TMP_Text textoTituloUtilidades;
+    [SerializeField] private TMP_Text textoUtilidades;
+
     [SerializeField] private TMP_Text textoVolver;
 
     [Header("Textos de confirmacion de volver")]
@@ -437,7 +448,6 @@ public class MenuPrincipalController : MonoBehaviour
             panelConfirmarReiniciar.SetActive(false);
     }
 
-    // Se ejecuta cuando el troll se queda sin vidas.
     public void MostrarVictoria()
     {
         if (panelVictoria == null)
@@ -468,43 +478,54 @@ public class MenuPrincipalController : MonoBehaviour
 
     public void ActualizarTextos()
     {
-        // Menú principal
+        // Menu principal
         AsignarTexto(textoTitulo, "titulo");
         AsignarTexto(textoJugar, "jugar");
         AsignarTexto(textoInstrucciones, "instrucciones");
         AsignarTexto(textoIdioma, "idioma");
         AsignarTexto(textoSalir, "salir");
 
-        // Confirmación de salida
+        // Confirmacion de salida
         AsignarTexto(textoMensajeConfirmarSalida, "confirmar_salida");
         AsignarTexto(textoBotonConfirmarSalida, "salir");
         AsignarTexto(textoCancelar, "cancelar");
 
-        // Selección de idioma
+        // Seleccion de idioma
         AsignarTexto(textoEspanol, "espanol");
         AsignarTexto(textoEuskera, "euskera");
         AsignarTexto(textoIngles, "ingles");
 
-        // Instrucciones
-        AsignarTexto(textoContenidoInstrucciones, "texto_instrucciones");
+        // Instrucciones: cuatro pergaminos
+        AsignarTexto(textoTituloPreparacion, "instrucciones.preparacion.titulo");
+        AsignarTexto(textoPreparacion, "instrucciones.preparacion.texto");
+
+        AsignarTexto(textoTituloEnigma, "instrucciones.enigma.titulo");
+        AsignarTexto(textoEnigma, "instrucciones.enigma.texto");
+
+        AsignarTexto(textoTituloResultado, "instrucciones.resultado.titulo");
+        AsignarTexto(textoResultado, "instrucciones.resultado.texto");
+
+        AsignarTexto(textoTituloUtilidades, "instrucciones.utilidades.titulo");
+        AsignarTexto(textoUtilidades, "instrucciones.utilidades.texto");
+
         AsignarTexto(textoVolver, "volver");
 
-        // Confirmación de volver
+        // Confirmacion de volver
         AsignarTexto(textoConfirmarVolver, "confirmar_volver");
         AsignarTexto(textoSalirMenu, "salir");
         AsignarTexto(textoCancelarVolver, "cancelar");
 
-        // Confirmación de reinicio
+        // Confirmacion de reinicio
         AsignarTexto(textoConfirmarReiniciar, "confirmar_reiniciar");
         AsignarTexto(textoBotonReiniciar, "boton_reiniciar");
         AsignarTexto(textoBotonCancelarReinicio, "boton_cancelar_reinicio");
 
-        // Menú de derrota
+        // Menu de derrota
         AsignarTexto(textoDerrota, "derrota");
         AsignarTexto(textoBotonRevancha, "revancha");
         AsignarTexto(textoBotonMenuPrincipal, "menu_principal");
 
-        // Menú de victoria
+        // Menu de victoria
         AsignarTexto(textoVictoria, "victoria");
         AsignarTexto(textoBotonVolverAJugar, "volver_a_jugar");
         AsignarTexto(textoBotonMenuPrincipalVictoria, "menu_principal");
