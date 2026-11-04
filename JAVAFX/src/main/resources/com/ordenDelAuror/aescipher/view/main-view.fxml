@@ -9,7 +9,8 @@
       alignment="CENTER"
       spacing="10">
 
-    <Button text="Seleccionar archivo"/>
+    <Button text="Seleccionar archivo"
+            onAction="#selectFile"/>
 
     <PasswordField
             promptText="Contraseña"/>
@@ -18,6 +19,7 @@
 
     <Button text="Descifrar"/>
 
-    <Label text="Sin archivo seleccionado"/>
+    <Label fx:id="statusLabel"
+           text="Sin archivo seleccionado"/>
 
 </VBox>
