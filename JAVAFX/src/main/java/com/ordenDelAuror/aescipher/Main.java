@@ -16,6 +16,11 @@ public class Main extends Application {
 
         Scene scene = new Scene(loader.load());
 
+        scene.getStylesheets().add(
+                getClass()
+                        .getResource("/com/ordenDelAuror/aescipher/css/style.css")
+                        .toExternalForm());
+
         stage.setTitle("Orden del Auror");
         stage.setScene(scene);
         stage.setMinWidth(400);

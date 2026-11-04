@@ -7,21 +7,23 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.ordenDelAuror.aescipher.controller.MainController"
       alignment="CENTER"
-      spacing="10">
+      spacing="15">
+
+    <Label text="Orden Del Auror"
+           styleClass="title-label"/>
 
     <Button text="Seleccionar archivo"
-            onAction="#selectFile"/>
+            styleClass="file-button"/>
 
     <PasswordField
-            fx:id="passwordField"/>
+            promptText="Contraseña"/>
 
-    <Button text="Encriptar"
-            onAction="#encrypt"/>
+    <Button text="Cifrar"
+            styleClass="encrypt-button"/>
 
-    <Button text="Desencriptar"
-            onAction="#decrypt"/>
+    <Button text="Descifrar"
+            styleClass="decrypt-button"/>
 
-    <Label fx:id="statusLabel"
-           text="Sin archivo seleccionado"/>
+    <Label text="Sin archivo seleccionado"/>
 
 </VBox>
