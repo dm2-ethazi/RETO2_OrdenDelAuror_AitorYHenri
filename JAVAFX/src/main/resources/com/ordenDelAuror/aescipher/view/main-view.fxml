@@ -13,11 +13,13 @@
             onAction="#selectFile"/>
 
     <PasswordField
-            promptText="Contraseña"/>
+            fx:id="passwordField"/>
 
-    <Button text="Cifrar"/>
+    <Button text="Encriptar"
+            onAction="#encrypt"/>
 
-    <Button text="Descifrar"/>
+    <Button text="Desencriptar"
+            onAction="#decrypt"/>
 
     <Label fx:id="statusLabel"
            text="Sin archivo seleccionado"/>
