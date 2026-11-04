@@ -1,0 +1,30 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema principal de Orden del Auror -->
+    <style name="Base.Theme.Orden_del_Auror"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/azul_hechicero</item>
+        <item name="colorOnPrimary">@color/texto_claro</item>
+
+        <!-- Colores secundarios -->
+        <item name="colorSecondary">@color/dorado_antiguo</item>
+        <item name="colorOnSecondary">@color/texto_claro</item>
+
+        <!-- Color terciario -->
+        <item name="colorTertiary">@color/granate_magico</item>
+        <item name="colorOnTertiary">@color/texto_claro</item>
+
+        <!-- Fondo y superficies -->
+        <item name="android:colorBackground">@color/fondo_principal</item>
+        <item name="colorSurface">@color/fondo_secundario</item>
+        <item name="colorOnSurface">@color/texto_principal</item>
+
+    </style>
+
+    <style name="Theme.Orden_del_Auror"
+        parent="Base.Theme.Orden_del_Auror" />
+
+</resources>

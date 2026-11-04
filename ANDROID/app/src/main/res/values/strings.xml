@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Aplicación -->
+    <string name="app_name">Orden del Auror</string>
+
+    <!-- Pantalla principal -->
+    <string name="nombre_aplicacion">ORDEN DEL AUROR</string>
+    <string name="subtitulo_aplicacion">CENTRO DE DESCIFRADO MÁGICO</string>
+    <string name="bienvenida">Bienvenido, Auror</string>
+    <string name="descripcion_bienvenida">Selecciona una herramienta para recuperar los mensajes protegidos de la Orden.</string>
+
+    <!-- Tarjeta AES -->
+    <string name="titulo_aes">DESCIFRADO AES</string>
+    <string name="descripcion_aes">Recupera imágenes protegidas mediante cifrado AES utilizando la contraseña correspondiente.</string>
+    <string name="acceder_aes">ACCEDER A AES</string>
+
+    <!-- Tarjeta César -->
+    <string name="titulo_cesar">DESCIFRADO CÉSAR</string>
+    <string name="descripcion_cesar">Descifra mensajes secretos utilizando el desplazamiento adecuado del alfabeto.</string>
+    <string name="acceder_cesar">ACCEDER A CÉSAR</string>
+
+    <!-- Pie de pantalla -->
+    <string name="pie_pantalla">ARCHIVOS CLASIFICADOS · MIEMBROS DE LA ORDEN</string>
+
+    <!-- General -->
+    <string name="button_back">Volver</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_accept">Aceptar</string>
+    <string name="error_title">Error</string>
+
+    <!-- Pantalla AES -->
+    <string name="aes_screen_title">Descifrado AES</string>
+    <string name="aes_header_title">DESCIFRADO AES</string>
+    <string name="aes_header_subtitle">RECUPERACIÓN DE IMÁGENES</string>
+    <string name="aes_received_files">Archivos recibidos</string>
+    <string name="aes_instructions">Selecciona una imagen cifrada e introduce la contraseña correspondiente para recuperar su contenido.</string>
+    <string name="aes_file_section">01 | ARCHIVO CIFRADO</string>
+    <string name="aes_no_file">No se ha seleccionado ningún archivo</string>
+    <string name="aes_no_file_selected">Ningún archivo seleccionado</string>
+    <string name="aes_select_file">Seleccionar imagen PNG</string>
+    <string name="aes_select_image">Seleccionar imagen PNG</string>
+    <string name="aes_password_section">02 | CLAVE DE DESCIFRADO</string>
+    <string name="aes_password_label">Contraseña de descifrado</string>
+    <string name="aes_password_hint">Introduce la contraseña AES</string>
+    <string name="aes_decrypt_button">Descifrar imagen</string>
+    <string name="aes_result_title">Imagen recuperada</string>
+    <string name="aes_result_section">03 | IMAGEN RECUPERADA</string>
+    <string name="aes_waiting_decryption">Esperando descifrado...</string>
+    <string name="aes_decrypted_image_description">Imagen descifrada</string>
+    <string name="aes_save_button">Guardar imagen recuperada</string>
+    <string name="aes_no_password">Introduce la contraseña de descifrado</string>
+    <string name="aes_decrypting">Descifrando imagen...</string>
+    <string name="aes_success">Imagen descifrada correctamente</string>
+    <string name="aes_error">Error al descifrar la imagen</string>
+    <string name="aes_saved">Imagen guardada correctamente</string>
+
+    <!-- Pantalla César -->
+    <string name="cesar_screen_title">Descifrado César</string>
+    <string name="cesar_header_title">DESCIFRADO CÉSAR</string>
+    <string name="cesar_header_subtitle">RECUPERACIÓN DE MENSAJES</string>
+    <string name="cesar_received_files">Archivos recibidos</string>
+    <string name="cesar_instructions">Selecciona un archivo de texto e introduce el desplazamiento utilizado para recuperar el mensaje original.</string>
+    <string name="cesar_file_section">01 | ARCHIVO CIFRADO</string>
+    <string name="cesar_no_file">No se ha seleccionado ningún archivo</string>
+    <string name="cesar_no_file_selected">Ningún archivo seleccionado</string>
+    <string name="cesar_select_file">Seleccionar archivo TXT</string>
+    <string name="cesar_key_section">02 | CLAVE DE DESCIFRADO</string>
+    <string name="cesar_shift_label">Desplazamiento del alfabeto</string>
+    <string name="cesar_shift_instructions">Introduce el número de posiciones utilizadas para cifrar el mensaje (0-25).</string>
+    <string name="cesar_shift_hint">Ejemplo: 3</string>
+    <string name="cesar_decrypt_button">Descifrar mensaje</string>
+    <string name="cesar_result_title">Mensaje recuperado</string>
+    <string name="cesar_result_section">03 | MENSAJE RECUPERADO</string>
+    <string name="cesar_waiting_decryption">Esperando descifrado...</string>
+    <string name="cesar_result_hint">Aquí aparecerá el mensaje descifrado...</string>
+    <string name="cesar_save_button">Guardar mensaje recuperado</string>
+    <string name="cesar_decrypting">Descifrando mensaje...</string>
+    <string name="cesar_success">Mensaje descifrado correctamente</string>
+    <string name="cesar_error">Error al descifrar el mensaje</string>
+    <string name="cesar_saved">Mensaje guardado correctamente</string>
+
+    <string name="settings_button">Ajustes</string>
+    <string name="settings_title">AJUSTES</string>
+    <string name="settings_subtitle">PERSONALIZA TU EXPERIENCIA</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_description">Selecciona el idioma de la aplicación.</string>
+
+    <string-array name="languages">
+        <item>Español</item>
+        <item>English</item>
+        <item>Euskara</item>
+    </string-array>
+
+</resources>

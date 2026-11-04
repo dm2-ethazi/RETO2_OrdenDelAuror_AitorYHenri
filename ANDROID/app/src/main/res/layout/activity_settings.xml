@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_principal"
+    android:padding="20dp">
+
+    <!-- CABECERA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@color/azul_hechicero">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/texto_claro"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="serif" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/dorado_antiguo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/settings_subtitle"
+            android:textColor="@color/texto_claro"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <!-- OPCIONES -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/fondo_secundario"
+        android:elevation="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_language"
+            android:textColor="@color/azul_hechicero"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/settings_language_description"
+            android:textColor="@color/texto_secundario"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spinnerIdioma"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:entries="@array/languages"
+            android:spinnerMode="dropdown"
+            android:backgroundTint="@color/azul_hechicero" />
+
+    </LinearLayout>
+
+    <!-- BOTÓN VOLVER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|end"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnVolverAjustes"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/button_back"
+            android:textAllCaps="false"
+            android:textColor="@color/texto_claro"
+            android:backgroundTint="@color/granate_magico" />
+
+    </LinearLayout>
+
+</LinearLayout>
