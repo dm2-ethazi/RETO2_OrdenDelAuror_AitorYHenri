@@ -57,3 +57,70 @@
 .file-button:hover {
     -fx-background-color: #8a6733;
 }
+
+/* ===== DIÁLOGOS ===== */
+
+.info-dialog {
+    -fx-background-color: #F5F3EF;
+}
+
+.info-dialog > *.header-panel {
+    -fx-background-color: #243B73;
+}
+
+.info-dialog > *.header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.warning-dialog {
+    -fx-background-color: #F5F3EF;
+}
+
+.warning-dialog > *.header-panel {
+    -fx-background-color: #73552A;
+}
+
+.warning-dialog > *.header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.error-dialog {
+    -fx-background-color: #F5F3EF;
+}
+
+.error-dialog > *.header-panel {
+    -fx-background-color: #73243B;
+}
+
+.error-dialog > *.header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Texto del mensaje */
+
+.info-dialog .content.label,
+.warning-dialog .content.label,
+.error-dialog .content.label {
+    -fx-text-fill: #243B73;
+    -fx-font-size: 14px;
+}
+
+/* Botones */
+
+.info-dialog .button,
+.warning-dialog .button,
+.error-dialog .button {
+    -fx-background-color: #243B73;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.info-dialog .button:hover,
+.warning-dialog .button:hover,
+.error-dialog .button:hover {
+    -fx-background-color: #2f4c96;
+}

@@ -13,17 +13,22 @@
            styleClass="title-label"/>
 
     <Button text="Seleccionar archivo"
+            onAction="#selectFile"
             styleClass="file-button"/>
 
     <PasswordField
+            fx:id="passwordField"
             promptText="Contraseña"/>
 
     <Button text="Cifrar"
+            onAction="#encrypt"
             styleClass="encrypt-button"/>
 
     <Button text="Descifrar"
+            onAction="#decrypt"
             styleClass="decrypt-button"/>
 
-    <Label text="Sin archivo seleccionado"/>
+    <Label fx:id="statusLabel"
+            text="Sin archivo seleccionado"/>
 
 </VBox>
