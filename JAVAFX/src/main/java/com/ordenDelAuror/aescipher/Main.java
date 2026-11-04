@@ -12,12 +12,14 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(
-                        "/com/henri/aescipher/view/main-view.fxml"));
+                        "/com/ordenDelAuror/aescipher/view/main-view.fxml"));
 
         Scene scene = new Scene(loader.load());
 
         stage.setTitle("Orden del Auror");
         stage.setScene(scene);
+        stage.setMinWidth(400);
+        stage.setMinHeight(400);
         stage.show();
     }
 
