@@ -1,99 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/fondo_principal"
-    android:padding="20dp">
+    android:background="@drawable/fondo_biblioteca">
 
-    <!-- CABECERA -->
-    <LinearLayout
+    <!-- CONTENIDO DE LA PANTALLA -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="24dp"
-        android:background="@color/azul_hechicero">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:paddingTop="20dp"
+        android:paddingBottom="75dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/settings_title"
-            android:textColor="@color/texto_claro"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:fontFamily="serif" />
-
-        <View
-            android:layout_width="60dp"
-            android:layout_height="2dp"
-            android:layout_marginTop="12dp"
-            android:background="@color/dorado_antiguo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/settings_subtitle"
-            android:textColor="@color/texto_claro"
-            android:textSize="11sp" />
-
-    </LinearLayout>
-
-    <!-- OPCIONES -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_marginTop="25dp"
-        android:background="@color/fondo_secundario"
-        android:elevation="3dp">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/settings_language"
-            android:textColor="@color/azul_hechicero"
-            android:textSize="19sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/settings_language_description"
-            android:textColor="@color/texto_secundario"
-            android:textSize="14sp" />
+            <!-- CABECERA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/cabecera_orden"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-        <Spinner
-            android:id="@+id/spinnerIdioma"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:entries="@array/languages"
-            android:spinnerMode="dropdown"
-            android:backgroundTint="@color/azul_hechicero" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:gravity="center" />
 
-    </LinearLayout>
+                <View
+                    android:layout_width="65dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#C9A45C" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_subtitle"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.12"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- PERGAMINO DEL IDIOMA -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/fondo_tarjeta_pergamino">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingStart="42dp"
+                    android:paddingEnd="42dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_language_title"
+                        android:textColor="#102B59"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/settings_language_description"
+                        android:textColor="#68451F"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+
+                    <Spinner
+                        android:id="@+id/spinnerIdioma"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/boton_orden"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:popupBackground="#102B59"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- PERGAMINO ACERCA DE -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@drawable/fondo_tarjeta_pergamino">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingStart="42dp"
+                    android:paddingEnd="42dp"
+                    android:paddingTop="38dp"
+                    android:paddingBottom="38dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_about_title"
+                        android:textColor="#102B59"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="65dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="7dp"
+                        android:background="#A66A20" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/settings_about_app"
+                        android:textColor="#68451F"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/settings_about_description"
+                        android:textColor="#68451F"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/settings_about_developers_title"
+                        android:textColor="#102B59"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/settings_about_developers"
+                        android:textColor="#68451F"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="65dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#A66A20" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/settings_about_languages"
+                        android:textColor="#68451F"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <!-- BOTÓN VOLVER -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="bottom|end"
-        android:paddingBottom="8dp">
+    <ImageButton
+        android:id="@+id/btnVolverAjustes"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/fondo_flecha_volver"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/button_back"
+        android:padding="0dp" />
 
-        <Button
-            android:id="@+id/btnVolverAjustes"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="@string/button_back"
-            android:textAllCaps="false"
-            android:textColor="@color/texto_claro"
-            android:backgroundTint="@color/granate_magico" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>

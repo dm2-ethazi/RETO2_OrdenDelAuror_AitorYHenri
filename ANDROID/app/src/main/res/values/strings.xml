@@ -80,12 +80,24 @@
     <string name="cesar_error">Error al descifrar el mensaje</string>
     <string name="cesar_saved">Mensaje guardado correctamente</string>
 
+    <!-- Ajustes -->
     <string name="settings_button">Ajustes</string>
     <string name="settings_title">AJUSTES</string>
     <string name="settings_subtitle">PERSONALIZA TU EXPERIENCIA</string>
     <string name="settings_language">Idioma</string>
+    <string name="settings_language_title">Idioma</string>
     <string name="settings_language_description">Selecciona el idioma de la aplicación.</string>
 
+    <!-- Acerca de -->
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_about_title">Acerca de</string>
+    <string name="settings_about_app">Orden del Auror</string>
+    <string name="settings_about_description">Centro de descifrado mágico para recuperar información protegida mediante diferentes métodos de cifrado.</string>
+    <string name="settings_about_developers_title">Desarrolladores</string>
+    <string name="settings_about_developers">Organización de aurores unidos</string>
+    <string name="settings_about_languages">Idiomas disponibles: Español, Inglés y Euskera.</string>
+
+    <!-- Idiomas -->
     <string-array name="languages">
         <item>Español</item>
         <item>English</item>
