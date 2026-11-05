@@ -28,6 +28,15 @@
             onAction="#decrypt"
             styleClass="decrypt-button"/>
 
+    <ProgressBar
+            fx:id="progressBar"
+            prefWidth="300"
+            progress="0"/>
+
+    <Label
+            fx:id="progressLabel"
+            text="Listo"/>
+
     <Label fx:id="statusLabel"
             text="Sin archivo seleccionado"/>
 

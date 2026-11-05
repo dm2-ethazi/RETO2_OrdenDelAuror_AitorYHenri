@@ -124,3 +124,13 @@
 .error-dialog .button:hover {
     -fx-background-color: #2f4c96;
 }
+
+/* ProgressBar */
+
+.progress-bar {
+    -fx-accent: #24734C;
+}
+
+.progress-bar .track {
+    -fx-background-color: #d8d8d8;
+}
