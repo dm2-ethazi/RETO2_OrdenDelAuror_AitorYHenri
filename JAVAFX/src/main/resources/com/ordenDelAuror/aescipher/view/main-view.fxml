@@ -3,11 +3,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
 
+
+<?import javafx.scene.layout.HBox?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.ordenDelAuror.aescipher.controller.MainController"
       alignment="CENTER"
       spacing="15">
+    <HBox alignment="CENTER_RIGHT">
+
+        <ComboBox
+                fx:id="languageComboBox"
+                prefWidth="150"
+                styleClass="language-combo"/>
+
+    </HBox>
 
     <Label text="Orden Del Auror"
            styleClass="title-label"/>
@@ -36,11 +46,8 @@
             prefWidth="300"
             progress="0"/>
 
-    <Label
-            fx:id="progressLabel"
-            text=""/>
+    <Label fx:id="progressLabel"/>
 
-    <Label fx:id="statusLabel"
-            />
+    <Label fx:id="statusLabel"/>
 
 </VBox>

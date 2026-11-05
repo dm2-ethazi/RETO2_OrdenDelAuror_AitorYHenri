@@ -1,16 +1,19 @@
 package com.ordenDelAuror.aescipher;
 
-import com.ordenDelAuror.aescipher.utils.LanguageManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        LanguageManager.setLanguage("eus");
+        Image icon = new Image(getClass().getResourceAsStream("/com/ordenDelAuror/aescipher/images/icon.png"));
+
+        // 2. Añadir el icono a la lista de iconos del Stage
+        stage.getIcons().add(icon);
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(
                         "/com/ordenDelAuror/aescipher/view/main-view.fxml"));

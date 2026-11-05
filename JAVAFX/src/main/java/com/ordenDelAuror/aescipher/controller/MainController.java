@@ -3,7 +3,12 @@ package com.ordenDelAuror.aescipher.controller;
 import com.ordenDelAuror.aescipher.crypto.AESService;
 import com.ordenDelAuror.aescipher.utils.AlertUtils;
 import com.ordenDelAuror.aescipher.utils.LanguageManager;
+import com.ordenDelAuror.aescipher.utils.LanguageManager;
+import com.ordenDelAuror.aescipher.utils.LanguageOption;
+
+
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -39,7 +44,9 @@ public class MainController {
     private Button decryptButton;
 
     @FXML
-    private void initialize() {
+    private ComboBox<LanguageOption> languageComboBox;
+
+    private void updateTexts() {
 
         selectButton.setText(
                 LanguageManager.get(
@@ -57,9 +64,51 @@ public class MainController {
                 LanguageManager.get(
                         "password.prompt"));
 
-        statusLabel.setText(
+        if (selectedFile == null) {
+
+            statusLabel.setText(
+                    LanguageManager.get(
+                            "status.no_file"));
+        }
+
+        progressLabel.setText(
                 LanguageManager.get(
-                        "status.no_file"));
+                        "status.ready"));
+    }
+
+    @FXML
+    private void initialize() {
+
+        languageComboBox.getItems().addAll(
+
+                new LanguageOption(
+                        "es",
+                        "Español"),
+
+                new LanguageOption(
+                        "en",
+                        "English"),
+
+                new LanguageOption(
+                        "eus",
+                        "Euskara")
+        );
+
+        languageComboBox.getSelectionModel()
+                .selectFirst();
+
+        languageComboBox.setOnAction(event -> {
+
+            LanguageOption option =
+                    languageComboBox.getValue();
+
+            LanguageManager.setLanguage(
+                    option.getCode());
+
+            updateTexts();
+        });
+
+        updateTexts();
     }
 
 
