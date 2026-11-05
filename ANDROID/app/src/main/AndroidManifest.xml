@@ -30,6 +30,11 @@
             android:name=".ui.AesActivity"
             android:exported="false" />
 
+        <!-- RESULTADO DEL DESCIFRADO AES -->
+        <activity
+            android:name=".ui.AesResultadoActivity"
+            android:exported="false" />
+
         <!-- DESCIFRADO CÉSAR -->
         <activity
             android:name=".ui.CesarActivity"

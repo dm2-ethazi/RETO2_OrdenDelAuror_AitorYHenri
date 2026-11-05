@@ -1,203 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/fondo_principal">
+    android:layout_height="match_parent">
+
+    <!-- Fondo de biblioteca mágica -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_biblioteca"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Oscurecer ligeramente el fondo -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
 
     <!-- Contenido principal -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:clipToPadding="false">
 
-            <!-- Cabecera -->
+            <!-- Contenedor centrado verticalmente -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:padding="20dp"
-                android:background="@color/azul_hechicero">
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <!-- CABECERA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/cabecera_orden">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre_aplicacion"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.08"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="65dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#F2B82E" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/subtitulo_aplicacion"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.16"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- BIENVENIDA -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/bienvenida"
+                    android:textColor="#F5BD36"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/nombre_aplicacion"
-                    android:textColor="@color/texto_claro"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.08" />
-
-                <View
-                    android:layout_width="55dp"
-                    android:layout_height="2dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/dorado_antiguo" />
+                    android:text="@string/descripcion_bienvenida"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="3dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/subtitulo_aplicacion"
-                    android:textColor="@color/texto_claro"
-                    android:textSize="10sp"
-                    android:letterSpacing="0.12" />
-
-            </LinearLayout>
-
-            <!-- Bienvenida -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="@string/bienvenida"
-                android:textColor="@color/azul_hechicero"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="@string/descripcion_bienvenida"
-                android:textColor="@color/texto_secundario"
-                android:textSize="13sp" />
-
-            <!-- Acceso AES -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp">
-
-                <Button
+                <!-- BOTÓN AES -->
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnAes"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/fondo_boton"
                     android:text="@string/titulo_aes"
-                    android:textColor="@color/texto_claro"
-                    android:background="@drawable/boton_orden"
-                    android:backgroundTint="@null"
-                    android:textSize="14sp"
+                    android:textColor="#09204C"
+                    android:textSize="21sp"
                     android:textStyle="bold"
                     android:textAllCaps="false"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="48dp"
                     android:insetTop="0dp"
-                    android:insetBottom="0dp" />
+                    android:insetBottom="0dp"
+                    app:backgroundTint="@null" />
 
+                <!-- DESCRIPCIÓN AES -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/descripcion_aes"
-                    android:textColor="@color/texto_secundario"
-                    android:textSize="12sp" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="3dp" />
 
-            </LinearLayout>
+                <!-- SEPARADOR -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#F2B82E" />
 
-            <!-- Separador -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="18dp"
-                android:background="@color/dorado_antiguo" />
-
-            <!-- Acceso César -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="18dp">
-
-                <Button
+                <!-- BOTÓN CÉSAR -->
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnCesar"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/fondo_boton"
                     android:text="@string/titulo_cesar"
-                    android:textColor="@color/texto_claro"
-                    android:background="@drawable/boton_orden"
-                    android:backgroundTint="@null"
-                    android:textSize="14sp"
+                    android:textColor="#09204C"
+                    android:textSize="21sp"
                     android:textStyle="bold"
                     android:textAllCaps="false"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="48dp"
                     android:insetTop="0dp"
-                    android:insetBottom="0dp" />
+                    android:insetBottom="0dp"
+                    app:backgroundTint="@null" />
 
+                <!-- DESCRIPCIÓN CÉSAR -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/descripcion_cesar"
-                    android:textColor="@color/texto_secundario"
-                    android:textSize="12sp" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <!-- SEPARADOR DEL PIE -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#F2B82E" />
+
+                <!-- PIE DE PANTALLA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre_aplicacion"
+                        android:textColor="#F5BD36"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.15"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/pie_pantalla"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.06"
+                        android:gravity="center" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- Separador del pie -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="18dp"
-                android:background="@color/dorado_antiguo" />
+        </ScrollView>
 
-            <!-- Pie de pantalla -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="14dp">
+        <!-- AJUSTES INFERIORES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nombre_aplicacion"
-                    android:textColor="@color/azul_hechicero"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.15" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/pie_pantalla"
-                    android:textColor="@color/texto_secundario"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnAjustes"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_settings"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@null"
+                android:scaleType="fitCenter"
+                android:padding="3dp"
+                android:contentDescription="@string/settings_button" />
 
         </LinearLayout>
 
-    </ScrollView>
-
-    <!-- Botón de ajustes inferior -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <ImageButton
-            android:id="@+id/btnAjustes"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_settings"
-            android:background="@android:color/transparent"
-            android:backgroundTint="@null"
-            android:scaleType="fitCenter"
-            android:padding="4dp"
-            android:contentDescription="@string/settings_button" />
-
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>

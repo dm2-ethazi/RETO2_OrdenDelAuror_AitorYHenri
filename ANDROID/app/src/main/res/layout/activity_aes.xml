@@ -1,220 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/fondo_principal"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
+
+    <!-- FONDO DE BIBLIOTECA -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_biblioteca"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- OSCURECER EL FONDO -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <!-- CABECERA -->
+        <!-- CONTENIDO PRINCIPAL -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <!-- CABECERA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="22dp"
+                    android:background="@drawable/cabecera_orden">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aes_header_title"
+                        android:textColor="#FFFFFF"
+                        android:textSize="27sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="65dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#F2B82E" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/aes_header_subtitle"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.12"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- TÍTULO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/aes_received_files"
+                    android:textColor="#F5BD36"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="@string/aes_instructions"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <!-- PERGAMINO 1: ARCHIVO -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="185dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/fondo_tarjeta_pergamino"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:paddingStart="65dp"
+                        android:paddingEnd="65dp"
+                        android:paddingTop="25dp"
+                        android:paddingBottom="25dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/aes_file_section"
+                            android:textColor="#09204C"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvArchivoSeleccionado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/aes_no_file_selected"
+                            android:textColor="#62513D"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/btnSeleccionarArchivo"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:text="@string/aes_select_image"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="@color/azul_hechicero" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <!-- PERGAMINO 2: CONTRASEÑA -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/fondo_tarjeta_pergamino"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:paddingStart="65dp"
+                        android:paddingEnd="65dp"
+                        android:paddingTop="25dp"
+                        android:paddingBottom="25dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/aes_password_section"
+                            android:textColor="#09204C"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etContrasena"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:hint="@string/aes_password_hint"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="#09204C"
+                            android:textColorHint="#75634E" />
+
+                        <Button
+                            android:id="@+id/btnDescifrar"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/aes_decrypt_button"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="@color/granate_magico" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- BOTÓN VOLVER ABAJO A LA IZQUIERDA -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="24dp"
-            android:background="@color/azul_hechicero">
+            android:layout_height="65dp"
+            android:gravity="center_vertical"
+            android:paddingStart="18dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aes_header_title"
-                android:textColor="@color/texto_claro"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:fontFamily="serif" />
-
-            <View
-                android:layout_width="60dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/dorado_antiguo" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/aes_header_subtitle"
-                android:textColor="@color/texto_claro"
-                android:textSize="11sp"
-                android:letterSpacing="0.1" />
-
-        </LinearLayout>
-
-        <!-- INFORMACIÓN -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="@string/aes_received_files"
-            android:textColor="@color/azul_hechicero"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:fontFamily="serif" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/aes_instructions"
-            android:textColor="@color/texto_secundario"
-            android:textSize="14sp" />
-
-        <!-- SELECCIONAR ARCHIVO -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:background="@color/fondo_secundario"
-            android:elevation="3dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aes_file_section"
-                android:textColor="@color/azul_hechicero"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvArchivoSeleccionado"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/aes_no_file_selected"
-                android:textColor="@color/texto_secundario"
-                android:textSize="13sp" />
-
-            <Button
-                android:id="@+id/btnSeleccionarArchivo"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/aes_select_image"
-                android:textAllCaps="false"
-                android:textColor="@color/texto_claro"
-                android:backgroundTint="@color/azul_hechicero" />
-
-        </LinearLayout>
-
-        <!-- CONTRASEÑA -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/fondo_secundario"
-            android:elevation="3dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aes_password_section"
-                android:textColor="@color/azul_hechicero"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etContrasena"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:hint="@string/aes_password_hint"
-                android:inputType="textPassword"
-                android:padding="12dp"
-                android:textColor="@color/azul_hechicero"
-                android:textColorHint="@color/texto_secundario" />
-
-            <Button
-                android:id="@+id/btnDescifrar"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/aes_decrypt_button"
-                android:textAllCaps="false"
-                android:textColor="@color/texto_claro"
-                android:backgroundTint="@color/granate_magico" />
-
-        </LinearLayout>
-
-        <!-- RESULTADO -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/fondo_secundario"
-            android:elevation="3dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aes_result_section"
-                android:textColor="@color/azul_hechicero"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvEstado"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/aes_waiting_decryption"
-                android:textColor="@color/texto_secundario"
-                android:textSize="13sp" />
-
-            <ImageView
-                android:id="@+id/ivImagenDescifrada"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="15dp"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/aes_decrypted_image_description"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/btnGuardar"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/aes_save_button"
-                android:textAllCaps="false"
-                android:textColor="@color/texto_claro"
-                android:backgroundTint="@color/azul_hechicero"
-                android:enabled="false" />
-
-        </LinearLayout>
-
-        <!-- BOTÓN VOLVER -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="10dp">
-
-            <Button
+            <ImageButton
                 android:id="@+id/btnVolver"
-                android:layout_width="wrap_content"
-                android:layout_height="52dp"
-                android:text="@string/button_back"
-                android:textAllCaps="false"
-                android:textColor="@color/texto_claro"
-                android:backgroundTint="@color/granate_magico" />
+                android:layout_width="65dp"
+                android:layout_height="55dp"
+                android:src="@drawable/fondo_flecha_volver"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:contentDescription="@string/button_back" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-</ScrollView>
+</FrameLayout>
