@@ -84,6 +84,7 @@
                     android:textStyle="bold"
                     android:fontFamily="serif" />
 
+                <!-- DESCRIPCIÓN -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -164,18 +165,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center_vertical"
-                        android:paddingStart="65dp"
-                        android:paddingEnd="65dp"
-                        android:paddingTop="25dp"
-                        android:paddingBottom="25dp">
+                        android:gravity="center"
+                        android:paddingStart="85dp"
+                        android:paddingEnd="85dp"
+                        android:paddingTop="35dp"
+                        android:paddingBottom="35dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:text="@string/aes_password_section"
                             android:textColor="#09204C"
-                            android:textSize="15sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
                         <EditText
@@ -185,16 +187,21 @@
                             android:layout_marginTop="8dp"
                             android:hint="@string/aes_password_hint"
                             android:inputType="textPassword"
-                            android:padding="8dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textSize="14sp"
+                            android:padding="6dp"
                             android:textColor="#09204C"
-                            android:textColorHint="#75634E" />
+                            android:textColorHint="#75634E"
+                            android:backgroundTint="#8B5425" />
 
                         <Button
                             android:id="@+id/btnDescifrar"
                             android:layout_width="match_parent"
-                            android:layout_height="42dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/aes_decrypt_button"
+                            android:textSize="12sp"
                             android:textAllCaps="false"
                             android:textColor="#FFFFFF"
                             android:backgroundTint="@color/granate_magico" />
@@ -205,7 +212,7 @@
             </LinearLayout>
         </ScrollView>
 
-        <!-- BOTÓN VOLVER ABAJO A LA IZQUIERDA -->
+        <!-- BOTÓN VOLVER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="65dp"
