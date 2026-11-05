@@ -12,7 +12,8 @@
     <Label text="Orden Del Auror"
            styleClass="title-label"/>
 
-    <Button text="Seleccionar archivo"
+    <Button
+            fx:id="selectButton"
             onAction="#selectFile"
             styleClass="file-button"/>
 
@@ -20,11 +21,13 @@
             fx:id="passwordField"
             promptText="Contraseña"/>
 
-    <Button text="Cifrar"
+    <Button
+            fx:id="encryptButton"
             onAction="#encrypt"
             styleClass="encrypt-button"/>
 
-    <Button text="Descifrar"
+    <Button
+            fx:id="decryptButton"
             onAction="#decrypt"
             styleClass="decrypt-button"/>
 
@@ -35,9 +38,9 @@
 
     <Label
             fx:id="progressLabel"
-            text="Listo"/>
+            text=""/>
 
     <Label fx:id="statusLabel"
-            text="Sin archivo seleccionado"/>
+            />
 
 </VBox>
