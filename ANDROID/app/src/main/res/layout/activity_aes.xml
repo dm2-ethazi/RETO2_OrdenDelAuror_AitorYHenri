@@ -82,7 +82,9 @@
                     android:textColor="#F5BD36"
                     android:textSize="27sp"
                     android:textStyle="bold"
-                    android:fontFamily="serif" />
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:textAlignment="center" />
 
                 <!-- DESCRIPCIÓN -->
                 <TextView
@@ -93,7 +95,9 @@
                     android:text="@string/aes_instructions"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
-                    android:lineSpacingExtra="3dp" />
+                    android:lineSpacingExtra="3dp"
+                    android:gravity="center"
+                    android:textAlignment="center" />
 
                 <!-- PERGAMINO 1: ARCHIVO -->
                 <FrameLayout
@@ -112,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center_vertical"
+                        android:gravity="center"
                         android:paddingStart="65dp"
                         android:paddingEnd="65dp"
                         android:paddingTop="25dp"
@@ -124,7 +128,9 @@
                             android:text="@string/aes_file_section"
                             android:textColor="#09204C"
                             android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textAlignment="center" />
 
                         <TextView
                             android:id="@+id/tvArchivoSeleccionado"
@@ -134,7 +140,9 @@
                             android:layout_marginBottom="10dp"
                             android:text="@string/aes_no_file_selected"
                             android:textColor="#62513D"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/btnSeleccionarArchivo"
@@ -143,6 +151,7 @@
                             android:text="@string/aes_select_image"
                             android:textAllCaps="false"
                             android:textColor="#FFFFFF"
+                            android:gravity="center"
                             android:backgroundTint="@color/azul_hechicero" />
 
                     </LinearLayout>
@@ -175,6 +184,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:textAlignment="center"
                             android:text="@string/aes_password_section"
                             android:textColor="#09204C"
                             android:textSize="14sp"
@@ -188,6 +198,7 @@
                             android:hint="@string/aes_password_hint"
                             android:inputType="textPassword"
                             android:gravity="center"
+                            android:textAlignment="center"
                             android:singleLine="true"
                             android:textSize="14sp"
                             android:padding="6dp"
@@ -204,7 +215,8 @@
                             android:textSize="12sp"
                             android:textAllCaps="false"
                             android:textColor="#FFFFFF"
-                            android:backgroundTint="@color/granate_magico" />
+                            android:gravity="center"
+                            android:backgroundTint="@color/azul_hechicero" />
 
                     </LinearLayout>
                 </FrameLayout>

@@ -40,6 +40,11 @@
             android:name=".ui.CesarActivity"
             android:exported="false" />
 
+        <!-- RESULTADO DEL DESCIFRADO CÉSAR -->
+        <activity
+            android:name=".ui.CesarResultadoActivity"
+            android:exported="false" />
+
         <!-- AJUSTES -->
         <activity
             android:name=".ui.SettingsActivity"

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo de biblioteca mágica -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_biblioteca"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="20dp">
+
+                <!-- CABECERA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:background="@drawable/cabecera_orden">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MENSAJE RECUPERADO"
+                        android:textColor="@color/texto_claro"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/dorado_antiguo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="ORDEN DEL AUROR"
+                        android:textColor="@color/texto_claro"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- TÍTULO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Mensaje descifrado"
+                    android:textColor="@color/dorado_antiguo"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="El contenido del archivo ha sido recuperado correctamente."
+                    android:textColor="@color/texto_claro"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+
+                <!-- PERGAMINO DEL RESULTADO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingStart="38dp"
+                    android:paddingEnd="38dp"
+                    android:paddingTop="38dp"
+                    android:paddingBottom="38dp"
+                    android:background="@drawable/fondo_tarjeta_pergamino">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MENSAJE RECUPERADO"
+                        android:textColor="@color/azul_hechicero"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvResultadoCesar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:textColor="#593719"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="5dp"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/btnGuardarCesar"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Guardar mensaje"
+                        android:textAllCaps="false"
+                        android:textColor="@color/texto_claro"
+                        android:backgroundTint="@color/azul_hechicero" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- FLECHA PARA VOLVER -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingStart="20dp"
+            android:paddingBottom="8dp"
+            android:gravity="start|center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnVolverResultado"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/fondo_flecha_volver"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/button_back"
+                android:padding="0dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
