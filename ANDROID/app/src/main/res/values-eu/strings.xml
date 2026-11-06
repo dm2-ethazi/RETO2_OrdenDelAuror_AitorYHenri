@@ -72,10 +72,12 @@
     <string name="cesar_decrypt_button">Mezua deszifratu</string>
     <string name="cesar_result_title">Berreskuratutako mezua</string>
     <string name="cesar_result_section">03 | BERRESKURATUTAKO MEZUA</string>
+    <string name="cesar_result_header_title">BERRESKURATUTAKO MEZUA</string>
+    <string name="cesar_result_header_subtitle">MEZUAK BERRESKURATZEA</string>
     <string name="cesar_waiting_decryption">Deszifratzea itxaroten...</string>
     <string name="cesar_result_hint">Deszifratutako mezua hemen agertuko da...</string>
     <string name="cesar_save_button">Berreskuratutako mezua gorde</string>
-    <string name="cesar_decrypting">Mezua deszifratzen...</string>
+    <string name="cesar_decrypting">Testua deszifratzen...</string>
     <string name="cesar_success">Mezua behar bezala deszifratu da</string>
     <string name="cesar_error">Errorea mezua deszifratzean</string>
     <string name="cesar_saved">Mezua behar bezala gorde da</string>

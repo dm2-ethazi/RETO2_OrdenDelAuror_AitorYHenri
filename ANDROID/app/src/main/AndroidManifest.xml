@@ -12,11 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orden_del_Auror">
 
-        <!-- PANTALLA PRINCIPAL -->
+        <!-- PANTALLA DE CARGA -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".SplashActivity"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,12 +24,18 @@
 
         </activity>
 
+        <!-- PANTALLA PRINCIPAL -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
         <!-- DESCIFRADO AES -->
         <activity
             android:name=".ui.AesActivity"
             android:exported="false" />
 
-        <!-- RESULTADO DEL DESCIFRADO AES -->
+        <!-- RESULTADO AES -->
         <activity
             android:name=".ui.AesResultadoActivity"
             android:exported="false" />
@@ -40,7 +45,7 @@
             android:name=".ui.CesarActivity"
             android:exported="false" />
 
-        <!-- RESULTADO DEL DESCIFRADO CÉSAR -->
+        <!-- RESULTADO CÉSAR -->
         <activity
             android:name=".ui.CesarResultadoActivity"
             android:exported="false" />

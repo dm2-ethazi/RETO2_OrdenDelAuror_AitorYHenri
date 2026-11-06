@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Fondo de biblioteca mágica -->
+    <!-- FONDO DE BIBLIOTECA -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,151 +11,155 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
+    <!-- OSCURECER EL FONDO -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp">
 
-        <ScrollView
+        <!-- CABECERA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/cabecera_orden">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cesar_result_header_title"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="65dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:background="#F2B82E" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/cesar_result_header_subtitle"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- PERGAMINO DEL RESULTADO -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:fillViewport="true">
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp">
 
-            <LinearLayout
+            <!-- FONDO DEL PERGAMINO -->
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="24dp"
-                android:paddingBottom="20dp">
+                android:layout_height="match_parent"
+                android:src="@drawable/fondo_tarjeta_pergamino"
+                android:scaleType="fitXY"
+                android:contentDescription="@null" />
 
-                <!-- CABECERA -->
-                <LinearLayout
+            <!-- ZONA INTERIOR DEL PERGAMINO -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="62dp"
+                android:paddingEnd="62dp"
+                android:paddingTop="100dp"
+                android:paddingBottom="85dp">
+
+                <!-- MENSAJE DE CARGA -->
+                <TextView
+                    android:id="@+id/tvEstadoCesar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:padding="24dp"
-                    android:background="@drawable/cabecera_orden">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="MENSAJE RECUPERADO"
-                        android:textColor="@color/texto_claro"
-                        android:textSize="23sp"
-                        android:textStyle="bold"
-                        android:fontFamily="serif"
-                        android:gravity="center" />
-
-                    <View
-                        android:layout_width="60dp"
-                        android:layout_height="2dp"
-                        android:layout_marginTop="12dp"
-                        android:background="@color/dorado_antiguo" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="ORDEN DEL AUROR"
-                        android:textColor="@color/texto_claro"
-                        android:textSize="11sp"
-                        android:letterSpacing="0.1"
-                        android:gravity="center" />
-
-                </LinearLayout>
-
-                <!-- TÍTULO -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Mensaje descifrado"
-                    android:textColor="@color/dorado_antiguo"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:fontFamily="serif"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="18dp"
-                    android:text="El contenido del archivo ha sido recuperado correctamente."
-                    android:textColor="@color/texto_claro"
+                    android:text="@string/cesar_decrypting"
+                    android:textColor="#62513D"
                     android:textSize="14sp"
-                    android:gravity="center" />
+                    android:visibility="visible" />
 
-                <!-- PERGAMINO DEL RESULTADO -->
-                <LinearLayout
+                <!-- TEXTO DESCIFRADO CON SCROLL -->
+                <ScrollView
+                    android:id="@+id/scrollResultadoCesar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="300dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:paddingStart="38dp"
-                    android:paddingEnd="38dp"
-                    android:paddingTop="38dp"
-                    android:paddingBottom="38dp"
-                    android:background="@drawable/fondo_tarjeta_pergamino">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="MENSAJE RECUPERADO"
-                        android:textColor="@color/azul_hechicero"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:gravity="center" />
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/tvResultadoCesar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:gravity="center"
                         android:textColor="#593719"
                         android:textSize="15sp"
                         android:lineSpacingExtra="5dp"
-                        android:textIsSelectable="true" />
+                        android:textIsSelectable="true"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
 
-                    <Button
-                        android:id="@+id/btnGuardarCesar"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="24dp"
-                        android:text="Guardar mensaje"
-                        android:textAllCaps="false"
-                        android:textColor="@color/texto_claro"
-                        android:backgroundTint="@color/azul_hechicero" />
+                </ScrollView>
 
-                </LinearLayout>
+            </FrameLayout>
 
-            </LinearLayout>
-        </ScrollView>
+        </FrameLayout>
 
-        <!-- FLECHA PARA VOLVER -->
+        <!-- BOTÓN GUARDAR FUERA DEL PERGAMINO -->
+        <Button
+            android:id="@+id/btnGuardarCesar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/azul_hechicero"
+            android:text="@string/cesar_save_button"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <!-- BOTÓN VOLVER -->
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:paddingStart="20dp"
-            android:paddingBottom="8dp"
-            android:gravity="start|center_vertical">
+            android:layout_height="58dp"
+            android:paddingStart="18dp"
+            android:gravity="center_vertical">
 
             <ImageButton
                 android:id="@+id/btnVolverResultado"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
                 android:src="@drawable/fondo_flecha_volver"
                 android:scaleType="fitCenter"
                 android:background="@android:color/transparent"
-                android:contentDescription="@string/button_back"
-                android:padding="0dp" />
+                android:padding="0dp"
+                android:contentDescription="@string/button_back" />
 
         </FrameLayout>
 

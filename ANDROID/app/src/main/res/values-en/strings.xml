@@ -72,10 +72,12 @@
     <string name="cesar_decrypt_button">Decrypt message</string>
     <string name="cesar_result_title">Recovered message</string>
     <string name="cesar_result_section">03 | RECOVERED MESSAGE</string>
+    <string name="cesar_result_header_title">RECOVERED MESSAGE</string>
+    <string name="cesar_result_header_subtitle">MESSAGE RECOVERY</string>
     <string name="cesar_waiting_decryption">Waiting for decryption...</string>
     <string name="cesar_result_hint">The decrypted message will appear here...</string>
     <string name="cesar_save_button">Save recovered message</string>
-    <string name="cesar_decrypting">Decrypting message...</string>
+    <string name="cesar_decrypting">Decrypting text...</string>
     <string name="cesar_success">Message decrypted successfully</string>
     <string name="cesar_error">Error decrypting message</string>
     <string name="cesar_saved">Message saved successfully</string>

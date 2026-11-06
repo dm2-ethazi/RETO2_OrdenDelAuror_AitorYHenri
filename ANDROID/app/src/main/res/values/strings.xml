@@ -8,11 +8,11 @@
     <string name="nombre_aplicacion">ORDEN DEL AUROR</string>
     <string name="subtitulo_aplicacion">CENTRO DE DESCIFRADO MÁGICO</string>
     <string name="bienvenida">Bienvenido, Auror</string>
-    <string name="descripcion_bienvenida">Selecciona una herramienta para recuperar los mensajes protegidos de la Orden.</string>
+    <string name="descripcion_bienvenida">Selecciona una herramienta para recuperar los mensajes protegidos por la Orden.</string>
 
     <!-- Tarjeta AES -->
     <string name="titulo_aes">DESCIFRADO AES</string>
-    <string name="descripcion_aes">Recupera imágenes protegidas mediante cifrado AES utilizando la contraseña correspondiente.</string>
+    <string name="descripcion_aes">Recupera imágenes protegidas y cifradas mediante AES utilizando la contraseña correspondiente.</string>
     <string name="acceder_aes">ACCEDER A AES</string>
 
     <!-- Tarjeta César -->
@@ -36,7 +36,7 @@
     <string name="aes_received_files">Archivos recibidos</string>
     <string name="aes_instructions">Selecciona una imagen cifrada e introduce la contraseña correspondiente para recuperar su contenido.</string>
     <string name="aes_file_section">01 | ARCHIVO CIFRADO</string>
-    <string name="aes_no_file">No se ha seleccionado ningún archivo</string>
+    <string name="aes_no_file">Ningún archivo seleccionado</string>
     <string name="aes_no_file_selected">Ningún archivo seleccionado</string>
     <string name="aes_select_file">Seleccionar imagen PNG</string>
     <string name="aes_select_image">Seleccionar imagen PNG</string>
@@ -62,20 +62,22 @@
     <string name="cesar_received_files">Archivos recibidos</string>
     <string name="cesar_instructions">Selecciona un archivo de texto e introduce el desplazamiento utilizado para recuperar el mensaje original.</string>
     <string name="cesar_file_section">01 | ARCHIVO CIFRADO</string>
-    <string name="cesar_no_file">No se ha seleccionado ningún archivo</string>
+    <string name="cesar_no_file">Ningún archivo seleccionado</string>
     <string name="cesar_no_file_selected">Ningún archivo seleccionado</string>
     <string name="cesar_select_file">Seleccionar archivo TXT</string>
     <string name="cesar_key_section">02 | CLAVE DE DESCIFRADO</string>
     <string name="cesar_shift_label">Desplazamiento del alfabeto</string>
-    <string name="cesar_shift_instructions">Introduce el número de posiciones utilizadas para cifrar el mensaje (0-25).</string>
+    <string name="cesar_shift_instructions">Introduce el número de posiciones utilizado para cifrar el mensaje (0-25).</string>
     <string name="cesar_shift_hint">Ejemplo: 3</string>
     <string name="cesar_decrypt_button">Descifrar mensaje</string>
     <string name="cesar_result_title">Mensaje recuperado</string>
     <string name="cesar_result_section">03 | MENSAJE RECUPERADO</string>
+    <string name="cesar_result_header_title">MENSAJE RECUPERADO</string>
+    <string name="cesar_result_header_subtitle">RECUPERACIÓN DE MENSAJES</string>
     <string name="cesar_waiting_decryption">Esperando descifrado...</string>
-    <string name="cesar_result_hint">Aquí aparecerá el mensaje descifrado...</string>
+    <string name="cesar_result_hint">El mensaje descifrado aparecerá aquí...</string>
     <string name="cesar_save_button">Guardar mensaje recuperado</string>
-    <string name="cesar_decrypting">Descifrando mensaje...</string>
+    <string name="cesar_decrypting">Descifrando texto...</string>
     <string name="cesar_success">Mensaje descifrado correctamente</string>
     <string name="cesar_error">Error al descifrar el mensaje</string>
     <string name="cesar_saved">Mensaje guardado correctamente</string>
@@ -95,7 +97,7 @@
     <string name="settings_about_description">Centro de descifrado mágico para recuperar información protegida mediante diferentes métodos de cifrado.</string>
     <string name="settings_about_developers_title">Desarrolladores</string>
     <string name="settings_about_developers">Organización de aurores unidos</string>
-    <string name="settings_about_languages">Idiomas disponibles: Español, Inglés y Euskera.</string>
+    <string name="settings_about_languages">Idiomas disponibles: español, inglés y euskera.</string>
 
     <!-- Idiomas -->
     <string-array name="languages">
