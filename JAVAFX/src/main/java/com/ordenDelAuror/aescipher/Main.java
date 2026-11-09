@@ -1,9 +1,13 @@
 package com.ordenDelAuror.aescipher;
 
+import com.ordenDelAuror.aescipher.controller.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 
 import org.slf4j.Logger;
@@ -23,6 +27,40 @@ public class Main extends Application {
         logger.info("Iniciando Orden del Auror");
 
         Scene scene = new Scene(loader.load());
+
+        MainController controller =
+                loader.getController();
+
+        controller.initializeShortcuts(scene);
+        scene.setOnKeyPressed(event -> {
+
+            scene.getAccelerators().put(
+                    new KeyCodeCombination(
+                            KeyCode.O,
+                            KeyCombination.CONTROL_DOWN),
+                    () -> controller.executeSelectFile()
+            );
+
+            scene.getAccelerators().put(
+                    new KeyCodeCombination(
+                            KeyCode.E,
+                            KeyCombination.CONTROL_DOWN),
+                    () -> controller.executeEncrypt()
+            );
+
+            scene.getAccelerators().put(
+                    new KeyCodeCombination(
+                            KeyCode.D,
+                            KeyCombination.CONTROL_DOWN),
+                    () -> controller.executeDecrypt()
+            );
+
+            scene.getAccelerators().put(
+                    new KeyCodeCombination(
+                            KeyCode.F1),
+                    () -> controller.executeShowInfo()
+            );
+        });
 
         scene.getStylesheets().add(
                 getClass()

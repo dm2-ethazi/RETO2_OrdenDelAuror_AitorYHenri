@@ -4,18 +4,19 @@ import com.ordenDelAuror.aescipher.crypto.AESService;
 import com.ordenDelAuror.aescipher.utils.AlertUtils;
 import com.ordenDelAuror.aescipher.utils.LanguageManager;
 import com.ordenDelAuror.aescipher.utils.LanguageOption;
+import javafx.scene.control.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
+import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.control.Tooltip;
 import javafx.stage.FileChooser;
 import javafx.concurrent.Task;
-import javafx.scene.control.ProgressBar;
 
 import java.io.File;
 
@@ -47,6 +48,41 @@ public class MainController {
     @FXML
     private ComboBox<LanguageOption> languageComboBox;
 
+    @FXML
+    private Button infoButton;
+
+    @FXML
+    public void showInfo() {
+        Alert alert =
+                new Alert(Alert.AlertType.INFORMATION);
+
+        alert.setTitle(
+                LanguageManager.get(
+                        "info.title"));
+
+        alert.setHeaderText(
+                LanguageManager.get(
+                        "info.header"));
+
+        alert.setContentText(
+                LanguageManager.get(
+                        "info.content"));
+
+        alert.getDialogPane()
+                .getStylesheets()
+                .add(
+                        getClass()
+                                .getResource(
+                                        "/css/style.css")
+                                .toExternalForm());
+
+        alert.getDialogPane()
+                .getStyleClass()
+                .add("info-dialog");
+
+        alert.showAndWait();
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
     private void updateTexts() {
@@ -77,6 +113,31 @@ public class MainController {
         progressLabel.setText(
                 LanguageManager.get(
                         "status.ready"));
+
+        selectButton.setTooltip(
+                new Tooltip(
+                        LanguageManager.get(
+                                "tooltip.select")));
+
+        encryptButton.setTooltip(
+                new Tooltip(
+                        LanguageManager.get(
+                                "tooltip.encrypt")));
+
+        decryptButton.setTooltip(
+                new Tooltip(
+                        LanguageManager.get(
+                                "tooltip.decrypt")));
+
+        languageComboBox.setTooltip(
+                new Tooltip(
+                        LanguageManager.get(
+                                "tooltip.language")));
+
+        infoButton.setTooltip(
+                new Tooltip(
+                        LanguageManager.get(
+                                "tooltip.info")));
     }
 
     @FXML
@@ -322,6 +383,60 @@ public class MainController {
         thread.setDaemon(true);
 
         thread.start();
+    }
+
+    public void initializeShortcuts(Scene scene) {
+
+        scene.getAccelerators().put(
+
+                new KeyCodeCombination(
+                        KeyCode.O,
+                        KeyCombination.CONTROL_DOWN),
+
+                this::selectFile
+        );
+
+        scene.getAccelerators().put(
+
+                new KeyCodeCombination(
+                        KeyCode.E,
+                        KeyCombination.CONTROL_DOWN),
+
+                this::encrypt
+        );
+
+        scene.getAccelerators().put(
+
+                new KeyCodeCombination(
+                        KeyCode.D,
+                        KeyCombination.CONTROL_DOWN),
+
+                this::decrypt
+        );
+
+        scene.getAccelerators().put(
+
+                new KeyCodeCombination(
+                        KeyCode.F1),
+
+                this::showInfo
+        );
+    }
+
+    public void executeSelectFile() {
+        selectFile();
+    }
+
+    public void executeEncrypt() {
+        encrypt();
+    }
+
+    public void executeDecrypt() {
+        decrypt();
+    }
+
+    public void executeShowInfo() {
+        showInfo();
     }
 
 }

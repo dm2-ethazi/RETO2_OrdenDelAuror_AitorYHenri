@@ -1,6 +1,18 @@
 .root {
-    -fx-background-color: #F5F3EF;
-    -fx-font-family: "Segoe UI";
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #f8f3e8 0%,
+            #efe4c8 100%);
+    -fx-font-family: "Palatino Linotype";
+}
+
+.main-panel {
+    -fx-background-color: rgba(255,255,255,0.35);
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-border-color: #73552A;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
 }
 
 .label {
@@ -9,17 +21,24 @@
 }
 
 .title-label {
-    -fx-text-fill: #243B73;
-    -fx-font-size: 24px;
+
+    -fx-font-size: 26px;
+
     -fx-font-weight: bold;
+
+    -fx-text-fill: #243B73;
 }
 
-.text-field,
-.password-field {
-    -fx-background-radius: 8;
-    -fx-border-radius: 8;
+.password-field,
+.text-field {
+
+    -fx-background-color: #fffdf5;
+
     -fx-border-color: #73552A;
     -fx-border-width: 2;
+
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
 }
 
 /* ComboBox Idioma */
@@ -80,15 +99,17 @@
 }
 
 .button {
-    -fx-background-color: #243B73;
-    -fx-text-fill: white;
-    -fx-background-radius: 8;
+    -fx-background-color: #73552A;
+    -fx-text-fill: #F5F3EF;
     -fx-font-weight: bold;
-    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-border-color: #4A3518;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
 }
 
 .button:hover {
-    -fx-background-color: #2f4c96;
+    -fx-background-color: #8F6A35;
 }
 
 .encrypt-button {
@@ -189,5 +210,8 @@
 }
 
 .progress-bar .track {
-    -fx-background-color: #d8d8d8;
+
+    -fx-background-color: #d9cfb1;
+
+    -fx-background-radius: 5;
 }

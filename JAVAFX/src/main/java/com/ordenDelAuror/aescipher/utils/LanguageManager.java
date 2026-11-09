@@ -9,7 +9,7 @@ public class LanguageManager {
     private static final Logger logger = LoggerFactory.getLogger(LanguageManager.class);
     private static ResourceBundle bundle =
             ResourceBundle.getBundle(
-                    "com.ordenDelAuror.aescipher.lang.messages",
+                    "lang.messages",
                     new Locale("es"));
 
     public static void setLanguage(

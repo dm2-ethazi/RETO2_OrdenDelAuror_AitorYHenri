@@ -5,7 +5,8 @@
 
 
 <?import javafx.scene.layout.HBox?>
-<VBox xmlns="http://javafx.com/javafx"
+<VBox styleClass="main-panel"
+      xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.ordenDelAuror.aescipher.controller.MainController"
       alignment="CENTER"
@@ -17,8 +18,15 @@
                 prefWidth="150"
                 styleClass="language-combo"/>
 
-    </HBox>
+        <Button
+                fx:id="infoButton"
+                text="ℹ"
+                onAction="#showInfo"/>
 
+    </HBox>
+    <Label
+            text="⚜"
+            style="-fx-font-size: 40px; -fx-text-fill: #73552A;"/>
     <Label text="Orden Del Auror"
            styleClass="title-label"/>
 
