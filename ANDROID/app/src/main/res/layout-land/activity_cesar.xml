@@ -8,11 +8,12 @@
         android:layout_height="match_parent"
         android:src="@drawable/fondo_biblioteca"
         android:scaleType="centerCrop"
-        android:contentDescription="@null"/>
+        android:contentDescription="@null" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#55000000"/>
+        android:background="#55000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,8 +29,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="7dp"
+            android:padding="6dp"
             android:background="@drawable/cabecera_orden">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,36 +40,38 @@
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:fontFamily="serif"
-                android:gravity="center"/>
+                android:gravity="center" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="2dp"
                 android:text="@string/cesar_header_subtitle"
                 android:textColor="#FFFFFF"
                 android:textSize="10sp"
-                android:gravity="center"/>
+                android:gravity="center" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="3dp"
             android:text="@string/cesar_received_files"
             android:textColor="#F5BD36"
             android:textSize="21sp"
             android:textStyle="bold"
             android:fontFamily="serif"
-            android:gravity="center"/>
+            android:gravity="center" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="3dp"
             android:text="@string/cesar_instructions"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
-            android:gravity="center"/>
+            android:gravity="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,18 +80,21 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:paddingBottom="2dp">
-            
+
+            <!-- Pergamino para seleccionar el archivo -->
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/fondo_tarjeta_pergamino"
                     android:scaleType="fitXY"
                     android:contentDescription="@null" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -95,8 +102,9 @@
                     android:gravity="center"
                     android:paddingStart="34dp"
                     android:paddingEnd="34dp"
-                    android:paddingTop="18dp"
-                    android:paddingBottom="18dp">
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -104,19 +112,21 @@
                         android:textColor="#09204C"
                         android:textSize="17sp"
                         android:textStyle="bold"
-                        android:gravity="center"/>
+                        android:gravity="center" />
+
                     <TextView
                         android:id="@+id/tvArchivoSeleccionado"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:text="@string/cesar_no_file_selected"
                         android:textColor="#62513D"
                         android:textSize="13sp"
                         android:gravity="center"
                         android:maxLines="2"
-                        android:ellipsize="end"/>
+                        android:ellipsize="end" />
+
                     <Button
                         android:id="@+id/btnSeleccionarArchivo"
                         android:layout_width="wrap_content"
@@ -127,21 +137,25 @@
                         android:text="@string/cesar_select_file"
                         android:textAllCaps="false"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="@color/azul_hechicero"/>
+                        android:backgroundTint="@color/azul_hechicero" />
+
                 </LinearLayout>
             </FrameLayout>
-            
+
+            <!-- Pergamino para introducir el desplazamiento -->
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/fondo_tarjeta_pergamino"
                     android:scaleType="fitXY"
-                    android:contentDescription="@null"/>
+                    android:contentDescription="@null" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -149,8 +163,9 @@
                     android:gravity="center"
                     android:paddingStart="34dp"
                     android:paddingEnd="34dp"
-                    android:paddingTop="18dp"
-                    android:paddingBottom="18dp">
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -158,12 +173,13 @@
                         android:textColor="#09204C"
                         android:textSize="17sp"
                         android:textStyle="bold"
-                        android:gravity="center"/>
+                        android:gravity="center" />
+
                     <EditText
                         android:id="@+id/etDesplazamiento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
+                        android:layout_marginTop="6dp"
                         android:hint="@string/cesar_shift_hint"
                         android:inputType="number"
                         android:maxLength="2"
@@ -171,8 +187,10 @@
                         android:gravity="center"
                         android:textColor="#09204C"
                         android:textColorHint="#75634E"
+                        android:textSize="16sp"
                         android:backgroundTint="#8B5425"
-                        android:padding="10dp"/>
+                        android:padding="5dp" />
+
                     <Button
                         android:id="@+id/btnDescifrar"
                         android:layout_width="wrap_content"
@@ -180,13 +198,15 @@
                         android:minWidth="165dp"
                         android:maxWidth="210dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="14dp"
+                        android:layout_marginTop="6dp"
                         android:text="@string/cesar_decrypt_button"
                         android:textAllCaps="false"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="@color/azul_hechicero"/>
+                        android:backgroundTint="@color/azul_hechicero" />
+
                 </LinearLayout>
             </FrameLayout>
+
         </LinearLayout>
 
         <ImageButton
@@ -197,6 +217,7 @@
             android:scaleType="fitCenter"
             android:background="@android:color/transparent"
             android:contentDescription="@string/button_back"
-            android:padding="0dp"/>
+            android:padding="0dp" />
+
     </LinearLayout>
 </FrameLayout>

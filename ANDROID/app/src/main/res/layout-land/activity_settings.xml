@@ -57,6 +57,7 @@
                     android:textSize="10sp"
                     android:letterSpacing="0.12"
                     android:gravity="center" />
+
             </LinearLayout>
 
             <!-- PANELES EN PARALELO -->
@@ -115,6 +116,7 @@
                             android:paddingEnd="12dp"
                             android:popupBackground="#102B59"
                             android:spinnerMode="dropdown" />
+
                     </LinearLayout>
                 </FrameLayout>
 
@@ -132,10 +134,10 @@
                         android:fillViewport="false"
                         android:scrollbars="vertical"
                         android:fadeScrollbars="true"
-                        android:paddingStart="28dp"
-                        android:paddingEnd="28dp"
-                        android:paddingTop="12dp"
-                        android:paddingBottom="12dp">
+                        android:paddingStart="65dp"
+                        android:paddingEnd="65dp"
+                        android:paddingTop="60dp"
+                        android:paddingBottom="60dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -210,9 +212,11 @@
                                 android:textColor="#68451F"
                                 android:textSize="12sp"
                                 android:gravity="center" />
+
                         </LinearLayout>
                     </ScrollView>
                 </FrameLayout>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -230,4 +234,5 @@
         android:scaleType="fitCenter"
         android:contentDescription="@string/button_back"
         android:padding="0dp" />
+
 </FrameLayout>

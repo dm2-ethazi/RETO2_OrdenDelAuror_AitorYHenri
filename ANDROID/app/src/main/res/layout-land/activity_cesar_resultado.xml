@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- FONDO -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -79,15 +80,16 @@
                 android:scaleType="fitXY"
                 android:contentDescription="@null" />
 
-            <!-- ZONA INTERIOR DEL PERGAMINO -->
+            <!-- CONTENIDO INTERIOR -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingStart="62dp"
-                android:paddingEnd="62dp"
-                android:paddingTop="100dp"
-                android:paddingBottom="85dp">
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="35dp">
 
+                <!-- MENSAJE DE ESTADO -->
                 <TextView
                     android:id="@+id/tvEstadoCesar"
                     android:layout_width="match_parent"
@@ -98,6 +100,7 @@
                     android:textSize="14sp"
                     android:visibility="visible" />
 
+                <!-- SCROLL DEL TEXTO DESCIFRADO -->
                 <ScrollView
                     android:id="@+id/scrollResultadoCesar"
                     android:layout_width="match_parent"

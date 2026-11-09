@@ -1,35 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Aplikazioa -->
     <string name="app_name">Auroreen Ordena</string>
-
-    <!-- Pantaila nagusia -->
     <string name="nombre_aplicacion">AUROREEN ORDENA</string>
     <string name="subtitulo_aplicacion">DESZIFRATZE MAGIKOAREN ZENTROA</string>
     <string name="bienvenida">Ongi etorri, Auror</string>
     <string name="descripcion_bienvenida">Hautatu tresna bat Ordenak babestutako mezuak berreskuratzeko.</string>
-
-    <!-- AES txartela -->
     <string name="titulo_aes">AES DESZIFRATZEA</string>
     <string name="descripcion_aes">Berreskuratu AES bidez zifratutako irudi babestuak dagokien pasahitza erabiliz.</string>
     <string name="acceder_aes">SARTU AES-ERA</string>
-
-    <!-- Zesar txartela -->
     <string name="titulo_cesar">ZESAR DESZIFRATZEA</string>
     <string name="descripcion_cesar">Deszifratu mezu sekretuak alfabetoko desplazamendu egokia erabiliz.</string>
     <string name="acceder_cesar">SARTU ZESAR-ERA</string>
-
-    <!-- Orri-oina -->
     <string name="pie_pantalla">FITXATEGI SAILKATUAK · ORDENAKO KIDEAK</string>
 
-    <!-- Orokorra -->
     <string name="button_back">Atzera</string>
     <string name="button_cancel">Utzi</string>
     <string name="button_accept">Onartu</string>
     <string name="error_title">Errorea</string>
 
-    <!-- AES pantaila -->
     <string name="aes_screen_title">AES deszifratzea</string>
     <string name="aes_header_title">AES DESZIFRATZEA</string>
     <string name="aes_header_subtitle">IRUDIAK BERRESKURATZEA</string>
@@ -55,7 +42,6 @@
     <string name="aes_error">Errorea irudia deszifratzean</string>
     <string name="aes_saved">Irudia behar bezala gorde da</string>
 
-    <!-- Zesar pantaila -->
     <string name="cesar_screen_title">Zesar deszifratzea</string>
     <string name="cesar_header_title">ZESAR DESZIFRATZEA</string>
     <string name="cesar_header_subtitle">MEZUAK BERRESKURATZEA</string>
@@ -82,15 +68,12 @@
     <string name="cesar_error">Errorea mezua deszifratzean</string>
     <string name="cesar_saved">Mezua behar bezala gorde da</string>
 
-    <!-- Ezarpenak -->
     <string name="settings_button">Ezarpenak</string>
     <string name="settings_title">EZARPENAK</string>
     <string name="settings_subtitle">PERTSONALIZATU ZURE ESPERIENTZIA</string>
     <string name="settings_language">Hizkuntza</string>
     <string name="settings_language_title">Hizkuntza</string>
     <string name="settings_language_description">Aukeratu aplikazioaren hizkuntza.</string>
-
-    <!-- Honi buruz -->
     <string name="settings_about">Honi buruz</string>
     <string name="settings_about_title">Honi buruz</string>
     <string name="settings_about_app">Auroreen Ordena</string>
@@ -99,7 +82,6 @@
     <string name="settings_about_developers">Auror Batuen Erakundea</string>
     <string name="settings_about_languages">Eskuragarri dauden hizkuntzak: gaztelania, ingelesa eta euskara.</string>
 
-    <!-- Hizkuntzak -->
     <string-array name="languages">
         <item>Español</item>
         <item>English</item>
@@ -107,5 +89,48 @@
     </string-array>
 
     <string name="share_button">Partekatu</string>
+    <string name="cesar_decrypting_title">Mezua deszifratzen</string>
+    <string name="cesar_decrypting_message">Fitxategia deszifratzen, itxaron une batez...</string>
+    <string name="cesar_loading_result">Aurrebista kargatzen...</string>
+    <string name="cesar_preview_limited">Aurrebista mugatua. Fitxategi osoa gordetzeko edo partekatzeko dago.</string>
+    <string name="cesar_error_result_file">Ezin izan da deszifratutako fitxategia ireki.</string>
+    <string name="cesar_error_save">Ezin izan da fitxategia gorde.</string>
+    <string name="cesar_error_share">Ezin izan da fitxategia partekatu.</string>
+    <string name="cesar_share_title">Berreskuratutako mezua partekatu</string>
 
+    <!-- AES erroreak eta alertak -->
+    <string name="aes_error_file_extension">Hautatutako fitxategiak ez du luzapen baliodunik.</string>
+    <string name="aes_decrypting_image">Irudia deszifratzen, itxaron mesedez...</string>
+    <string name="aes_decrypting_title">Irudia deszifratzen</string>
+    <string name="aes_error_select_file">Hautatu deszifratzeko irudi zifratu bat.</string>
+    <string name="aes_error_invalid_image">Deszifratutako fitxategia ez da PNG irudi balioduna.</string>
+    <string name="aes_error_wrong_password">Pasahitza okerra da edo fitxategia hondatuta dago.</string>
+    <string name="aes_error_invalid_encrypted_file">Zifratutako fitxategia baliogabea edo hondatuta dago.</string>
+    <string name="aes_error_read_image">Ezin izan da irudia irakurri edo deszifratu.</string>
+    <string name="aes_error_unexpected">Ustekabeko errore bat gertatu da irudia deszifratzean.</string>
+
+    <!-- AES emaitza -->
+    <string name="aes_result_error_missing_path">Ez da eman deszifratutako irudiaren bidea.</string>
+    <string name="aes_result_error_not_found">Ez da aurkitu deszifratutako irudia.</string>
+    <string name="aes_result_error_load">Ezin izan da irudia kargatu.</string>
+    <string name="aes_result_loading_image">Irudia kargatzen</string>
+    <string name="aes_result_error_nothing_to_save">Ez dago gordetzeko irudirik.</string>
+    <string name="aes_result_saved">Irudia behar bezala gorde da.</string>
+    <string name="aes_result_error_save">Ezin izan da irudia gorde.</string>
+    <string name="aes_result_error_nothing_to_share">Ez dago partekatzeko irudirik.</string>
+    <string name="aes_result_share_title">Deszifratutako irudia partekatu</string>
+    <string name="aes_result_error_share">Ezin izan da irudia partekatu.</string>
+
+    <!-- Zesar erroreak eta alertak -->
+    <string name="cesar_error_select_file">Hautatu deszifratzeko TXT fitxategi bat.</string>
+    <string name="cesar_error_empty_shift">Sartu desplazamendua.</string>
+    <string name="cesar_error_invalid_shift">Desplazamenduak 0 eta 25 arteko zenbakia izan behar du.</string>
+    <string name="cesar_error_read_file">ERROR. Egiaztatu TXT balioduna dela.</string>
+    <string name="cesar_error_unexpected">Ustekabeko errore bat gertatu da fitxategia deszifratzean.</string>
+
+    <!-- Errore orokorrak -->
+    <string name="error_file_permission">Ezin izan da hautatutako fitxategira sartu.</string>
+
+    <string name="error_invalid_data">Fitxategiaren datuak baliogabeak dira.</string>
+    <string name="error_empty_file">Fitxategia hutsik dago.</string>
 </resources>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- FONDO -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -79,24 +80,36 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/fondo_tarjeta_pergamino" />
 
-            <!-- ZONA INTERIOR -->
+            <!-- CONTENIDO INTERIOR -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingStart="62dp"
-                android:paddingEnd="62dp"
-                android:paddingTop="100dp"
-                android:paddingBottom="85dp">
+                android:paddingStart="120dp"
+                android:paddingEnd="120dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="35dp">
 
-                <ImageView
-                    android:id="@+id/ivImagenDescifrada"
+                <!-- SCROLL DE LA IMAGEN -->
+                <ScrollView
+                    android:id="@+id/scrollImagenDescifrada"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/aes_decrypted_image_description"
-                    android:scaleType="fitCenter"
-                    android:visibility="gone" />
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:visibility="gone">
 
+                    <ImageView
+                        android:id="@+id/ivImagenDescifrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/aes_decrypted_image_description"
+                        android:scaleType="fitCenter" />
+
+                </ScrollView>
+
+                <!-- MENSAJE DE ESTADO -->
                 <TextView
                     android:id="@+id/tvEstadoResultado"
                     android:layout_width="match_parent"

@@ -85,8 +85,8 @@
                 android:layout_height="match_parent"
                 android:paddingStart="62dp"
                 android:paddingEnd="62dp"
-                android:paddingTop="100dp"
-                android:paddingBottom="85dp">
+                android:paddingTop="115dp"
+                android:paddingBottom="115dp">
 
                 <TextView
                     android:id="@+id/tvEstadoCesar"
