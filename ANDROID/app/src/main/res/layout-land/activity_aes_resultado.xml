@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_biblioteca"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="5dp">
+
+        <!-- CABECERA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/cabecera_orden">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aes_result_section"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="65dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#F2B82E" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/aes_header_subtitle"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- PERGAMINO DEL RESULTADO -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/fondo_tarjeta_pergamino" />
+
+            <!-- ZONA INTERIOR -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="62dp"
+                android:paddingEnd="62dp"
+                android:paddingTop="100dp"
+                android:paddingBottom="85dp">
+
+                <ImageView
+                    android:id="@+id/ivImagenDescifrada"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/aes_decrypted_image_description"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvEstadoResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/aes_waiting_decryption"
+                    android:textColor="#62513D"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <!-- BOTONES GUARDAR Y COMPARTIR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:backgroundTint="@color/azul_hechicero"
+                android:text="@string/aes_save_button"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnCompartir"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:backgroundTint="@color/azul_hechicero"
+                android:text="@string/share_button"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- BOTÓN VOLVER -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:paddingStart="14dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnVolver"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:src="@drawable/fondo_flecha_volver"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:contentDescription="@string/button_back" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
