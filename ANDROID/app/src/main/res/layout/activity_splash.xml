@@ -20,6 +20,7 @@
             android:layout_height="280dp"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
             android:src="@drawable/logo_orden_auror" />
 
         <TextView

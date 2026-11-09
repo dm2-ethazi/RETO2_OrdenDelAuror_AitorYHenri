@@ -4,7 +4,6 @@ package com.dm2.orden_del_auror.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.provider.OpenableColumns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -12,24 +11,41 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.dm2.orden_del_auror.R
 import com.dm2.orden_del_auror.crypto.CesarCrypto
+import com.dm2.orden_del_auror.files.FileManager
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.IOException
 
+/**
+ * Pantalla encargada de seleccionar y descifrar archivos de texto
+ * mediante el algoritmo César.
+ */
 class CesarActivity : AppCompatActivity() {
 
     private lateinit var tvArchivoSeleccionado: TextView
     private lateinit var etDesplazamiento: EditText
+    private lateinit var btnDescifrar: Button
 
     private var archivoSeleccionado: Uri? = null
 
-    // Selector de archivos TXT
+    /**
+     * Selector de archivos TXT.
+     */
     private val selectorArchivo =
         registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
 
             if (uri != null) {
+
                 archivoSeleccionado = uri
 
-                tvArchivoSeleccionado.text = obtenerNombreArchivo(uri)
+                tvArchivoSeleccionado.text =
+                    FileManager.obtenerNombreArchivo(this, uri)
+
             }
         }
 
@@ -51,6 +67,9 @@ class CesarActivity : AppCompatActivity() {
 
         etDesplazamiento =
             findViewById(R.id.etDesplazamiento)
+
+        btnDescifrar =
+            findViewById(R.id.btnDescifrar)
     }
 
     /**
@@ -63,10 +82,9 @@ class CesarActivity : AppCompatActivity() {
                 seleccionarArchivo()
             }
 
-        findViewById<Button>(R.id.btnDescifrar)
-            .setOnClickListener {
-                descifrarArchivo()
-            }
+        btnDescifrar.setOnClickListener {
+            descifrarArchivo()
+        }
 
         findViewById<ImageButton>(R.id.btnVolver)
             .setOnClickListener {
@@ -85,109 +103,152 @@ class CesarActivity : AppCompatActivity() {
     }
 
     /**
-     * Descifra el contenido del archivo seleccionado.
+     * Descifra el contenido del archivo seleccionado
+     * utilizando una corrutina en segundo plano.
      */
     private fun descifrarArchivo() {
 
+        // 1. Comprobar que se ha seleccionado un archivo.
         val uri = archivoSeleccionado
 
         if (uri == null) {
-            mostrarMensaje("Primero debes seleccionar un archivo.")
+            mostrarMensaje(
+                "Primero debes seleccionar un archivo."
+            )
             return
         }
 
+        // 2. Comprobar que se ha introducido el desplazamiento.
         val desplazamientoTexto =
             etDesplazamiento.text.toString().trim()
 
         if (desplazamientoTexto.isEmpty()) {
-            etDesplazamiento.error = "Introduce un desplazamiento"
+
+            etDesplazamiento.error =
+                "Introduce un desplazamiento."
+
+            etDesplazamiento.requestFocus()
             return
         }
 
+        // 3. Comprobar que el desplazamiento es un número válido.
         val desplazamiento =
             desplazamientoTexto.toIntOrNull()
 
         if (desplazamiento == null || desplazamiento !in 0..25) {
-            etDesplazamiento.error = "Introduce un número entre 0 y 25"
+
+            etDesplazamiento.error =
+                "Introduce un número entre 0 y 25."
+
+            etDesplazamiento.requestFocus()
             return
         }
 
-        try {
+        // Evitar que el usuario inicie varios descifrados a la vez.
+        btnDescifrar.isEnabled = false
 
-            // Leer el contenido del archivo
-            val textoCifrado = contentResolver
-                .openInputStream(uri)
-                ?.bufferedReader(Charsets.UTF_8)
-                ?.use { it.readText() }
-                ?: throw Exception("No se pudo leer el archivo.")
+        lifecycleScope.launch {
 
-            if (textoCifrado.isEmpty()) {
-                mostrarMensaje("El archivo está vacío.")
-                return
+            try {
+
+                // 4. Leer el archivo y descifrarlo en segundo plano.
+                val textoDescifrado = withContext(Dispatchers.IO) {
+
+                    val datosCifrados = FileManager.leerArchivo(
+                        this@CesarActivity,
+                        uri
+                    )
+
+                    // Comprobar que el archivo no está vacío.
+                    if (datosCifrados.isEmpty()) {
+                        throw IOException(
+                            "El archivo está vacío."
+                        )
+                    }
+
+                    // Convertir los bytes a texto UTF-8.
+                    val textoCifrado = String(
+                        datosCifrados,
+                        Charsets.UTF_8
+                    )
+
+                    if (textoCifrado.isBlank()) {
+                        throw IOException(
+                            "El archivo no contiene texto."
+                        )
+                    }
+
+                    // Aplicar el algoritmo César.
+                    CesarCrypto.descifrar(
+                        textoCifrado,
+                        desplazamiento
+                    )
+                }
+
+                // 5. Abrir la pantalla del resultado.
+                val intent = Intent(
+                    this@CesarActivity,
+                    CesarResultadoActivity::class.java
+                )
+
+                intent.putExtra(
+                    CesarResultadoActivity.EXTRA_TEXTO,
+                    textoDescifrado
+                )
+
+                startActivity(intent)
+
+            } catch (e: CancellationException) {
+
+                // No ocultar la cancelación de la corrutina.
+                throw e
+
+            } catch (e: SecurityException) {
+
+                mostrarMensaje(
+                    "No tienes permiso para acceder a este archivo."
+                )
+
+            } catch (e: IOException) {
+
+                mostrarMensaje(
+                    e.message ?: "No se pudo leer el archivo."
+                )
+
+            } catch (e: IllegalArgumentException) {
+
+                mostrarMensaje(
+                    e.message ?: "El desplazamiento no es válido."
+                )
+
+            } catch (e: Exception) {
+
+                mostrarMensaje(
+                    "Ha ocurrido un error inesperado al descifrar el texto."
+                )
+
+            } finally {
+
+                // Recuperar el botón aunque se produzca un error.
+                if (!isFinishing && !isDestroyed) {
+                    btnDescifrar.isEnabled = true
+                }
             }
-
-            // Aplicar el algoritmo César
-            val textoDescifrado = CesarCrypto.descifrar(
-                textoCifrado,
-                desplazamiento
-            )
-
-            // Abrir la pantalla del resultado
-            val intent = Intent(
-                this,
-                CesarResultadoActivity::class.java
-            )
-
-            intent.putExtra(
-                CesarResultadoActivity.EXTRA_TEXTO,
-                textoDescifrado
-            )
-
-            startActivity(intent)
-
-        } catch (e: Exception) {
-
-            mostrarMensaje(
-                "No se pudo descifrar el archivo: ${e.message}"
-            )
         }
     }
 
     /**
-     * Obtiene el nombre del archivo seleccionado.
-     */
-    private fun obtenerNombreArchivo(uri: Uri): String {
-
-        var nombre = "Archivo seleccionado"
-
-        contentResolver.query(
-            uri,
-            null,
-            null,
-            null,
-            null
-        )?.use { cursor ->
-
-            val columna =
-                cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
-
-            if (cursor.moveToFirst() && columna >= 0) {
-                nombre = cursor.getString(columna)
-            }
-        }
-
-        return nombre
-    }
-
-    /**
-     * Muestra un mensaje al usuario.
+     * Muestra un mensaje al usuario sin cerrar la aplicación.
      */
     private fun mostrarMensaje(mensaje: String) {
 
-        Toast.makeText(
-            this,
-            mensaje,
-            Toast.LENGTH_SHORT
-        ).show()
+        if (!isFinishing && !isDestroyed) {
+
+            Toast.makeText(
+                this,
+                mensaje,
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 }

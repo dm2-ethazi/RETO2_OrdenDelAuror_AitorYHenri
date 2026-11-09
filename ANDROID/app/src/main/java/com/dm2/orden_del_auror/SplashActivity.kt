@@ -12,22 +12,27 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class SplashActivity : AppCompatActivity() {
 
     private val handler = Handler(Looper.getMainLooper())
-
     private val tiempoCarga = 2500L
 
     private val abrirPrincipal = Runnable {
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
+        if (!isFinishing && !isDestroyed) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // Inicializar la pantalla de carga del sistema
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
 
-        // Fondo negro de la pantalla de carga
         window.statusBarColor = android.graphics.Color.BLACK
         window.navigationBarColor = android.graphics.Color.BLACK
 
@@ -37,7 +42,6 @@ class SplashActivity : AppCompatActivity() {
 
         iniciarAnimaciones()
 
-        // Abrir la pantalla principal después de la carga
         handler.postDelayed(abrirPrincipal, tiempoCarga)
     }
 
@@ -45,7 +49,6 @@ class SplashActivity : AppCompatActivity() {
 
         val logo = findViewById<ImageView>(R.id.ivLogoSplash)
 
-        // Aparición progresiva del logo
         logo.alpha = 0f
         logo.scaleX = 0.85f
         logo.scaleY = 0.85f
@@ -58,7 +61,6 @@ class SplashActivity : AppCompatActivity() {
             .setInterpolator(AccelerateDecelerateInterpolator())
             .start()
 
-        // Animación de los destellos
         animarDestello(R.id.destello1, 0)
         animarDestello(R.id.destello2, 300)
         animarDestello(R.id.destello3, 600)

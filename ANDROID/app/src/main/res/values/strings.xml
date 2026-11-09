@@ -48,7 +48,7 @@
     <string name="aes_result_section">03 | IMAGEN RECUPERADA</string>
     <string name="aes_waiting_decryption">Esperando descifrado...</string>
     <string name="aes_decrypted_image_description">Imagen descifrada</string>
-    <string name="aes_save_button">Guardar imagen recuperada</string>
+    <string name="aes_save_button">Guardar</string>
     <string name="aes_no_password">Introduce la contraseña de descifrado</string>
     <string name="aes_decrypting">Descifrando imagen...</string>
     <string name="aes_success">Imagen descifrada correctamente</string>
@@ -76,7 +76,7 @@
     <string name="cesar_result_header_subtitle">RECUPERACIÓN DE MENSAJES</string>
     <string name="cesar_waiting_decryption">Esperando descifrado...</string>
     <string name="cesar_result_hint">El mensaje descifrado aparecerá aquí...</string>
-    <string name="cesar_save_button">Guardar mensaje recuperado</string>
+    <string name="cesar_save_button">Guardar</string>
     <string name="cesar_decrypting">Descifrando texto...</string>
     <string name="cesar_success">Mensaje descifrado correctamente</string>
     <string name="cesar_error">Error al descifrar el mensaje</string>
@@ -106,4 +106,5 @@
         <item>Euskara</item>
     </string-array>
 
+    <string name="share_button">Compartir</string>
 </resources>

@@ -1,6 +1,6 @@
-
 package com.dm2.orden_del_auror.ui
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
@@ -10,12 +10,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import com.dm2.orden_del_auror.R
 import com.dm2.orden_del_auror.files.FileManager
 import com.dm2.orden_del_auror.utils.AppUtils
 
 /**
- * Pantalla que muestra y permite guardar la imagen recuperada mediante AES.
+ * Pantalla que muestra y permite guardar o compartir
+ * la imagen recuperada mediante AES.
  */
 class AesResultadoActivity : AppCompatActivity() {
 
@@ -86,6 +88,9 @@ class AesResultadoActivity : AppCompatActivity() {
         tvEstado.text = "¡Imagen recuperada correctamente!"
     }
 
+    /**
+     * Configura los botones de la pantalla.
+     */
     private fun configurarBotones() {
 
         findViewById<Button>(R.id.btnGuardar)
@@ -100,6 +105,11 @@ class AesResultadoActivity : AppCompatActivity() {
                 }
 
                 selectorGuardar.launch(nombreArchivo)
+            }
+
+        findViewById<Button>(R.id.btnCompartir)
+            .setOnClickListener {
+                compartirImagen()
             }
 
         findViewById<ImageButton>(R.id.btnVolver)
@@ -134,6 +144,55 @@ class AesResultadoActivity : AppCompatActivity() {
             AppUtils.mostrarMensaje(
                 this,
                 "Error al guardar la imagen."
+            )
+        }
+    }
+
+    /**
+     * Comparte la imagen recuperada con otras aplicaciones.
+     */
+    private fun compartirImagen() {
+
+        val datos = imagenDescifrada
+
+        if (datos == null) {
+            AppUtils.mostrarMensaje(
+                this,
+                "No hay ninguna imagen recuperada para compartir."
+            )
+            return
+        }
+
+        try {
+            val uriCompartible = FileManager.crearUriCompartible(
+                this,
+                nombreArchivo,
+                datos
+            )
+
+            val compartirIntent = Intent(Intent.ACTION_SEND).apply {
+                type = "image/png"
+                putExtra(Intent.EXTRA_STREAM, uriCompartible)
+                clipData = android.content.ClipData.newUri(
+                    contentResolver,
+                    nombreArchivo,
+                    uriCompartible
+                )
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+
+            startActivity(
+                Intent.createChooser(
+                    compartirIntent,
+                    "Compartir imagen recuperada"
+                )
+            )
+
+        } catch (e: Exception) {
+
+            AppUtils.mostrarMensaje(
+                this,
+                "No se ha podido compartir la imagen."
             )
         }
     }

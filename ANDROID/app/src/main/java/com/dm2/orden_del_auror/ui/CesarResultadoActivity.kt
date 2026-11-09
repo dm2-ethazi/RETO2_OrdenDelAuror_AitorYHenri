@@ -1,6 +1,7 @@
-
 package com.dm2.orden_del_auror.ui
 
+import android.content.ClipData
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.dm2.orden_del_auror.R
+import com.dm2.orden_del_auror.files.FileManager
 
 class CesarResultadoActivity : AppCompatActivity() {
 
@@ -17,11 +19,10 @@ class CesarResultadoActivity : AppCompatActivity() {
 
     private var textoDescifrado: String = ""
 
-    // Selector de ubicación para guardar el resultado
     private val guardarArchivo =
         registerForActivityResult(
             ActivityResultContracts.CreateDocument("text/plain")
-        ) { uri ->
+        ) { uri: Uri? ->
 
             if (uri != null) {
                 guardarTexto(uri)
@@ -41,9 +42,7 @@ class CesarResultadoActivity : AppCompatActivity() {
      * Inicializa los componentes.
      */
     private fun inicializarVistas() {
-
-        tvResultado =
-            findViewById(R.id.tvResultadoCesar)
+        tvResultado = findViewById(R.id.tvResultadoCesar)
     }
 
     /**
@@ -55,6 +54,13 @@ class CesarResultadoActivity : AppCompatActivity() {
             intent.getStringExtra(EXTRA_TEXTO) ?: ""
 
         tvResultado.text = textoDescifrado
+
+        findViewById<TextView>(R.id.tvEstadoCesar).visibility =
+            android.view.View.GONE
+
+        findViewById<android.widget.ScrollView>(
+            R.id.scrollResultadoCesar
+        ).visibility = android.view.View.VISIBLE
     }
 
     /**
@@ -65,6 +71,11 @@ class CesarResultadoActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnGuardarCesar)
             .setOnClickListener {
                 solicitarGuardado()
+            }
+
+        findViewById<Button>(R.id.btnCompartirCesar)
+            .setOnClickListener {
+                compartirTexto()
             }
 
         findViewById<ImageButton>(R.id.btnVolverResultado)
@@ -112,10 +123,53 @@ class CesarResultadoActivity : AppCompatActivity() {
     }
 
     /**
+     * Comparte el mensaje descifrado como archivo TXT.
+     */
+    private fun compartirTexto() {
+
+        if (textoDescifrado.isEmpty()) {
+            mostrarMensaje("No hay ningún mensaje que compartir.")
+            return
+        }
+
+        try {
+
+            val datos = textoDescifrado.toByteArray(Charsets.UTF_8)
+
+            val uriCompartible = FileManager.crearUriCompartible(
+                this,
+                "mensaje_descifrado.txt",
+                datos
+            )
+
+            val compartirIntent = Intent(Intent.ACTION_SEND).apply {
+                type = "text/plain"
+                putExtra(Intent.EXTRA_STREAM, uriCompartible)
+                clipData = ClipData.newUri(
+                    contentResolver,
+                    "mensaje_descifrado.txt",
+                    uriCompartible
+                )
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+
+            startActivity(
+                Intent.createChooser(
+                    compartirIntent,
+                    "Compartir mensaje recuperado"
+                )
+            )
+
+        } catch (e: Exception) {
+
+            mostrarMensaje("No se ha podido compartir el mensaje.")
+        }
+    }
+
+    /**
      * Muestra un mensaje al usuario.
      */
     private fun mostrarMensaje(mensaje: String) {
-
         Toast.makeText(
             this,
             mensaje,

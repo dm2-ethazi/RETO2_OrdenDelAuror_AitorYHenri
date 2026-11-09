@@ -1,30 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema principal de la aplicación -->
+    <style name="Theme.Orden_del_Auror" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:colorAccent">#D99A25</item>
+    </style>
 
-    <!-- Tema principal de Orden del Auror -->
-    <style name="Base.Theme.Orden_del_Auror"
-        parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Pantalla de carga -->
 
-        <!-- Colores principales -->
-        <item name="colorPrimary">@color/azul_hechicero</item>
-        <item name="colorOnPrimary">@color/texto_claro</item>
+    <style name="Theme.Orden_del_Auror.Splash" parent="Theme.SplashScreen">
 
-        <!-- Colores secundarios -->
-        <item name="colorSecondary">@color/dorado_antiguo</item>
-        <item name="colorOnSecondary">@color/texto_claro</item>
+        <item name="windowSplashScreenBackground">#000000</item>
 
-        <!-- Color terciario -->
-        <item name="colorTertiary">@color/granate_magico</item>
-        <item name="colorOnTertiary">@color/texto_claro</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_splash_sistema</item>
 
-        <!-- Fondo y superficies -->
-        <item name="android:colorBackground">@color/fondo_principal</item>
-        <item name="colorSurface">@color/fondo_secundario</item>
-        <item name="colorOnSurface">@color/texto_principal</item>
+        <item name="windowSplashScreenIconBackgroundColor">#000000</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Orden_del_Auror</item>
 
     </style>
 
-    <style name="Theme.Orden_del_Auror"
-        parent="Base.Theme.Orden_del_Auror" />
 
 </resources>

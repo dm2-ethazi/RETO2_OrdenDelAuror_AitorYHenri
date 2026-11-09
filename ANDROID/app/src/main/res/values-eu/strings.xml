@@ -48,7 +48,7 @@
     <string name="aes_result_section">03 | BERRESKURATUTAKO IRUDIA</string>
     <string name="aes_waiting_decryption">Deszifratzea itxaroten...</string>
     <string name="aes_decrypted_image_description">Deszifratutako irudia</string>
-    <string name="aes_save_button">Berreskuratutako irudia gorde</string>
+    <string name="aes_save_button">Gorde</string>
     <string name="aes_no_password">Sartu deszifratzeko pasahitza</string>
     <string name="aes_decrypting">Irudia deszifratzen...</string>
     <string name="aes_success">Irudia behar bezala deszifratu da</string>
@@ -76,7 +76,7 @@
     <string name="cesar_result_header_subtitle">MEZUAK BERRESKURATZEA</string>
     <string name="cesar_waiting_decryption">Deszifratzea itxaroten...</string>
     <string name="cesar_result_hint">Deszifratutako mezua hemen agertuko da...</string>
-    <string name="cesar_save_button">Berreskuratutako mezua gorde</string>
+    <string name="cesar_save_button">Gorde</string>
     <string name="cesar_decrypting">Testua deszifratzen...</string>
     <string name="cesar_success">Mezua behar bezala deszifratu da</string>
     <string name="cesar_error">Errorea mezua deszifratzean</string>
@@ -105,5 +105,7 @@
         <item>English</item>
         <item>Euskara</item>
     </string-array>
+
+    <string name="share_button">Partekatu</string>
 
 </resources>

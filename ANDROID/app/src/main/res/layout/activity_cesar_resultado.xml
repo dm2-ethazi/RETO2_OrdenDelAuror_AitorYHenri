@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- FONDO DE BIBLIOTECA -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,7 +10,6 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
-    <!-- OSCURECER EL FONDO -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -74,7 +72,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="8dp">
 
-            <!-- FONDO DEL PERGAMINO -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -91,7 +88,6 @@
                 android:paddingTop="100dp"
                 android:paddingBottom="85dp">
 
-                <!-- MENSAJE DE CARGA -->
                 <TextView
                     android:id="@+id/tvEstadoCesar"
                     android:layout_width="match_parent"
@@ -102,7 +98,6 @@
                     android:textSize="14sp"
                     android:visibility="visible" />
 
-                <!-- TEXTO DESCIFRADO CON SCROLL -->
                 <ScrollView
                     android:id="@+id/scrollResultadoCesar"
                     android:layout_width="match_parent"
@@ -130,19 +125,42 @@
 
         </FrameLayout>
 
-        <!-- BOTÓN GUARDAR FUERA DEL PERGAMINO -->
-        <Button
-            android:id="@+id/btnGuardarCesar"
+        <!-- BOTONES GUARDAR Y COMPARTIR -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginStart="55dp"
-            android:layout_marginEnd="55dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="@color/azul_hechicero"
-            android:text="@string/cesar_save_button"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF" />
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btnGuardarCesar"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/azul_hechicero"
+                android:text="@string/cesar_save_button"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnCompartirCesar"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/azul_hechicero"
+                android:text="@string/share_button"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+        </LinearLayout>
 
         <!-- BOTÓN VOLVER -->
         <FrameLayout

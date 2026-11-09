@@ -15,7 +15,9 @@
         <!-- PANTALLA DE CARGA -->
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Orden_del_Auror.Splash">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,32 +30,51 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- DESCIFRADO AES -->
         <activity
             android:name=".ui.AesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <!-- RESULTADO AES -->
         <activity
             android:name=".ui.AesResultadoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <!-- DESCIFRADO CÉSAR -->
         <activity
             android:name=".ui.CesarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <!-- RESULTADO CÉSAR -->
         <activity
             android:name=".ui.CesarResultadoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <!-- AJUSTES -->
         <activity
             android:name=".ui.SettingsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- COMPARTIR ARCHIVOS -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
 
     </application>
 
