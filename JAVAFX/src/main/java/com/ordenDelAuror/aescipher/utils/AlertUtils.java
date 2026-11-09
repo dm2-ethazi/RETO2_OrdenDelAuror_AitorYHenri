@@ -15,7 +15,7 @@ public class AlertUtils {
         dialogPane.getStylesheets().add(
                 AlertUtils.class
                         .getResource(
-                                "/com/ordenDelAuror/aescipher/css/style.css")
+                                "/css/style.css")
                         .toExternalForm());
 
         dialogPane.getStyleClass().add(styleClass);

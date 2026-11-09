@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+registroDeApp.log
+registroDeApp1MB.log

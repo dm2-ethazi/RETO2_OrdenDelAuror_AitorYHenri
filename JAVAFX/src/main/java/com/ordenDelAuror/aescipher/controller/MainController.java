@@ -3,8 +3,9 @@ package com.ordenDelAuror.aescipher.controller;
 import com.ordenDelAuror.aescipher.crypto.AESService;
 import com.ordenDelAuror.aescipher.utils.AlertUtils;
 import com.ordenDelAuror.aescipher.utils.LanguageManager;
-import com.ordenDelAuror.aescipher.utils.LanguageManager;
 import com.ordenDelAuror.aescipher.utils.LanguageOption;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 import javafx.fxml.FXML;
@@ -45,6 +46,8 @@ public class MainController {
 
     @FXML
     private ComboBox<LanguageOption> languageComboBox;
+
+    private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
     private void updateTexts() {
 
@@ -114,7 +117,7 @@ public class MainController {
 
     @FXML
     private void selectFile() {
-
+        logger.info("Seleccionando archivos");
         FileChooser chooser =
                 new FileChooser();
 
@@ -123,6 +126,7 @@ public class MainController {
 
         if (selectedFile != null) {
             statusLabel.setText(selectedFile.getName());
+            logger.info("Archivo seleccionado: " + selectedFile.getName());
         }
     }
 
@@ -130,7 +134,7 @@ public class MainController {
     private void encrypt() {
 
         if (selectedFile == null) {
-
+            logger.warn("No se ha seleccionado Archivo para cifrar");
             AlertUtils.showWarning(
                     LanguageManager.get("alert.file_missing.title"),
                     LanguageManager.get("alert.file_missing.message"));
@@ -139,7 +143,7 @@ public class MainController {
         }
 
         if (passwordField.getText().trim().isEmpty()) {
-
+            logger.warn("No se ha introducido contraseña para cifrar");
             AlertUtils.showWarning(
                     LanguageManager.get("alert.password_missing.title"),
                     LanguageManager.get("alert.password_missing.message"));
@@ -189,7 +193,7 @@ public class MainController {
 
             progressLabel.textProperty().unbind();
             progressLabel.setText(LanguageManager.get("status.finish"));
-
+            logger.info("Archivo Cifrado Correctamente");
             AlertUtils.showInfo(
                     LanguageManager.get("alert.encrypt_success.title"),
                     LanguageManager.get("alert.encrypt_success.message"));
@@ -198,7 +202,7 @@ public class MainController {
         task.setOnFailed(event -> {
 
             progressLabel.textProperty().unbind();
-
+            logger.error("Error al cifrar: "+ task.getException().getMessage());
             AlertUtils.showError(
                     LanguageManager.get("alert.error.encrypt"),
                     task.getException().getMessage());
@@ -211,7 +215,7 @@ public class MainController {
     private void decrypt() {
 
         if (selectedFile == null) {
-
+            logger.warn("No se ha seleccionado Archivo a descifrar");
             AlertUtils.showWarning(
                     LanguageManager.get("alert.file_missing.title"),
                     LanguageManager.get("alert.file_missing.message"));
@@ -219,10 +223,8 @@ public class MainController {
             return;
         }
 
-        if (passwordField.getText()
-                .trim()
-                .isEmpty()) {
-
+        if (passwordField.getText().trim().isEmpty()) {
+            logger.warn("No se ha introducido contraseña para descifrar");
             AlertUtils.showWarning(
                     LanguageManager.get("alert.password_missing.title"),
                     LanguageManager.get("alert.password_missing.message"));
@@ -242,7 +244,7 @@ public class MainController {
                                         .getAbsolutePath();
 
                         if (!path.endsWith(".aes")) {
-
+                            logger.error("El archivo debe ser .aes");
                             throw new Exception(
                                     LanguageManager.get("alert.error.decrypt.notaes"));
                         }
@@ -294,7 +296,7 @@ public class MainController {
 
             progressLabel.setText(
                     LanguageManager.get("status.finish"));
-
+            logger.info("Archivo descifrado correctamente");
             AlertUtils.showInfo(
                     LanguageManager.get("alert.decrypt_success.title"),
                     LanguageManager.get("alert.decrypt_success.message"));
@@ -308,7 +310,7 @@ public class MainController {
 
             Throwable ex =
                     task.getException();
-
+            logger.error("Error al descifrar: "+task.getException().getMessage());
             AlertUtils.showError(
                     LanguageManager.get("alert.error.decrypt"),
                     ex.getMessage());

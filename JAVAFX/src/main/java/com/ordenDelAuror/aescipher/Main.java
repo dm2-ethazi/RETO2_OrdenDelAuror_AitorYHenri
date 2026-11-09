@@ -6,23 +6,27 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+public class Main extends Application {
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
     @Override
     public void start(Stage stage) throws Exception {
-        Image icon = new Image(getClass().getResourceAsStream("/com/ordenDelAuror/aescipher/images/icon.png"));
+        Image icon = new Image(getClass().getResourceAsStream("/images/icon.png"));
 
         // 2. Añadir el icono a la lista de iconos del Stage
         stage.getIcons().add(icon);
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(
-                        "/com/ordenDelAuror/aescipher/view/main-view.fxml"));
+                        "/view/main-view.fxml"));
+        logger.info("Iniciando Orden del Auror");
 
         Scene scene = new Scene(loader.load());
 
         scene.getStylesheets().add(
                 getClass()
-                        .getResource("/com/ordenDelAuror/aescipher/css/style.css")
+                        .getResource("/css/style.css")
                         .toExternalForm());
 
         stage.setTitle("Orden del Auror");
