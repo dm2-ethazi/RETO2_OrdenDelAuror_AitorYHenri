@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -20,14 +21,12 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
 import javax.crypto.BadPaddingException
 import javax.crypto.IllegalBlockSizeException
 
-/**
- * Pantalla encargada de seleccionar una imagen
- * y descifrarla mediante el algoritmo AES.
- */
 class AesActivity : AppCompatActivity() {
 
     private lateinit var tvArchivoSeleccionado: TextView
@@ -36,18 +35,32 @@ class AesActivity : AppCompatActivity() {
 
     private var archivoSeleccionado: Uri? = null
 
-    /**
-     * Selector de imágenes PNG.
-     */
+    companion object {
+        private const val TAG = "PRUEBA_AES"
+    }
+
+    // Selector de archivos AES cifrados.
     private val selectorArchivo =
         registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
 
             if (uri != null) {
-
-                archivoSeleccionado = uri
-
-                tvArchivoSeleccionado.text =
+                val nombreArchivo =
                     FileManager.obtenerNombreArchivo(this, uri)
+
+                if (!nombreArchivo.endsWith(".png.aes", ignoreCase = true)) {
+                    archivoSeleccionado = null
+                    tvArchivoSeleccionado.text = "Ningún archivo seleccionado"
+
+                    AppUtils.mostrarMensaje(
+                        this,
+                        "Selecciona un archivo con extensión .png.aes."
+                    )
+                } else {
+                    archivoSeleccionado = uri
+                    tvArchivoSeleccionado.text = nombreArchivo
+
+                    Log.d(TAG, "Archivo seleccionado: $nombreArchivo")
+                }
             }
         }
 
@@ -59,11 +72,7 @@ class AesActivity : AppCompatActivity() {
         configurarBotones()
     }
 
-    /**
-     * Inicializa los componentes de la interfaz.
-     */
     private fun inicializarVistas() {
-
         tvArchivoSeleccionado =
             findViewById(R.id.tvArchivoSeleccionado)
 
@@ -74,9 +83,6 @@ class AesActivity : AppCompatActivity() {
             findViewById(R.id.btnDescifrar)
     }
 
-    /**
-     * Configura las acciones de los botones.
-     */
     private fun configurarBotones() {
 
         findViewById<Button>(R.id.btnSeleccionarArchivo)
@@ -94,54 +100,39 @@ class AesActivity : AppCompatActivity() {
             }
     }
 
-    /**
-     * Abre el selector de imágenes PNG.
-     */
+    // Permitir seleccionar archivos cifrados.
     private fun seleccionarArchivo() {
-
-        selectorArchivo.launch(
-            arrayOf("image/png")
-        )
+        selectorArchivo.launch(arrayOf("*/*"))
     }
 
-    /**
-     * Descifra la imagen seleccionada en segundo plano.
-     */
     private fun descifrarImagen() {
 
-        // 1. Comprobar que se ha seleccionado un archivo.
         val uri = archivoSeleccionado
 
         if (uri == null) {
-
             AppUtils.mostrarMensaje(
                 this,
-                "Selecciona primero una imagen."
+                "Selecciona primero un archivo .png.aes."
             )
-
             return
         }
 
-        // 2. Comprobar que se ha introducido la contraseña.
         val contrasena = etContrasena.text.toString()
 
         if (contrasena.isBlank()) {
-
-            etContrasena.error =
-                "Introduce la contraseña."
-
+            etContrasena.error = "Introduce la contraseña."
             etContrasena.requestFocus()
             return
         }
 
-        // Evitar varios descifrados simultáneos.
         btnDescifrar.isEnabled = false
 
-        lifecycleScope.launch {
+        Log.d(TAG, "Comenzando el descifrado")
 
+        lifecycleScope.launch {
             try {
 
-                // 3. Leer y descifrar el archivo en segundo plano.
+                // Leer y descifrar la imagen en segundo plano.
                 val resultado = withContext(Dispatchers.IO) {
 
                     val datosCifrados = FileManager.leerArchivo(
@@ -149,20 +140,26 @@ class AesActivity : AppCompatActivity() {
                         uri
                     )
 
-                    // Comprobar que el archivo no está vacío.
+                    Log.d(
+                        TAG,
+                        "1. Archivo leído: ${datosCifrados.size} bytes"
+                    )
+
                     if (datosCifrados.isEmpty()) {
-                        throw IOException(
-                            "El archivo está vacío."
-                        )
+                        throw IOException("El archivo está vacío.")
                     }
 
-                    // Descifrar el contenido mediante AES.
                     val datosDescifrados = AESCrypto.descifrar(
                         datosCifrados,
                         contrasena
                     )
 
-                    // Comprobar que el resultado es una imagen válida.
+                    Log.d(
+                        TAG,
+                        "2. Archivo descifrado: ${datosDescifrados.size} bytes"
+                    )
+
+                    // Comprobar que los datos corresponden a una imagen.
                     val opciones = BitmapFactory.Options().apply {
                         inJustDecodeBounds = true
                     }
@@ -182,76 +179,89 @@ class AesActivity : AppCompatActivity() {
                         )
                     }
 
+                    Log.d(
+                        TAG,
+                        "3. Imagen validada: ${opciones.outWidth}x${opciones.outHeight}"
+                    )
+
                     datosDescifrados
                 }
 
-                // 4. Volver al hilo principal y abrir el resultado.
+                // Obtener el nombre del archivo original.
+                val nombreOriginal =
+                    FileManager.obtenerNombreArchivo(this@AesActivity, uri)
+
+                val nombreDescifrado =
+                    FileManager.generarNombreDescifrado(nombreOriginal)
+
+                // Guardar la imagen descifrada en la caché.
+                val archivoTemporal = File(cacheDir, nombreDescifrado)
+
+                withContext(Dispatchers.IO) {
+                    FileOutputStream(archivoTemporal).use { output ->
+                        output.write(resultado)
+                    }
+                }
+
+                Log.d(
+                    TAG,
+                    "4. Imagen guardada en: ${archivoTemporal.absolutePath}"
+                )
+
+                // Enviar solamente la ruta del archivo.
                 val intent = Intent(
                     this@AesActivity,
                     AesResultadoActivity::class.java
                 )
 
                 intent.putExtra(
-                    AesResultadoActivity.EXTRA_IMAGEN,
-                    resultado
+                    AesResultadoActivity.EXTRA_RUTA_IMAGEN,
+                    archivoTemporal.absolutePath
                 )
 
                 intent.putExtra(
                     AesResultadoActivity.EXTRA_NOMBRE,
-                    FileManager.generarNombreDescifrado(
-                        FileManager.obtenerNombreArchivo(
-                            this@AesActivity,
-                            uri
-                        )
-                    )
+                    nombreDescifrado
                 )
+
+                Log.d(TAG, "5. Abriendo pantalla de resultado")
 
                 startActivity(intent)
 
             } catch (e: CancellationException) {
-
-                // Respetar la cancelación de la corrutina.
                 throw e
 
             } catch (e: BadPaddingException) {
-
-                mostrarError(
-                    "Contraseña incorrecta o archivo dañado."
-                )
+                Log.e(TAG, "Error: contraseña incorrecta o archivo dañado", e)
+                mostrarError("Contraseña incorrecta o archivo dañado.")
 
             } catch (e: IllegalBlockSizeException) {
-
-                mostrarError(
-                    "El archivo cifrado tiene un formato incorrecto."
-                )
+                Log.e(TAG, "Error: tamaño del archivo incorrecto", e)
+                mostrarError("El archivo cifrado tiene un formato incorrecto.")
 
             } catch (e: SecurityException) {
-
-                mostrarError(
-                    "No tienes permiso para acceder a este archivo."
-                )
+                Log.e(TAG, "Error de permisos", e)
+                mostrarError("No tienes permiso para acceder a este archivo.")
 
             } catch (e: IOException) {
-
+                Log.e(TAG, "Error de lectura o validación", e)
                 mostrarError(
                     e.message ?: "No se pudo leer o validar la imagen."
                 )
 
             } catch (e: IllegalArgumentException) {
-
+                Log.e(TAG, "Error de argumentos", e)
                 mostrarError(
                     e.message ?: "Los datos introducidos no son válidos."
                 )
 
             } catch (e: Exception) {
-
+                Log.e(TAG, "Error inesperado durante el descifrado", e)
                 mostrarError(
                     "Ha ocurrido un error inesperado al descifrar la imagen."
                 )
 
             } finally {
-
-                // Recuperar el botón al terminar el proceso.
                 if (!isFinishing && !isDestroyed) {
                     btnDescifrar.isEnabled = true
                 }
@@ -259,16 +269,9 @@ class AesActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Muestra un error sin cerrar la aplicación.
-     */
     private fun mostrarError(mensaje: String) {
-
         if (!isFinishing && !isDestroyed) {
-            AppUtils.mostrarMensaje(
-                this,
-                mensaje
-            )
+            AppUtils.mostrarMensaje(this, mensaje)
         }
     }
 }

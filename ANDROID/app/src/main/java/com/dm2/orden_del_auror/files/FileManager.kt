@@ -126,17 +126,24 @@ object FileManager {
      */
     fun generarNombreDescifrado(nombreOriginal: String): String {
 
-        val extension = nombreOriginal.substringAfterLast(".", "")
+        return if (nombreOriginal.endsWith(".png.aes", ignoreCase = true)) {
 
-        val nombreBase = nombreOriginal.substringBeforeLast(
-            ".",
-            nombreOriginal
-        )
+            nombreOriginal.dropLast(4)
 
-        return if (extension.isNotEmpty()) {
-            "${nombreBase}_descifrado.$extension"
         } else {
-            "${nombreOriginal}_descifrado"
+
+            val extension = nombreOriginal.substringAfterLast(".", "")
+
+            val nombreBase = nombreOriginal.substringBeforeLast(
+                ".",
+                nombreOriginal
+            )
+
+            if (extension.isNotEmpty()) {
+                "${nombreBase}_descifrado.$extension"
+            } else {
+                "${nombreOriginal}_descifrado"
+            }
         }
     }
 
