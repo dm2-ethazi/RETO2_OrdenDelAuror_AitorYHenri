@@ -69,8 +69,8 @@ public class Main extends Application {
 
         stage.setTitle("Orden del Auror");
         stage.setScene(scene);
-        stage.setMinWidth(400);
-        stage.setMinHeight(400);
+        stage.setMinWidth(500);
+        stage.setMinHeight(500);
         stage.setMaxWidth(650);
         stage.setMaxHeight(650);
         stage.show();

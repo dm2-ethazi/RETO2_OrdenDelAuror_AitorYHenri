@@ -33,7 +33,8 @@
     <Button
             fx:id="selectButton"
             onAction="#selectFile"
-            styleClass="file-button"/>
+            styleClass="file-button"
+            minWidth="150"/>
 
     <PasswordField
             fx:id="passwordField"
@@ -42,12 +43,14 @@
     <Button
             fx:id="encryptButton"
             onAction="#encrypt"
-            styleClass="encrypt-button"/>
+            styleClass="encrypt-button"
+            minWidth="150"/>
 
     <Button
             fx:id="decryptButton"
             onAction="#decrypt"
-            styleClass="decrypt-button"/>
+            styleClass="decrypt-button"
+            minWidth="150"/>
 
     <ProgressBar
             fx:id="progressBar"
