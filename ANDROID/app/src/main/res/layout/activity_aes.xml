@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Pantalla principal de descifrado AES.
+    Permite seleccionar una imagen cifrada e introducir la contraseña
+    necesaria para recuperar su contenido.
+-->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- FONDO DE BIBLIOTECA -->
+    <!-- Imagen de fondo que representa la biblioteca mágica. -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,24 +17,29 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
-    <!-- OSCURECER EL FONDO -->
+    <!-- Capa semitransparente para mejorar la legibilidad del contenido. -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#55000000" />
 
+    <!-- Contenedor vertical de toda la interfaz. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- CONTENIDO PRINCIPAL -->
+        <!--
+            Área desplazable que contiene los elementos principales.
+            Permite acceder a todo el contenido en pantallas pequeñas.
+        -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:fillViewport="true">
 
+            <!-- Contenedor central de la pantalla. -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -36,7 +47,12 @@
                 android:gravity="center_vertical"
                 android:padding="20dp">
 
-                <!-- CABECERA -->
+                <!-- CABECERA DE LA PANTALLA -->
+
+                <!--
+                    Panel decorativo que contiene el título,
+                    la línea dorada y el subtítulo de la sección AES.
+                -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -45,6 +61,7 @@
                     android:padding="22dp"
                     android:background="@drawable/cabecera_orden">
 
+                    <!-- Título principal de la herramienta AES. -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -55,12 +72,14 @@
                         android:fontFamily="serif"
                         android:gravity="center" />
 
+                    <!-- Línea decorativa dorada que separa título y subtítulo. -->
                     <View
                         android:layout_width="65dp"
                         android:layout_height="3dp"
                         android:layout_marginTop="10dp"
                         android:background="#F2B82E" />
 
+                    <!-- Subtítulo descriptivo de la pantalla. -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,7 +92,9 @@
 
                 </LinearLayout>
 
-                <!-- TÍTULO -->
+                <!-- TÍTULO DE LA SECCIÓN -->
+
+                <!-- Indica que se está trabajando con archivos recibidos. -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -86,7 +107,7 @@
                     android:gravity="center"
                     android:textAlignment="center" />
 
-                <!-- DESCRIPCIÓN -->
+                <!-- Explicación del funcionamiento de la herramienta AES. -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,12 +120,15 @@
                     android:gravity="center"
                     android:textAlignment="center" />
 
-                <!-- PERGAMINO 1: ARCHIVO -->
+                <!-- PERGAMINO 1: SELECCIÓN DEL ARCHIVO -->
+
+                <!-- Contenedor decorativo de la sección de selección. -->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="185dp"
                     android:layout_marginTop="5dp">
 
+                    <!-- Imagen de fondo con apariencia de pergamino. -->
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -112,6 +136,7 @@
                         android:scaleType="fitXY"
                         android:contentDescription="@null" />
 
+                    <!-- Elementos superpuestos sobre el pergamino. -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -122,6 +147,7 @@
                         android:paddingTop="25dp"
                         android:paddingBottom="25dp">
 
+                        <!-- Identificador de la primera sección. -->
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -132,6 +158,10 @@
                             android:gravity="center"
                             android:textAlignment="center" />
 
+                        <!--
+                            Muestra el nombre del archivo seleccionado.
+                            Este TextView se actualiza desde AesActivity.kt.
+                        -->
                         <TextView
                             android:id="@+id/tvArchivoSeleccionado"
                             android:layout_width="match_parent"
@@ -144,6 +174,10 @@
                             android:gravity="center"
                             android:textAlignment="center" />
 
+                        <!--
+                            Abre el selector de documentos de Android
+                            para elegir la imagen que se desea descifrar.
+                        -->
                         <Button
                             android:id="@+id/btnSeleccionarArchivo"
                             android:layout_width="match_parent"
@@ -157,12 +191,15 @@
                     </LinearLayout>
                 </FrameLayout>
 
-                <!-- PERGAMINO 2: CONTRASEÑA -->
+                <!-- PERGAMINO 2: CONTRASEÑA Y DESCIFRADO -->
+
+                <!-- Contenedor decorativo de la sección de contraseña. -->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
                     android:layout_marginTop="20dp">
 
+                    <!-- Fondo de pergamino de la segunda sección. -->
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -170,6 +207,7 @@
                         android:scaleType="fitXY"
                         android:contentDescription="@null" />
 
+                    <!-- Contenedor de la contraseña y del botón de descifrado. -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -180,6 +218,7 @@
                         android:paddingTop="35dp"
                         android:paddingBottom="35dp">
 
+                        <!-- Identificador de la segunda sección. -->
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -190,6 +229,10 @@
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
+                        <!--
+                            Campo para introducir la contraseña AES.
+                            El tipo textPassword oculta los caracteres introducidos.
+                        -->
                         <EditText
                             android:id="@+id/etContrasena"
                             android:layout_width="match_parent"
@@ -206,6 +249,10 @@
                             android:textColorHint="#75634E"
                             android:backgroundTint="#8B5425" />
 
+                        <!--
+                            Inicia el proceso de descifrado AES.
+                            La lógica y las validaciones se gestionan en AesActivity.kt.
+                        -->
                         <Button
                             android:id="@+id/btnDescifrar"
                             android:layout_width="match_parent"
@@ -224,13 +271,20 @@
             </LinearLayout>
         </ScrollView>
 
-        <!-- BOTÓN VOLVER -->
+        <!-- BOTÓN DE NAVEGACIÓN -->
+
+        <!-- Barra inferior que contiene el botón para volver a la pantalla anterior. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:gravity="center_vertical"
             android:paddingStart="18dp">
 
+            <!--
+                Botón gráfico de regreso.
+                Su identificador btnVolver permite asociarle el evento
+                de navegación desde AesActivity.kt.
+            -->
             <ImageButton
                 android:id="@+id/btnVolver"
                 android:layout_width="65dp"

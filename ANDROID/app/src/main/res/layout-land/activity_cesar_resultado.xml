@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Diseño horizontal de la pantalla de resultado del descifrado César.
+    Muestra el texto recuperado y permite desplazarse por él,
+    guardarlo o compartirlo.
+-->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- FONDO -->
+
+    <!-- Imagen de fondo de la biblioteca mágica. -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,11 +19,13 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
+    <!-- Capa oscura semitransparente para mejorar el contraste. -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#55000000" />
 
+    <!-- Contenedor principal vertical de la pantalla. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,6 +34,8 @@
         android:paddingBottom="5dp">
 
         <!-- CABECERA -->
+
+        <!-- Panel decorativo con el título y subtítulo del resultado. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,6 +47,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/cabecera_orden">
 
+            <!-- Título principal de la pantalla de resultados César. -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,12 +58,14 @@
                 android:fontFamily="serif"
                 android:gravity="center" />
 
+            <!-- Línea decorativa dorada debajo del título. -->
             <View
                 android:layout_width="65dp"
                 android:layout_height="3dp"
                 android:layout_marginTop="5dp"
                 android:background="#F2B82E" />
 
+            <!-- Subtítulo descriptivo de la pantalla de resultados. -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,6 +79,12 @@
         </LinearLayout>
 
         <!-- PERGAMINO DEL RESULTADO -->
+
+        <!--
+            Contenedor que ocupa el espacio vertical restante.
+            Incluye el fondo decorativo y la zona donde se muestra
+            el texto obtenido después del descifrado.
+        -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -73,6 +94,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="4dp">
 
+            <!-- Fondo decorativo del pergamino. -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -81,6 +103,12 @@
                 android:contentDescription="@null" />
 
             <!-- CONTENIDO INTERIOR -->
+
+            <!--
+                Área interior del pergamino.
+                Los márgenes internos mantienen el texto separado
+                de los bordes decorativos.
+            -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -90,6 +118,12 @@
                 android:paddingBottom="35dp">
 
                 <!-- MENSAJE DE ESTADO -->
+
+                <!--
+                    Informa del estado del proceso de descifrado.
+                    Inicialmente muestra el mensaje definido en strings.xml.
+                    Se actualiza desde CesarResultadoActivity.kt.
+                -->
                 <TextView
                     android:id="@+id/tvEstadoCesar"
                     android:layout_width="match_parent"
@@ -101,6 +135,13 @@
                     android:visibility="visible" />
 
                 <!-- SCROLL DEL TEXTO DESCIFRADO -->
+
+                <!--
+                    Permite desplazarse verticalmente por el texto recuperado.
+                    Empieza oculto y se muestra cuando el resultado está disponible.
+                    Los indicadores de desplazamiento permanecen visibles
+                    mientras el usuario recorre el contenido.
+                -->
                 <ScrollView
                     android:id="@+id/scrollResultadoCesar"
                     android:layout_width="match_parent"
@@ -110,6 +151,12 @@
                     android:fadeScrollbars="false"
                     android:visibility="gone">
 
+                    <!--
+                        Contiene el texto descifrado.
+                        Su contenido se establece desde Kotlin.
+                        textIsSelectable permite seleccionar y copiar
+                        fragmentos del mensaje recuperado.
+                    -->
                     <TextView
                         android:id="@+id/tvResultadoCesar"
                         android:layout_width="match_parent"
@@ -129,6 +176,8 @@
         </FrameLayout>
 
         <!-- BOTONES GUARDAR Y COMPARTIR -->
+
+        <!-- Contenedor horizontal que agrupa las acciones del resultado. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -139,6 +188,10 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="5dp">
 
+            <!--
+                Botón para guardar el texto descifrado en un archivo.
+                La operación se gestiona desde CesarResultadoActivity.kt.
+            -->
             <Button
                 android:id="@+id/btnGuardarCesar"
                 android:layout_width="0dp"
@@ -151,6 +204,10 @@
                 android:textColor="#FFFFFF"
                 android:textSize="13sp" />
 
+            <!--
+                Botón para compartir el texto recuperado
+                mediante las aplicaciones compatibles de Android.
+            -->
             <Button
                 android:id="@+id/btnCompartirCesar"
                 android:layout_width="0dp"
@@ -166,12 +223,18 @@
         </LinearLayout>
 
         <!-- BOTÓN VOLVER -->
+
+        <!-- Contenedor que posiciona el botón de regreso en la parte inferior. -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:paddingStart="14dp"
             android:gravity="center_vertical">
 
+            <!--
+                Botón gráfico para regresar a la pantalla anterior.
+                Su comportamiento se controla desde CesarResultadoActivity.kt.
+            -->
             <ImageButton
                 android:id="@+id/btnVolverResultado"
                 android:layout_width="60dp"

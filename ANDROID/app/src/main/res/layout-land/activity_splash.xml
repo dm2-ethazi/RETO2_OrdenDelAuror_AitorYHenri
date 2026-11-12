@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor principal de la pantalla de inicio -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <!-- Logo central -->
+    <!-- LOGO CENTRAL -->
+    <!-- Contenedor vertical que agrupa el logotipo y el texto identificativo -->
     <LinearLayout
         android:id="@+id/contenedorLogo"
         android:layout_width="match_parent"
@@ -14,6 +16,7 @@
         android:orientation="vertical"
         android:padding="8dp">
 
+        <!-- Imagen del logotipo principal de la aplicación -->
         <ImageView
             android:id="@+id/ivLogoSplash"
             android:layout_width="170dp"
@@ -23,6 +26,7 @@
             android:adjustViewBounds="true"
             android:src="@drawable/logo_orden_auror" />
 
+        <!-- Texto identificativo situado debajo del logotipo -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +40,10 @@
 
     </LinearLayout>
 
-    <!-- Destellos mágicos -->
+    <!-- DESTELLOS MÁGICOS -->
+    <!-- Elementos decorativos que rodean el logotipo -->
+
+    <!-- Primer destello situado en la parte superior central -->
     <TextView
         android:id="@+id/destello1"
         android:layout_width="wrap_content"
@@ -47,6 +54,7 @@
         android:textColor="#FFD76A"
         android:textSize="30sp" />
 
+    <!-- Segundo destello situado en el lateral izquierdo -->
     <TextView
         android:id="@+id/destello2"
         android:layout_width="wrap_content"
@@ -57,6 +65,7 @@
         android:textColor="#F6C453"
         android:textSize="24sp" />
 
+    <!-- Tercer destello situado en el lateral derecho -->
     <TextView
         android:id="@+id/destello3"
         android:layout_width="wrap_content"
@@ -67,6 +76,7 @@
         android:textColor="#FFD76A"
         android:textSize="24sp" />
 
+    <!-- Cuarto destello situado en la parte inferior central -->
     <TextView
         android:id="@+id/destello4"
         android:layout_width="wrap_content"

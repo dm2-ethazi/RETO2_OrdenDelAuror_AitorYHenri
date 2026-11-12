@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor principal de la pantalla -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Fondo de biblioteca mágica -->
+    <!-- Imagen de fondo de la biblioteca mágica -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,11 +13,13 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
+    <!-- Capa semitransparente para oscurecer el fondo y facilitar la lectura -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#66000000" />
 
+    <!-- Contenedor principal que organiza los elementos verticalmente -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +29,7 @@
         android:paddingTop="8dp"
         android:paddingBottom="4dp">
 
-        <!-- CABECERA -->
+        <!-- CABECERA DE LA APLICACIÓN -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,6 +38,7 @@
             android:padding="8dp"
             android:background="@drawable/cabecera_orden">
 
+            <!-- Nombre de la aplicación -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,6 +49,7 @@
                 android:letterSpacing="0.08"
                 android:gravity="center" />
 
+            <!-- Línea decorativa dorada que separa el nombre del subtítulo -->
             <View
                 android:layout_width="55dp"
                 android:layout_height="2dp"
@@ -52,6 +57,7 @@
                 android:layout_marginBottom="3dp"
                 android:background="#F2B82E" />
 
+            <!-- Subtítulo de la aplicación -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +68,7 @@
                 android:gravity="center" />
         </LinearLayout>
 
-        <!-- BIENVENIDA -->
+        <!-- TÍTULO DE BIENVENIDA -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,6 +79,7 @@
             android:textStyle="bold"
             android:gravity="center" />
 
+        <!-- Descripción inicial de la aplicación -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,7 +91,7 @@
             android:gravity="center"
             android:lineSpacingExtra="1dp" />
 
-        <!-- OPCIONES EN DOS COLUMNAS -->
+        <!-- CONTENEDOR DE LAS OPCIONES EN DOS COLUMNAS -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -93,7 +100,7 @@
             android:gravity="center_vertical"
             android:baselineAligned="false">
 
-            <!-- AES -->
+            <!-- COLUMNA DE DESCIFRADO AES -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -103,6 +110,8 @@
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp">
 
+                <!-- Botón para acceder a la pantalla de descifrado AES -->
+                <!-- btnAes permite localizar el botón desde Kotlin -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnAes"
                     android:layout_width="match_parent"
@@ -120,6 +129,7 @@
                     android:insetBottom="0dp"
                     app:backgroundTint="@null" />
 
+                <!-- Descripción de la funcionalidad de descifrado AES -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -131,6 +141,7 @@
                     android:lineSpacingExtra="2dp" />
             </LinearLayout>
 
+            <!-- Separador vertical entre las dos opciones de descifrado -->
             <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
@@ -138,7 +149,7 @@
                 android:layout_marginBottom="8dp"
                 android:background="#F2B82E" />
 
-            <!-- CÉSAR -->
+            <!-- COLUMNA DE DESCIFRADO CÉSAR -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -148,6 +159,8 @@
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp">
 
+                <!-- Botón para acceder a la pantalla de descifrado César -->
+                <!-- btnCesar permite localizar el botón desde Kotlin -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnCesar"
                     android:layout_width="match_parent"
@@ -165,6 +178,7 @@
                     android:insetBottom="0dp"
                     app:backgroundTint="@null" />
 
+                <!-- Descripción de la funcionalidad de descifrado César -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -177,7 +191,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- PIE -->
+        <!-- PIE DE PANTALLA -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -186,6 +200,7 @@
             android:paddingTop="4dp"
             android:paddingBottom="2dp">
 
+            <!-- Nombre de la aplicación mostrado en el pie -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -195,6 +210,7 @@
                 android:textStyle="bold"
                 android:letterSpacing="0.12" />
 
+            <!-- Texto adicional del pie de pantalla -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -205,7 +221,8 @@
                 android:letterSpacing="0.04" />
         </LinearLayout>
 
-        <!-- AJUSTES -->
+        <!-- BOTÓN DE AJUSTES -->
+        <!-- btnAjustes permite abrir la configuración de la aplicación desde Kotlin -->
         <ImageButton
             android:id="@+id/btnAjustes"
             android:layout_width="38dp"

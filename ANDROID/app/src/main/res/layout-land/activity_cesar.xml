@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Diseño horizontal de la pantalla de descifrado César.
+    Permite seleccionar un archivo de texto e introducir
+    el desplazamiento necesario para recuperar su contenido.
+-->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- FONDO -->
+
+    <!-- Imagen de fondo de la biblioteca mágica. -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -10,11 +19,13 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
+    <!-- Capa oscura semitransparente para mejorar el contraste. -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#55000000" />
 
+    <!-- Contenedor principal vertical de la pantalla. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,6 +35,9 @@
         android:paddingTop="6dp"
         android:paddingBottom="4dp">
 
+        <!-- CABECERA -->
+
+        <!-- Panel decorativo que contiene el título y subtítulo de César. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,6 +46,7 @@
             android:padding="6dp"
             android:background="@drawable/cabecera_orden">
 
+            <!-- Título principal de la herramienta. -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,6 +57,7 @@
                 android:fontFamily="serif"
                 android:gravity="center" />
 
+            <!-- Subtítulo descriptivo de la herramienta. -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,6 +68,9 @@
                 android:gravity="center" />
         </LinearLayout>
 
+        <!-- TÍTULO DE LA SECCIÓN -->
+
+        <!-- Indica la sección de archivos recibidos. -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,6 +82,9 @@
             android:fontFamily="serif"
             android:gravity="center" />
 
+        <!-- INSTRUCCIONES -->
+
+        <!-- Explica al usuario cómo utilizar el descifrado César. -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,6 +95,11 @@
             android:textSize="11sp"
             android:gravity="center" />
 
+        <!--
+            CONTENEDOR DE LOS DOS PERGAMINOS.
+            Distribuye el espacio horizontal disponible entre
+            la selección del archivo y la introducción del desplazamiento.
+        -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -81,13 +108,15 @@
             android:gravity="center"
             android:paddingBottom="2dp">
 
-            <!-- Pergamino para seleccionar el archivo -->
+            <!-- PERGAMINO IZQUIERDO: SELECCIÓN DEL ARCHIVO -->
+
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp">
 
+                <!-- Fondo decorativo del primer pergamino. -->
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -95,6 +124,7 @@
                     android:scaleType="fitXY"
                     android:contentDescription="@null" />
 
+                <!-- Contenido interior del pergamino de selección. -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -105,6 +135,7 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp">
 
+                    <!-- Título de la sección de selección de archivos. -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -114,6 +145,11 @@
                         android:textStyle="bold"
                         android:gravity="center" />
 
+                    <!--
+                        Muestra el nombre del archivo TXT seleccionado.
+                        Su contenido se actualiza desde CesarActivity.kt.
+                        Limita el nombre a dos líneas para evitar desbordamientos.
+                    -->
                     <TextView
                         android:id="@+id/tvArchivoSeleccionado"
                         android:layout_width="match_parent"
@@ -127,6 +163,10 @@
                         android:maxLines="2"
                         android:ellipsize="end" />
 
+                    <!--
+                        Botón que abre el selector de archivos de Android
+                        para elegir el documento que se quiere descifrar.
+                    -->
                     <Button
                         android:id="@+id/btnSeleccionarArchivo"
                         android:layout_width="wrap_content"
@@ -142,13 +182,15 @@
                 </LinearLayout>
             </FrameLayout>
 
-            <!-- Pergamino para introducir el desplazamiento -->
+            <!-- PERGAMINO DERECHO: DESPLAZAMIENTO -->
+
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp">
 
+                <!-- Fondo decorativo del segundo pergamino. -->
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -156,6 +198,7 @@
                     android:scaleType="fitXY"
                     android:contentDescription="@null" />
 
+                <!-- Contenido interior del pergamino de desplazamiento. -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -166,6 +209,7 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp">
 
+                    <!-- Título de la sección de desplazamiento César. -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -175,6 +219,12 @@
                         android:textStyle="bold"
                         android:gravity="center" />
 
+                    <!--
+                        Campo para introducir el desplazamiento.
+                        inputType="number" muestra el teclado numérico.
+                        maxLength limita la entrada a dos caracteres.
+                        El valor se recoge desde CesarActivity.kt.
+                    -->
                     <EditText
                         android:id="@+id/etDesplazamiento"
                         android:layout_width="match_parent"
@@ -191,6 +241,11 @@
                         android:backgroundTint="#8B5425"
                         android:padding="5dp" />
 
+                    <!--
+                        Botón que inicia el descifrado César.
+                        La operación se gestiona desde CesarActivity.kt,
+                        utilizando el archivo seleccionado y el desplazamiento.
+                    -->
                     <Button
                         android:id="@+id/btnDescifrar"
                         android:layout_width="wrap_content"
@@ -209,6 +264,12 @@
 
         </LinearLayout>
 
+        <!-- BOTÓN VOLVER -->
+
+        <!--
+            Botón gráfico para regresar a la pantalla anterior.
+            Su comportamiento se controla desde CesarActivity.kt.
+        -->
         <ImageButton
             android:id="@+id/btnVolver"
             android:layout_width="38dp"

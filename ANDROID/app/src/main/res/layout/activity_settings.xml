@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor principal de la pantalla de ajustes -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_biblioteca">
 
     <!-- CONTENIDO DE LA PANTALLA -->
+    <!-- Permite desplazar el contenido si no cabe en la pantalla -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,6 +16,7 @@
         android:paddingTop="20dp"
         android:paddingBottom="75dp">
 
+        <!-- Contenedor vertical que agrupa las diferentes secciones de ajustes -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +25,7 @@
             android:paddingStart="18dp"
             android:paddingEnd="18dp">
 
-            <!-- CABECERA -->
+            <!-- CABECERA DE LA PANTALLA DE AJUSTES -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
@@ -35,6 +38,7 @@
                 android:orientation="vertical"
                 android:padding="12dp">
 
+                <!-- Título de la pantalla obtenido de los recursos de idioma -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -45,12 +49,14 @@
                     android:fontFamily="serif"
                     android:gravity="center" />
 
+                <!-- Línea decorativa que separa el título del subtítulo -->
                 <View
                     android:layout_width="65dp"
                     android:layout_height="2dp"
                     android:layout_marginTop="8dp"
                     android:background="#C9A45C" />
 
+                <!-- Subtítulo descriptivo de la pantalla de ajustes -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,13 +69,14 @@
 
             </LinearLayout>
 
-            <!-- PERGAMINO DEL IDIOMA -->
+            <!-- PERGAMINO PARA CONFIGURAR EL IDIOMA -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="205dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/fondo_tarjeta_pergamino">
 
+                <!-- Contenedor de los textos y el selector de idioma -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -80,6 +87,7 @@
                     android:paddingTop="30dp"
                     android:paddingBottom="30dp">
 
+                    <!-- Título de la sección de selección de idioma -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -89,6 +97,7 @@
                         android:textStyle="bold"
                         android:gravity="center" />
 
+                    <!-- Explicación de la opción de cambio de idioma -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -98,6 +107,8 @@
                         android:textSize="12sp"
                         android:gravity="center" />
 
+                    <!-- Selector desplegable para elegir el idioma de la aplicación -->
+                    <!-- spinnerIdioma permite acceder al selector desde Kotlin -->
                     <Spinner
                         android:id="@+id/spinnerIdioma"
                         android:layout_width="match_parent"
@@ -112,12 +123,13 @@
                 </LinearLayout>
             </FrameLayout>
 
-            <!-- PERGAMINO ACERCA DE -->
+            <!-- PERGAMINO CON LA INFORMACIÓN DE LA APLICACIÓN -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:background="@drawable/fondo_tarjeta_pergamino">
 
+                <!-- Contenedor vertical de la información sobre la aplicación -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -128,6 +140,7 @@
                     android:paddingTop="38dp"
                     android:paddingBottom="38dp">
 
+                    <!-- Título de la sección de información -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -137,12 +150,14 @@
                         android:textStyle="bold"
                         android:gravity="center" />
 
+                    <!-- Separador decorativo debajo del título -->
                     <View
                         android:layout_width="65dp"
                         android:layout_height="2dp"
                         android:layout_marginTop="7dp"
                         android:background="#A66A20" />
 
+                    <!-- Nombre o descripción principal de la aplicación -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -153,6 +168,7 @@
                         android:textStyle="bold"
                         android:gravity="center" />
 
+                    <!-- Descripción general de las funcionalidades de la aplicación -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -162,6 +178,7 @@
                         android:textSize="12sp"
                         android:gravity="center" />
 
+                    <!-- Título de la sección dedicada a los desarrolladores -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -172,6 +189,7 @@
                         android:textStyle="bold"
                         android:gravity="center" />
 
+                    <!-- Información de los desarrolladores -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -181,12 +199,14 @@
                         android:textSize="12sp"
                         android:gravity="center" />
 
+                    <!-- Separador decorativo de la información final -->
                     <View
                         android:layout_width="65dp"
                         android:layout_height="2dp"
                         android:layout_marginTop="12dp"
                         android:background="#A66A20" />
 
+                    <!-- Idiomas disponibles en la aplicación -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -202,7 +222,8 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BOTÓN VOLVER -->
+    <!-- BOTÓN PARA VOLVER A LA PANTALLA ANTERIOR -->
+    <!-- btnVolverAjustes permite gestionar la navegación desde Kotlin -->
     <ImageButton
         android:id="@+id/btnVolverAjustes"
         android:layout_width="52dp"

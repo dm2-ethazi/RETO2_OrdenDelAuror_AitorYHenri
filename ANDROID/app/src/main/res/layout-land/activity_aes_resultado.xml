@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Diseño vertical de la pantalla de resultado del descifrado AES.
+    Muestra la imagen recuperada, permite desplazarse por ella
+    y ofrece opciones para guardar o compartir el resultado.
+-->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- FONDO -->
+
+    <!-- Imagen de fondo de la biblioteca mágica. -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,11 +19,13 @@
         android:scaleType="centerCrop"
         android:contentDescription="@null" />
 
+    <!-- Capa oscura semitransparente para mejorar la lectura. -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#55000000" />
 
+    <!-- Contenedor principal vertical de toda la pantalla. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,6 +34,8 @@
         android:paddingBottom="5dp">
 
         <!-- CABECERA -->
+
+        <!-- Panel decorativo que contiene el título y subtítulo. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,6 +47,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/cabecera_orden">
 
+            <!-- Título de la sección de resultados AES. -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,12 +58,14 @@
                 android:fontFamily="serif"
                 android:gravity="center" />
 
+            <!-- Línea decorativa dorada debajo del título. -->
             <View
                 android:layout_width="65dp"
                 android:layout_height="3dp"
                 android:layout_marginTop="5dp"
                 android:background="#F2B82E" />
 
+            <!-- Subtítulo descriptivo de la herramienta. -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,6 +79,11 @@
         </LinearLayout>
 
         <!-- PERGAMINO DEL RESULTADO -->
+
+        <!--
+            Contenedor del resultado que ocupa el espacio vertical restante.
+            Incluye la imagen de fondo y la zona interior de visualización.
+        -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -73,6 +93,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="4dp">
 
+            <!-- Fondo decorativo del pergamino. -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -81,6 +102,12 @@
                 android:src="@drawable/fondo_tarjeta_pergamino" />
 
             <!-- CONTENIDO INTERIOR -->
+
+            <!--
+                Área interior del pergamino.
+                Los paddings dejan espacio alrededor del contenido
+                para que no se superponga con los bordes decorativos.
+            -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -90,6 +117,13 @@
                 android:paddingBottom="35dp">
 
                 <!-- SCROLL DE LA IMAGEN -->
+
+                <!--
+                    Permite desplazarse verticalmente por la imagen descifrada.
+                    Empieza oculto y se muestra cuando el resultado está disponible.
+                    fillViewport hace que el contenido pueda ocupar al menos
+                    toda la altura disponible del ScrollView.
+                -->
                 <ScrollView
                     android:id="@+id/scrollImagenDescifrada"
                     android:layout_width="match_parent"
@@ -99,6 +133,12 @@
                     android:fadeScrollbars="false"
                     android:visibility="gone">
 
+                    <!--
+                        Imagen recuperada después del descifrado AES.
+                        Su contenido se establece desde AesResultadoActivity.kt.
+                        wrap_content permite conservar su altura necesaria
+                        y fitCenter ajusta su visualización al ancho disponible.
+                    -->
                     <ImageView
                         android:id="@+id/ivImagenDescifrada"
                         android:layout_width="match_parent"
@@ -110,6 +150,13 @@
                 </ScrollView>
 
                 <!-- MENSAJE DE ESTADO -->
+
+                <!--
+                    Muestra información sobre el estado del resultado.
+                    Inicialmente indica que se está esperando el descifrado.
+                    Se puede actualizar desde AesResultadoActivity.kt.
+                    Se muestra mientras el ScrollView permanece oculto.
+                -->
                 <TextView
                     android:id="@+id/tvEstadoResultado"
                     android:layout_width="match_parent"
@@ -125,6 +172,8 @@
         </FrameLayout>
 
         <!-- BOTONES GUARDAR Y COMPARTIR -->
+
+        <!-- Contenedor horizontal que agrupa las acciones disponibles. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,6 +184,10 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="5dp">
 
+            <!--
+                Botón para guardar la imagen descifrada.
+                La operación se gestiona desde AesResultadoActivity.kt.
+            -->
             <Button
                 android:id="@+id/btnGuardar"
                 android:layout_width="0dp"
@@ -147,6 +200,10 @@
                 android:textColor="#FFFFFF"
                 android:textSize="13sp" />
 
+            <!--
+                Botón para compartir la imagen descifrada
+                mediante las aplicaciones compatibles de Android.
+            -->
             <Button
                 android:id="@+id/btnCompartir"
                 android:layout_width="0dp"
@@ -162,12 +219,18 @@
         </LinearLayout>
 
         <!-- BOTÓN VOLVER -->
+
+        <!-- Contenedor que posiciona el botón de regreso en la parte inferior. -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:paddingStart="14dp"
             android:gravity="center_vertical">
 
+            <!--
+                Botón gráfico para regresar a la pantalla anterior.
+                Su comportamiento se controla desde AesResultadoActivity.kt.
+            -->
             <ImageButton
                 android:id="@+id/btnVolver"
                 android:layout_width="60dp"
