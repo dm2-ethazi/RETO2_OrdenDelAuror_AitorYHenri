@@ -1,0 +1,22 @@
+
+<resources>
+
+    <style name="Base.Theme.Orden_del_Auror"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#536DA8</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#B99865</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="colorTertiary">#A64B65</item>
+        <item name="colorOnTertiary">#FFFFFF</item>
+
+        <item name="android:colorBackground">#191B24</item>
+        <item name="colorSurface">#252936</item>
+        <item name="colorOnSurface">#F5F0E6</item>
+
+    </style>
+
+</resources>

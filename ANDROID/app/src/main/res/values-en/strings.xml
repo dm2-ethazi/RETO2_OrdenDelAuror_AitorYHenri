@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">Auror\'s Order</string>
+    <string name="nombre_aplicacion">AUROR\'S ORDER</string>
+    <string name="subtitulo_aplicacion">MAGICAL DECRYPTION CENTER</string>
+    <string name="bienvenida">Welcome, Auror</string>
+    <string name="descripcion_bienvenida">Select a tool to recover the messages protected by the Order.</string>
+    <string name="titulo_aes">AES DECRYPTION</string>
+    <string name="descripcion_aes">Recover protected images encrypted with AES using the corresponding password.</string>
+    <string name="acceder_aes">ACCESS AES</string>
+    <string name="titulo_cesar">CAESAR DECRYPTION</string>
+    <string name="descripcion_cesar">Decrypt secret messages using the appropriate alphabet shift.</string>
+    <string name="acceder_cesar">ACCESS CAESAR</string>
+    <string name="pie_pantalla">CLASSIFIED FILES · ORDER MEMBERS</string>
+
+    <string name="button_back">Back</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_accept">Accept</string>
+    <string name="error_title">Error</string>
+
+    <string name="aes_screen_title">AES Decryption</string>
+    <string name="aes_header_title">AES DECRYPTION</string>
+    <string name="aes_header_subtitle">IMAGE RECOVERY</string>
+    <string name="aes_received_files">Received files</string>
+    <string name="aes_instructions">Select an encrypted image and enter the corresponding password to recover its contents.</string>
+    <string name="aes_file_section">01 | ENCRYPTED FILE</string>
+    <string name="aes_no_file">No file selected</string>
+    <string name="aes_no_file_selected">No file selected</string>
+    <string name="aes_select_file">Select PNG image</string>
+    <string name="aes_select_image">Select PNG image</string>
+    <string name="aes_password_section">02 | DECRYPTION KEY</string>
+    <string name="aes_password_label">Decryption password</string>
+    <string name="aes_password_hint">Enter the AES password</string>
+    <string name="aes_decrypt_button">Decrypt image</string>
+    <string name="aes_result_title">Recovered image</string>
+    <string name="aes_result_section">03 | RECOVERED IMAGE</string>
+    <string name="aes_waiting_decryption">Waiting for decryption...</string>
+    <string name="aes_decrypted_image_description">Decrypted image</string>
+    <string name="aes_save_button">Save</string>
+    <string name="aes_no_password">Enter the decryption password</string>
+    <string name="aes_decrypting">Decrypting image...</string>
+    <string name="aes_success">Image decrypted successfully</string>
+    <string name="aes_error">Error decrypting image</string>
+    <string name="aes_saved">Image saved successfully</string>
+
+    <string name="cesar_screen_title">Caesar Decryption</string>
+    <string name="cesar_header_title">CAESAR DECRYPTION</string>
+    <string name="cesar_header_subtitle">MESSAGE RECOVERY</string>
+    <string name="cesar_received_files">Received files</string>
+    <string name="cesar_instructions">Select a text file and enter the shift used to recover the original message.</string>
+    <string name="cesar_file_section">01 | ENCRYPTED FILE</string>
+    <string name="cesar_no_file">No file selected</string>
+    <string name="cesar_no_file_selected">No file selected</string>
+    <string name="cesar_select_file">Select TXT file</string>
+    <string name="cesar_key_section">02 | DECRYPTION KEY</string>
+    <string name="cesar_shift_label">Alphabet shift</string>
+    <string name="cesar_shift_instructions">Enter the number of positions used to encrypt the message (0-25).</string>
+    <string name="cesar_shift_hint">Example: 3</string>
+    <string name="cesar_decrypt_button">Decrypt message</string>
+    <string name="cesar_result_title">Recovered message</string>
+    <string name="cesar_result_section">03 | RECOVERED MESSAGE</string>
+    <string name="cesar_result_header_title">RECOVERED MESSAGE</string>
+    <string name="cesar_result_header_subtitle">MESSAGE RECOVERY</string>
+    <string name="cesar_waiting_decryption">Waiting for decryption...</string>
+    <string name="cesar_result_hint">The decrypted message will appear here...</string>
+    <string name="cesar_save_button">Save</string>
+    <string name="cesar_decrypting">Decrypting text...</string>
+    <string name="cesar_success">Message decrypted successfully</string>
+    <string name="cesar_error">Error decrypting message</string>
+    <string name="cesar_saved">Message saved successfully</string>
+
+    <string name="settings_button">Settings</string>
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_subtitle">CUSTOMIZE YOUR EXPERIENCE</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_title">Language</string>
+    <string name="settings_language_description">Select the application language.</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_title">About</string>
+    <string name="settings_about_app">Auror\'s Order</string>
+    <string name="settings_about_description">A magical decryption center for recovering information protected through different encryption methods.</string>
+    <string name="settings_about_developers_title">Developers</string>
+    <string name="settings_about_developers">United Aurors Organization</string>
+    <string name="settings_about_languages">Available languages: Spanish, English and Basque.</string>
+
+    <string-array name="languages">
+        <item>Español</item>
+        <item>English</item>
+        <item>Euskara</item>
+    </string-array>
+
+    <string name="share_button">Share</string>
+    <string name="cesar_decrypting_title">Decrypting message</string>
+    <string name="cesar_decrypting_message">Decrypting the file, please wait...</string>
+    <string name="cesar_loading_result">Loading preview...</string>
+    <string name="cesar_preview_limited">Preview limited. The complete file is still available to save or share.</string>
+    <string name="cesar_error_result_file">The decrypted file could not be opened.</string>
+    <string name="cesar_error_save">The file could not be saved.</string>
+    <string name="cesar_error_share">The file could not be shared.</string>
+    <string name="cesar_share_title">Share recovered message</string>
+
+    <!-- AES errors and alerts -->
+    <string name="aes_error_file_extension">The selected file does not have a valid extension.</string>
+    <string name="aes_decrypting_image">Decrypting image, please wait...</string>
+    <string name="aes_decrypting_title">Decrypting image</string>
+    <string name="aes_error_select_file">Select an encrypted image to decrypt.</string>
+    <string name="aes_error_invalid_image">The decrypted file is not a valid PNG image.</string>
+    <string name="aes_error_wrong_password">The password is incorrect or the file is corrupted.</string>
+    <string name="aes_error_invalid_encrypted_file">The encrypted file is invalid or corrupted.</string>
+    <string name="aes_error_read_image">The image could not be read or decrypted.</string>
+    <string name="aes_error_unexpected">An unexpected error occurred while decrypting the image.</string>
+
+    <!-- AES result -->
+    <string name="aes_result_error_missing_path">The decrypted image path was not provided.</string>
+    <string name="aes_result_error_not_found">The decrypted image could not be found.</string>
+    <string name="aes_result_error_load">The image could not be loaded.</string>
+    <string name="aes_result_loading_image">Loading image</string>
+    <string name="aes_result_error_nothing_to_save">There is no image to save.</string>
+    <string name="aes_result_saved">Image saved successfully.</string>
+    <string name="aes_result_error_save">The image could not be saved.</string>
+    <string name="aes_result_error_nothing_to_share">There is no image to share.</string>
+    <string name="aes_result_share_title">Share decrypted image</string>
+    <string name="aes_result_error_share">The image could not be shared.</string>
+
+    <!-- Caesar errors and alerts -->
+    <string name="cesar_error_select_file">Select a TXT file to decrypt.</string>
+    <string name="cesar_error_empty_shift">Enter the shift value.</string>
+    <string name="cesar_error_invalid_shift">The shift must be a number between 0 and 25.</string>
+    <string name="cesar_error_read_file">ERROR. Make sure it is a valid TXT file.</string>
+    <string name="cesar_error_unexpected">An unexpected error occurred while decrypting the file.</string>
+
+    <!-- General errors -->
+    <string name="error_file_permission">Could not access the selected file.</string>
+
+    <string name="error_invalid_data">The file data is invalid.</string>
+    <string name="error_empty_file">The file is empty.</string>
+</resources>

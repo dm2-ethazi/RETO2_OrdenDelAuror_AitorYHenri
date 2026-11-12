@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema principal de la aplicación -->
+    <style name="Theme.Orden_del_Auror" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:colorAccent">#D99A25</item>
+    </style>
+
+    <!-- Pantalla de carga -->
+
+    <style name="Theme.Orden_del_Auror.Splash" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">#000000</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_splash_sistema</item>
+
+        <item name="windowSplashScreenIconBackgroundColor">#000000</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Orden_del_Auror</item>
+
+    </style>
+
+
+</resources>
