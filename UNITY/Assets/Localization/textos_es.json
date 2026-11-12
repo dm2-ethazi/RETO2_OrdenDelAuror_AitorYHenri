@@ -1,0 +1,156 @@
+{
+  "traducciones": [
+    {
+      "clave": "titulo",
+      "valor": "THE ARCANE CIPHER"
+    },
+    {
+      "clave": "jugar",
+      "valor": "JUGAR"
+    },
+    {
+      "clave": "instrucciones",
+      "valor": "INSTRUCCIONES"
+    },
+    {
+      "clave": "idioma",
+      "valor": "IDIOMA"
+    },
+    {
+      "clave": "salir",
+      "valor": "SALIR"
+    },
+    {
+      "clave": "confirmar_salida",
+      "valor": "¿SEGURO QUE QUIERES SALIR?"
+    },
+    {
+      "clave": "cancelar",
+      "valor": "CANCELAR"
+    },
+    {
+      "clave": "espanol",
+      "valor": "ESPAÑOL"
+    },
+    {
+      "clave": "euskera",
+      "valor": "EUSKARA"
+    },
+    {
+      "clave": "ingles",
+      "valor": "ENGLISH"
+    },
+    {
+      "clave": "texto_instrucciones",
+      "valor": "Bienvenido a The Arcane Cipher.\n\n- Consigue códigos que llevan las palomas.\n- Estos están cifrados y describen los puntos débiles del enemigo.\n- Resuélvelos para hacerle daño, pero ¡ten cuidado de no fallar o lo pagarás!\n- Ten en cuenta el tipo de cifrado que tiene cada código. Serán más difíciles cuanto menos vida tenga el enemigo.\n- Descifra los códigos suficientes para derrotar al enemigo antes de que llegue al castillo.\n\n¡Buena suerte, mago!"
+    },
+    {
+      "clave": "volver",
+      "valor": "VOLVER"
+    },
+    {
+      "clave": "confirmar_volver",
+      "valor": "¿VOLVER AL MENÚ PRINCIPAL?"
+    },
+    {
+      "clave": "confirmar_reiniciar",
+      "valor": "¿SEGURO QUE QUIERES REINICIAR?"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Desplazamiento"
+    },
+    {
+      "clave": "acertijo.placeholder",
+      "valor": "Escribe tu respuesta..."
+    },
+    {
+      "clave": "acertijo.confirmar",
+      "valor": "CONFIRMAR"
+    },
+    {
+      "clave": "acertijo.vacia",
+      "valor": "Escribe una respuesta."
+    },
+    {
+      "clave": "acertijo.correcta",
+      "valor": "¡Respuesta correcta!"
+    },
+    {
+      "clave": "acertijo.incorrecta",
+      "valor": "Respuesta incorrecta. Pierdes una vida."
+    },
+    {
+      "clave": "acertijo.derrota",
+      "valor": "¡El troll ha sido derrotado!"
+    },
+    {
+      "clave": "boton_reiniciar",
+      "valor": "REINICIAR"
+    },
+    {
+      "clave": "boton_cancelar_reinicio",
+      "valor": "CANCELAR"
+    },
+    {
+      "clave": "derrota",
+      "valor": "¡DERROTA!"
+    },
+    {
+      "clave": "revancha",
+      "valor": "REVANCHA"
+    },
+    {
+      "clave": "menu_principal",
+      "valor": "MENÚ PRINCIPAL"
+    },
+    {
+      "clave": "victoria",
+      "valor": "¡VICTORIA!"
+    },
+    {
+      "clave": "volver_a_jugar",
+      "valor": "VOLVER A JUGAR"
+    },
+    {
+      "clave": "acertijo.correcto",
+      "valor": "¡CORRECTO!"
+    },
+    {
+      "clave": "acertijo.incorrecto",
+      "valor": "¡INCORRECTO!"
+    },
+    {
+      "clave": "instrucciones.preparacion.titulo",
+      "valor": "PREPARACIÓN"
+    },
+    {
+      "clave": "instrucciones.preparacion.texto",
+      "valor": "Consigue un pergamino haciendo clic en las palomas mensajeras que van pasando. Al abrirlo, encontrarás un enigma que tendrás que resolver. ¡Cuantos más pergaminos consigas, más rápido volarán las palomas!"
+    },
+    {
+      "clave": "instrucciones.enigma.titulo",
+      "valor": "ENIGMA"
+    },
+    {
+      "clave": "instrucciones.enigma.texto",
+      "valor": "Resuelve el enigma utilizando el método de cifrado César. Aparecerá una palabra cifrada y debajo un número que indica cuántas posiciones se ha desplazado cada letra (siemple en alfabeto inglés). Descifra la palabra y confirma tu respuesta."
+    },
+    {
+      "clave": "instrucciones.resultado.titulo",
+      "valor": "RESULTADO"
+    },
+    {
+      "clave": "instrucciones.resultado.texto",
+      "valor": "Si aciertas el enigma, el enemigo perderá una vida y volverás a la fase de preparación con enigmas más difíciles. Si fallas, el enemigo no perderá ninguna vida y aumentará su velocidad de movimiento."
+    },
+    {
+      "clave": "instrucciones.utilidades.titulo",
+      "valor": "UTILIDADES"
+    },
+    {
+      "clave": "instrucciones.utilidades.texto",
+      "valor": "En el modo acertijo, tendrás un botón «ABC» que muestra u oculta un abecedario (el inglés) para ayudarte a resolver los enigmas. También puedes reiniciar o salir del minijuego en cualquier momento mediante los botones de la parte inferior izquierda. ¡Derrota al enemigo antes de que llegue a la puerta del castillo para ganar!"
+    }
+  ]
+}
