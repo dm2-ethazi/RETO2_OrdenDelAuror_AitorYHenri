@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from utilities.general_utils import mostrar_menu, func_salir, elegir_idioma
 from utilities.encrypt_utils import encrypt_text, decrypt_text
 from utilities.files_utils import encrypt_file, decrypt_file

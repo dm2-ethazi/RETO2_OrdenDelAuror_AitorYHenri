@@ -2,7 +2,7 @@
   "menu_cifrar_text": "1. Testua zifratu",
   "menu_descifrar_text": "2. Testua deszifratu",
   "menu_cifrar_arch": "3. Fitxategia zifratu",
-  "menu_descifrar_arch": "3. Fitxategia zifratu",
+  "menu_descifrar_arch": "4. Fitxategia deszifratu",
   "menu_salir": "5. Irten",
   "menu_opcion": "Aukeratu aukera bat: ",
   "menu_texto": "Testua: ",
