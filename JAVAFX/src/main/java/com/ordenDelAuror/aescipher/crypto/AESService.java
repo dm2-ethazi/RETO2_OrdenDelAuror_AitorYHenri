@@ -14,14 +14,52 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.security.SecureRandom;
 
+/**
+ * Servicio de cifrado y descifrado de ficheros con AES-256 en modo CBC.
+ *
+ * <p>El fichero resultante tiene esta estructura: 16 bytes de salt + 16 bytes
+ * de IV (ambos aleatorios) + contenido cifrado con relleno PKCS5. La clave se
+ * deriva de la contraseña con PBKDF2-HMAC-SHA256 usando 65 536 iteraciones y
+ * una clave de 256 bits.</p>
+ *
+ * <p>Todos los métodos son estáticos y trabajan sobre streams, por lo que
+ * pueden usarlos con ficheros grandes sin cargarlos entero en memoria.</p>
+ *
+ * @author Henri Tejada
+ */
 public class AESService {
 
+    /** Longitud (en bytes) del salt aleatorio almacenado en la cabecera. */
     private static final int SALT_LENGTH = 16;
+
+    /** Longitud (en bytes) del vector de inicialización (IV). */
     private static final int IV_LENGTH = 16;
+
+    /** Número de iteraciones de PBKDF2 para derivar la clave. */
     private static final int ITERATIONS = 65536;
+
+    /** Longitud (en bits) de la clave AES derivada de la contraseña. */
     private static final int KEY_LENGTH = 256;
+
+    /** Tamaño (en bytes) del buffer usado para leer y escribir los streams. */
     private static final int BUFFER_SIZE = 8192;
 
+    /**
+     * Cifra un fichero con AES-256/CBC y escribe salt e IV al principio del
+     * fichero resultante.
+     *
+     * <p>Se genera un salt y un IV distintos en cada llamada, por lo que
+     * cifrar siempre el mismo fichero con la misma contraseña produce
+     * ficheros cifrados distintos.</p>
+     *
+     * @param inputFile  fichero original que se va a cifrar
+     * @param outputFile fichero de salida con la cabecera y el contenido cifrado
+     * @param password   contraseña de la que se deriva la clave
+     * @param callback   notificación de progreso; se invoca tras cada bloque
+     *                   leído con los bytes procesados y el total
+     * @throws Exception si el fichero de entrada no existe, hay un error de
+     *                   E/S o falla el cifrado
+     */
     public static void encryptFile(
             File inputFile,
             File outputFile,
@@ -94,6 +132,20 @@ public class AESService {
         }
     }
 
+    /**
+     * Descifra un fichero generado por {@link #encryptFile}.
+     *
+     * <p>Primero se leen los 32 bytes de cabecera (salt + IV) y a partir de
+     * ellos se deriva la misma clave que se usó para cifrar.</p>
+     *
+     * @param inputFile  fichero cifrado ({@code .aes}) que se va a descifrar
+     * @param outputFile fichero de salida con el contenido original
+     * @param password   contraseña con la que se cifró el fichero
+     * @param callback   notificación de progreso; se invoca tras cada bloque
+     *                   leído con los bytes procesados y el total
+     * @throws Exception si el fichero de entrada no existe, la contraseña es
+     *                   incorrecta o hay un error de E/S
+     */
     public static void decryptFile(
             File inputFile,
             File outputFile,
@@ -167,6 +219,14 @@ public class AESService {
         }
     }
 
+    /**
+     * Deriva la clave AES a partir de la contraseña con PBKDF2-HMAC-SHA256.
+     *
+     * @param password contraseña introducida por el usuario
+     * @param salt     salt aleatorio almacenado en la cabecera del fichero
+     * @return clave AES de 256 bits lista para usar con el cifrado
+     * @throws Exception si el algoritmo de derivación no está disponible
+     */
     private static SecretKey generateKey(
             String password,
             byte[] salt) throws Exception {

@@ -13,8 +13,26 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Clase principal de la aplicación JavaFX "Orden del Auror".
+ *
+ * <p>Carga la interfaz desde el fichero FXML {@code /view/main-view.fxml},
+ * aplica la hoja de estilos, el icono, el tamaño de la ventana y registra
+ * los atajos de teclado (Ctrl+O, Ctrl+E, Ctrl+D y F1).</p>
+ *
+ * @author Henri Tejada
+ */
 public class Main extends Application {
+
+    /** Logger de la aplicación (SLF4J + Logback). */
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
+
+    /**
+     * Configura y muestra la ventana principal de la aplicación.
+     *
+     * @param stage ventana principal (Stage) que entrega JavaFX al iniciar
+     * @throws Exception si no se puede cargar el FXML, la imagen o el CSS
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Image icon = new Image(getClass().getResourceAsStream("/images/icon.png"));
@@ -76,6 +94,11 @@ public class Main extends Application {
         stage.show();
     }
 
+    /**
+     * Método de arranque estándar de toda aplicación JavaFX.
+     *
+     * @param args argumentos de línea de comandos; no se utilizan
+     */
     public static void main(String[] args) {
         launch(args);
     }

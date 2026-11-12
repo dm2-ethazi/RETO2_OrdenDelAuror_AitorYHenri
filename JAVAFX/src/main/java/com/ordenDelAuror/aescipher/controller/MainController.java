@@ -20,37 +20,62 @@ import javafx.concurrent.Task;
 
 import java.io.File;
 
+/**
+ * Controlador de la vista principal ({@code /view/main-view.fxml}).
+ *
+ * <p>Gestiona la selección del fichero, el cifrado y el descifrado en un
+ * hilo aparte (JavaFX {@link Task}) con su barra de progreso, los avisos al
+ * usuario, el selector de idioma y los atajos de teclado.</p>
+ *
+ * @author Henri Tejada
+ */
 public class MainController {
 
+    /** Etiqueta de estado; muestra el nombre del fichero seleccionado. */
     @FXML
     private Label statusLabel;
 
+    /** Fichero elegido por el usuario; {@code null} mientras no se elija ninguno. */
     private File selectedFile;
 
+    /** Campo donde el usuario escribe la contraseña de cifrado. */
     @FXML
     private PasswordField passwordField;
 
+    /** Barra de progreso de la operación en curso. */
     @FXML
     private ProgressBar progressBar;
 
+    /** Etiqueta con el porcentaje de progreso y el mensaje de estado. */
     @FXML
     private Label progressLabel;
 
+    /** Botón para abrir el diálogo de selección de ficheros. */
     @FXML
     private Button selectButton;
 
+    /** Botón que dispara el cifrado del fichero seleccionado. */
     @FXML
     private Button encryptButton;
 
+    /** Botón que dispara el descifrado del fichero seleccionado. */
     @FXML
     private Button decryptButton;
 
+    /** Desplegable con los idiomas disponibles (español, inglés y euskera). */
     @FXML
     private ComboBox<LanguageOption> languageComboBox;
 
+    /** Botón que muestra el diálogo de información de la aplicación. */
     @FXML
     private Button infoButton;
 
+    /**
+     * Muestra el diálogo de información de la aplicación (atajo F1).
+     *
+     * <p>Los textos se recuperan del bundle de idioma activo y el diálogo se
+     * aplica la hoja de estilos de la aplicación.</p>
+     */
     @FXML
     public void showInfo() {
         Alert alert =
@@ -83,8 +108,16 @@ public class MainController {
         alert.showAndWait();
     }
 
+    /** Logger de la clase (SLF4J + Logback). */
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
+    /**
+     * Actualiza todos los textos, tooltips y mensajes de la interfaz según el
+     * idioma activo.
+     *
+     * <p>Si no hay fichero seleccionado se restablece el mensaje de estado
+     * por defecto.</p>
+     */
     private void updateTexts() {
 
         selectButton.setText(
@@ -140,6 +173,14 @@ public class MainController {
                                 "tooltip.info")));
     }
 
+    /**
+     * Inicialización invocada automáticamente por el FXMLLoader al cargar el
+     * FXML.
+     *
+     * <p>Rellena el ComboBox de idiomas, selecciona el primero por defecto,
+     * asocia el cambio de idioma a la recarga de textos y aplica los textos
+     * iniciales.</p>
+     */
     @FXML
     private void initialize() {
 
@@ -176,6 +217,13 @@ public class MainController {
     }
 
 
+    /**
+     * Abre el diálogo de selección de ficheros y guarda la elección del
+     * usuario en {@link #selectedFile}.
+     *
+     * <p>Si el usuario cancela el diálogo no se modifica el fichero
+     * seleccionado previamente.</p>
+     */
     @FXML
     private void selectFile() {
         logger.info("Seleccionando archivos");
@@ -191,6 +239,15 @@ public class MainController {
         }
     }
 
+    /**
+     * Cifra el fichero seleccionado con la contraseña introducida.
+     *
+     * <p>Si no hay fichero o la contraseña está vacía se muestra un aviso y
+     * no se hace nada. El cifrado se ejecuta en un hilo aparte
+     * ({@link Task}) para no bloquear la interfaz, actualizando la barra y
+     * la etiqueta de progreso; al terminar se muestra un diálogo de éxito o
+     * de error.</p>
+     */
     @FXML
     private void encrypt() {
 
@@ -272,6 +329,15 @@ public class MainController {
         new Thread(task).start();
     }
 
+    /**
+     * Descifra el fichero seleccionado con la contraseña introducida.
+     *
+     * <p>Si no hay fichero o la contraseña está vacía se muestra un aviso y
+     * no se hace nada. El fichero debe terminar en {@code .aes}; en caso
+     * contrario la tarea falla y se notifica el error. El descifrado se
+     * ejecuta en un hilo aparte ({@link Task}) actualizando la barra de
+     * progreso.</p>
+     */
     @FXML
     private void decrypt() {
 
@@ -385,6 +451,13 @@ public class MainController {
         thread.start();
     }
 
+    /**
+     * Registra los atajos de teclado de la aplicación en la escena.
+     *
+     * @param scene escena sobre la que se registran los aceleradores:
+     *              Ctrl+O (seleccionar fichero), Ctrl+E (cifrar),
+     *              Ctrl+D (descifrar) y F1 (información)
+     */
     public void initializeShortcuts(Scene scene) {
 
         scene.getAccelerators().put(
@@ -423,18 +496,30 @@ public class MainController {
         );
     }
 
+    /**
+     * Método puente para invocar la selección de fichero desde los aceleradores.
+     */
     public void executeSelectFile() {
         selectFile();
     }
 
+    /**
+     * Método puente para invocar el cifrado desde los aceleradores.
+     */
     public void executeEncrypt() {
         encrypt();
     }
 
+    /**
+     * Método puente para invocar el descifrado desde los aceleradores.
+     */
     public void executeDecrypt() {
         decrypt();
     }
 
+    /**
+     * Método puente para mostrar la información desde los aceleradores.
+     */
     public void executeShowInfo() {
         showInfo();
     }
