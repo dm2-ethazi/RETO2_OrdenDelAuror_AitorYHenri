@@ -1,0 +1,9 @@
+.idea/
+__pycache__/
+OrdenDelAuror.egg-info/
+.venv/
+uv.lock
+.pytest_cache/
+dist/
+build/
+main.spec

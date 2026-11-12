@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales -->
+    <color name="azul_hechicero">#243B73</color>
+    <color name="dorado_antiguo">#73552A</color>
+    <color name="verde_bosque">#24734C</color>
+    <color name="granate_magico">#73243B</color>
+
+    <!-- Colores de fondo -->
+    <color name="fondo_principal">#F5F0E6</color>
+    <color name="fondo_secundario">#FFFFFF</color>
+
+    <!-- Colores de texto -->
+    <color name="texto_principal">#252525</color>
+    <color name="texto_secundario">#777777</color>
+    <color name="texto_claro">#FFFFFF</color>
+
+    <!-- Estados -->
+    <color name="color_error">#B3261E</color>
+    <color name="color_exito">#24734C</color>
+</resources>

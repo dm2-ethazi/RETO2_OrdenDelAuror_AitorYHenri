@@ -1,0 +1,156 @@
+{
+  "traducciones": [
+    {
+      "clave": "titulo",
+      "valor": "THE ARCANE CIPHER"
+    },
+    {
+      "clave": "jugar",
+      "valor": "JOLASTU"
+    },
+    {
+      "clave": "instrucciones",
+      "valor": "ARGIBIDEAK"
+    },
+    {
+      "clave": "idioma",
+      "valor": "HIZKUNTZA"
+    },
+    {
+      "clave": "salir",
+      "valor": "IRTEN"
+    },
+    {
+      "clave": "confirmar_salida",
+      "valor": "ZIUR ZAUDE IRTEERAKO?"
+    },
+    {
+      "clave": "cancelar",
+      "valor": "UTZI"
+    },
+    {
+      "clave": "espanol",
+      "valor": "ESPAÑOL"
+    },
+    {
+      "clave": "euskera",
+      "valor": "EUSKARA"
+    },
+    {
+      "clave": "ingles",
+      "valor": "ENGLISH"
+    },
+    {
+      "clave": "texto_instrucciones",
+      "valor": "Ongi etorri The Arcane Cipher-era.\n\n- Bildu usoek ekartzen dituzten kodeak.\n- Kodeak zifratuta daude eta etsaiaren ahulguneak deskribatzen dituzte.\n- Ebatzi kodeak etsaia zauritzeko, baina kontuz ibili huts ez egiteko!\n- Kontuan izan kode bakoitzaren zifratze mota. Etsaia bizitza gutxiago duen heinean, kodeak zailagoak izango dira.\n- Ebatzi behar adina kode etsaia gaztelura iritsi baino lehen garaitzeko.\n\nZorte on, azti!"
+    },
+    {
+      "clave": "volver",
+      "valor": "ATZERA"
+    },
+    {
+      "clave": "confirmar_volver",
+      "valor": "MENU NAGUSIRA ITZULI?"
+    },
+    {
+      "clave": "confirmar_reiniciar",
+      "valor": "ZIUR BERRABIARAZI NAHI DUZULA?"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Desplazamendua"
+    },
+    {
+      "clave": "acertijo.placeholder",
+      "valor": "Idatzi zure erantzuna..."
+    },
+    {
+      "clave": "acertijo.confirmar",
+      "valor": "BAIEZTATU"
+    },
+    {
+      "clave": "acertijo.vacia",
+      "valor": "Idatzi erantzun bat."
+    },
+    {
+      "clave": "acertijo.correcta",
+      "valor": "Erantzun zuzena!"
+    },
+    {
+      "clave": "acertijo.incorrecta",
+      "valor": "Erantzun okerra. Bizitza bat galdu duzu."
+    },
+    {
+      "clave": "acertijo.derrota",
+      "valor": "Trolla garaitua izan da!"
+    },
+    {
+      "clave": "boton_reiniciar",
+      "valor": "BERRABIARAZI"
+    },
+    {
+      "clave": "boton_cancelar_reinicio",
+      "valor": "UTZI"
+    },
+    {
+      "clave": "derrota",
+      "valor": "GALDU DUZU!"
+    },
+    {
+      "clave": "revancha",
+      "valor": "BERRIRO JOKATU"
+    },
+    {
+      "clave": "menu_principal",
+      "valor": "MENU NAGUSIA"
+    },
+    {
+      "clave": "victoria",
+      "valor": "GARAIPENA!"
+    },
+    {
+      "clave": "volver_a_jugar",
+      "valor": "BERRIRO JOKATU"
+    },
+    {
+      "clave": "acertijo.correcto",
+      "valor": "ZUZENA!"
+    },
+    {
+      "clave": "acertijo.incorrecto",
+      "valor": "OKERRA!"
+    },
+    {
+      "clave": "instrucciones.preparacion.titulo",
+      "valor": "PRESTAKETA"
+    },
+    {
+      "clave": "instrucciones.preparacion.texto",
+      "valor": "Lortu pergamino bat igarotzen diren uso mezularietan klik eginez. Irekitzean, ebatzi beharko duzun asmakizun bat aurkituko duzu. Zenbat eta pergamino gehiago lortu, orduan eta azkarrago egingo dute hegan usoek!"
+    },
+    {
+      "clave": "instrucciones.enigma.titulo",
+      "valor": "ASMAKIZUNA"
+    },
+    {
+      "clave": "instrucciones.enigma.texto",
+      "valor": "Ebatzi asmakizuna Zesarren zifratze-metodoa erabiliz. Zifratutako hitz bat agertuko da, eta azpian zenbaki bat, letra bakoitza zenbat posizio mugitu den adierazteko (beti alfabeto ingelesean). Deszifratu hitza eta berretsi zure erantzuna."
+    },
+    {
+      "clave": "instrucciones.resultado.titulo",
+      "valor": "EMAITZA"
+    },
+    {
+      "clave": "instrucciones.resultado.texto",
+      "valor": "Asmakizuna zuzen asmatzen baduzu, etsaiak bizitza bat galduko du eta prestaketa-fasera itzuliko zara, asmakizun zailagoekin. Huts egiten baduzu, etsaiak ez du bizitzarik galduko eta mugitzeko abiadura handituko du."
+    },
+    {
+      "clave": "instrucciones.utilidades.titulo",
+      "valor": "TRESNAK"
+    },
+    {
+      "clave": "instrucciones.utilidades.texto",
+      "valor": "Asmakizun moduan, «ABC» botoi bat izango duzu, asmakizunak ebazten laguntzeko alfabetoa (ingelesa) erakutsi edo ezkutatzeko. Minijokoa edozein unetan berrabiarazi edo utzi dezakezu beheko ezkerreko aldeko botoiak erabiliz. Garaitu etsaia gazteluko ateraino iritsi baino lehen irabazteko!"
+    }
+  ]
+}
