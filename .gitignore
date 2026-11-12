@@ -1,0 +1,18 @@
+# Archivos generados
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svclog
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
