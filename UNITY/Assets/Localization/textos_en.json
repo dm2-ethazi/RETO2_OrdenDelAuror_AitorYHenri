@@ -1,0 +1,156 @@
+{
+  "traducciones": [
+    {
+      "clave": "titulo",
+      "valor": "THE ARCANE CIPHER"
+    },
+    {
+      "clave": "jugar",
+      "valor": "PLAY"
+    },
+    {
+      "clave": "instrucciones",
+      "valor": "INSTRUCTIONS"
+    },
+    {
+      "clave": "idioma",
+      "valor": "LANGUAGE"
+    },
+    {
+      "clave": "salir",
+      "valor": "EXIT"
+    },
+    {
+      "clave": "confirmar_salida",
+      "valor": "ARE YOU SURE YOU WANT TO EXIT?"
+    },
+    {
+      "clave": "cancelar",
+      "valor": "CANCEL"
+    },
+    {
+      "clave": "espanol",
+      "valor": "ESPAÑOL"
+    },
+    {
+      "clave": "euskera",
+      "valor": "EUSKARA"
+    },
+    {
+      "clave": "ingles",
+      "valor": "ENGLISH"
+    },
+    {
+      "clave": "texto_instrucciones",
+      "valor": "Welcome to The Arcane Cipher.\n\n- Collect the codes carried by the pigeons.\n- These codes are encrypted and describe the enemy's weak points.\n- Solve them to damage the enemy, but be careful not to fail, or you will pay the price!\n- Pay attention to the encryption type of each code. They become harder as the enemy loses health.\n- Decipher enough codes to defeat the enemy before it reaches the castle.\n\nGood luck, wizard!"
+    },
+    {
+      "clave": "volver",
+      "valor": "BACK"
+    },
+    {
+      "clave": "confirmar_volver",
+      "valor": "RETURN TO THE MAIN MENU?"
+    },
+    {
+      "clave": "confirmar_reiniciar",
+      "valor": "ARE YOU SURE YOU WANT TO RESTART?"
+    },
+    {
+      "clave": "acertijo.desplazamiento",
+      "valor": "Shift"
+    },
+    {
+      "clave": "acertijo.placeholder",
+      "valor": "Enter your answer..."
+    },
+    {
+      "clave": "acertijo.confirmar",
+      "valor": "CONFIRM"
+    },
+    {
+      "clave": "acertijo.vacia",
+      "valor": "Enter an answer."
+    },
+    {
+      "clave": "acertijo.correcta",
+      "valor": "Correct answer!"
+    },
+    {
+      "clave": "acertijo.incorrecta",
+      "valor": "Wrong answer. You lose one life."
+    },
+    {
+      "clave": "acertijo.derrota",
+      "valor": "The troll has been defeated!"
+    },
+    {
+      "clave": "boton_reiniciar",
+      "valor": "RESTART"
+    },
+    {
+      "clave": "boton_cancelar_reinicio",
+      "valor": "CANCEL"
+    },
+    {
+      "clave": "derrota",
+      "valor": "DEFEAT!"
+    },
+    {
+      "clave": "revancha",
+      "valor": "REMATCH"
+    },
+    {
+      "clave": "menu_principal",
+      "valor": "MAIN MENU"
+    },
+    {
+      "clave": "victoria",
+      "valor": "VICTORY!"
+    },
+    {
+      "clave": "volver_a_jugar",
+      "valor": "PLAY AGAIN"
+    },
+    {
+      "clave": "acertijo.correcto",
+      "valor": "CORRECT!"
+    },
+    {
+      "clave": "acertijo.incorrecto",
+      "valor": "INCORRECT!"
+    },
+    {
+      "clave": "instrucciones.preparacion.titulo",
+      "valor": "PREPARATION"
+    },
+    {
+      "clave": "instrucciones.preparacion.texto",
+      "valor": "Collect a scroll by clicking on the messenger pigeons as they fly by. When you open it, you will find a riddle that you must solve. The more scrolls you collect, the faster the pigeons will fly!"
+    },
+    {
+      "clave": "instrucciones.enigma.titulo",
+      "valor": "RIDDLE"
+    },
+    {
+      "clave": "instrucciones.enigma.texto",
+      "valor": "Solve the riddle using the Caesar cipher. A coded word will appear, along with a number indicating how many positions each letter has been shifted (always on english alphabet). Decode the word and confirm your answer."
+    },
+    {
+      "clave": "instrucciones.resultado.titulo",
+      "valor": "RESULT"
+    },
+    {
+      "clave": "instrucciones.resultado.texto",
+      "valor": "If you solve the riddle correctly, the enemy will lose one life and you will return to the preparation phase with harder riddles. If you fail, the enemy will not lose any lives and its movement speed will increase."
+    },
+    {
+      "clave": "instrucciones.utilidades.titulo",
+      "valor": "UTILITIES"
+    },
+    {
+      "clave": "instrucciones.utilidades.texto",
+      "valor": "In riddle mode, you will have an «ABC» button that shows or hides an alphabet (the english one) to help you solve the riddles. You can also restart or leave the minigame at any time using the buttons in the bottom-left corner. Defeat the enemy before it reaches the castle gate to win!"
+    }
+  ]
+}

@@ -1,0 +1,1495 @@
+fileFormatVersion: 2
+guid: 2691f824cfc2c8948a9479c9a8b38be4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5953402460042383111
+    second: "Paloma mensajera en vuelo p\xEDxel_0"
+  - first:
+      213: 1759546478874617207
+    second: "Paloma mensajera en vuelo p\xEDxel_1"
+  - first:
+      213: 8460036279229868443
+    second: "Paloma mensajera en vuelo p\xEDxel_2"
+  - first:
+      213: 3180820466808337378
+    second: "Paloma mensajera en vuelo p\xEDxel_3"
+  - first:
+      213: -7764798451727978707
+    second: "Paloma mensajera en vuelo p\xEDxel_4"
+  - first:
+      213: -2493745812417327129
+    second: "Paloma mensajera en vuelo p\xEDxel_5"
+  - first:
+      213: 6532200872883734541
+    second: "Paloma mensajera en vuelo p\xEDxel_6"
+  - first:
+      213: -3159604278118074145
+    second: "Paloma mensajera en vuelo p\xEDxel_7"
+  - first:
+      213: -4479124224153913022
+    second: "Paloma mensajera en vuelo p\xEDxel_8"
+  - first:
+      213: -1199778657146338651
+    second: "Paloma mensajera en vuelo p\xEDxel_9"
+  - first:
+      213: 4178050347003765454
+    second: "Paloma mensajera en vuelo p\xEDxel_10"
+  - first:
+      213: -6710695661541158097
+    second: "Paloma mensajera en vuelo p\xEDxel_11"
+  - first:
+      213: 4020355967488155653
+    second: "Paloma mensajera en vuelo p\xEDxel_12"
+  - first:
+      213: 2438624836668102814
+    second: "Paloma mensajera en vuelo p\xEDxel_13"
+  - first:
+      213: 7156605024454756106
+    second: "Paloma mensajera en vuelo p\xEDxel_14"
+  - first:
+      213: -2920190266832797924
+    second: "Paloma mensajera en vuelo p\xEDxel_15"
+  - first:
+      213: -6335395646687408069
+    second: "Paloma mensajera en vuelo p\xEDxel_16"
+  - first:
+      213: 6893699929906619289
+    second: "Paloma mensajera en vuelo p\xEDxel_17"
+  - first:
+      213: -5071476999847843060
+    second: "Paloma mensajera en vuelo p\xEDxel_18"
+  - first:
+      213: -7160870653368131907
+    second: "Paloma mensajera en vuelo p\xEDxel_19"
+  - first:
+      213: -4179617782554448574
+    second: "Paloma mensajera en vuelo p\xEDxel_20"
+  - first:
+      213: 1213023113096502618
+    second: "Paloma mensajera en vuelo p\xEDxel_21"
+  - first:
+      213: 7244974106305961081
+    second: "Paloma mensajera en vuelo p\xEDxel_22"
+  - first:
+      213: 3547517729491605391
+    second: "Paloma mensajera en vuelo p\xEDxel_23"
+  - first:
+      213: 1007351690505809827
+    second: "Paloma mensajera en vuelo p\xEDxel_24"
+  - first:
+      213: 5706237828377614482
+    second: "Paloma mensajera en vuelo p\xEDxel_25"
+  - first:
+      213: 6524701700084705910
+    second: "Paloma mensajera en vuelo p\xEDxel_26"
+  - first:
+      213: -7710036426678467398
+    second: "Paloma mensajera en vuelo p\xEDxel_27"
+  - first:
+      213: -552314800122045545
+    second: "Paloma mensajera en vuelo p\xEDxel_28"
+  - first:
+      213: 8158043996573876505
+    second: "Paloma mensajera en vuelo p\xEDxel_29"
+  - first:
+      213: -6500760129446619386
+    second: "Paloma mensajera en vuelo p\xEDxel_30"
+  - first:
+      213: -7483324984889155904
+    second: "Paloma mensajera en vuelo p\xEDxel_31"
+  - first:
+      213: -2734964323316535186
+    second: "Paloma mensajera en vuelo p\xEDxel_32"
+  - first:
+      213: 2300243667387407429
+    second: "Paloma mensajera en vuelo p\xEDxel_33"
+  - first:
+      213: -3626765957110876398
+    second: "Paloma mensajera en vuelo p\xEDxel_34"
+  - first:
+      213: -3352484997642924340
+    second: "Paloma mensajera en vuelo p\xEDxel_35"
+  - first:
+      213: 4967845265481567229
+    second: "Paloma mensajera en vuelo p\xEDxel_36"
+  - first:
+      213: 4959878377800519559
+    second: "Paloma mensajera en vuelo p\xEDxel_37"
+  - first:
+      213: -4554011177328232499
+    second: "Paloma mensajera en vuelo p\xEDxel_38"
+  - first:
+      213: 4092619047199878601
+    second: "Paloma mensajera en vuelo p\xEDxel_39"
+  - first:
+      213: 7264108328567761575
+    second: "Paloma mensajera en vuelo p\xEDxel_40"
+  - first:
+      213: -4604089210855006119
+    second: "Paloma mensajera en vuelo p\xEDxel_41"
+  - first:
+      213: -3722178331637324668
+    second: "Paloma mensajera en vuelo p\xEDxel_42"
+  - first:
+      213: 7848061958392271944
+    second: "Paloma mensajera en vuelo p\xEDxel_43"
+  - first:
+      213: 8347830551845328504
+    second: "Paloma mensajera en vuelo p\xEDxel_44"
+  - first:
+      213: 7254739944473547067
+    second: "Paloma mensajera en vuelo p\xEDxel_45"
+  - first:
+      213: -1919674070864504687
+    second: "Paloma mensajera en vuelo p\xEDxel_46"
+  - first:
+      213: -2423125157273636831
+    second: "Paloma mensajera en vuelo p\xEDxel_47"
+  - first:
+      213: -1905045678159402071
+    second: "Paloma mensajera en vuelo p\xEDxel_48"
+  - first:
+      213: 21890436728179575
+    second: "Paloma mensajera en vuelo p\xEDxel_49"
+  - first:
+      213: 3266130405832867938
+    second: "Paloma mensajera en vuelo p\xEDxel_50"
+  - first:
+      213: -5541987699870293068
+    second: "Paloma mensajera en vuelo p\xEDxel_51"
+  - first:
+      213: 5953231415248873457
+    second: "Paloma mensajera en vuelo p\xEDxel_52"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1774
+        height: 831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f43c3befbbe9250800000000000000
+      internalID: 5953402460042383111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_1"
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 773
+        width: 83
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7756c17333a2b6810800000000000000
+      internalID: 1759546478874617207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_2"
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 808
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99e96a3c26186570800000000000000
+      internalID: 8460036279229868443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_3"
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 805
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e33762ac5b842c20800000000000000
+      internalID: 3180820466808337378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_4"
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 805
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f2044a2f4ed3490800000000000000
+      internalID: -7764798451727978707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_5"
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 765
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef4fb2656f646dd0800000000000000
+      internalID: -2493745812417327129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_6"
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 745
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d084bb5b51a07aa50800000000000000
+      internalID: 6532200872883734541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_7"
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 743
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8b7fb36a4d624d0800000000000000
+      internalID: -3159604278118074145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_8"
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 61
+        width: 62
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2497572ef34f6d1c0800000000000000
+      internalID: -4479124224153913022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_9"
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 126
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a282b30ba7895fe0800000000000000
+      internalID: -1199778657146338651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_10"
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 80
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec26bd287aa6bf930800000000000000
+      internalID: 4178050347003765454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_11"
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 92
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f239512c9d1ded2a0800000000000000
+      internalID: -6710695661541158097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_12"
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 94
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500e0c0a37c2bc730800000000000000
+      internalID: 4020355967488155653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_13"
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 112
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e981c0a5e5cb7d120800000000000000
+      internalID: 2438624836668102814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_14"
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 98
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07c6683a5e515360800000000000000
+      internalID: 7156605024454756106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_15"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 96
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1fb0e49c666977d0800000000000000
+      internalID: -2920190266832797924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_16"
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 94
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3014a7c9372418a0800000000000000
+      internalID: -6335395646687408069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_17"
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 104
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9932836df875baf50800000000000000
+      internalID: 6893699929906619289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_18"
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 80
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b6189d98e7e99b0800000000000000
+      internalID: -5071476999847843060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_19"
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 88
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe1977a41a7f9c90800000000000000
+      internalID: -7160870653368131907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_20"
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 80
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24dafe575c30ff5c0800000000000000
+      internalID: -4179617782554448574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_21"
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 71
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d9470381685d010800000000000000
+      internalID: 1213023113096502618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_22"
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 58
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c154d60915b8460800000000000000
+      internalID: 7244974106305961081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_23"
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 63
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f875fb454905b3130800000000000000
+      internalID: 3547517729491605391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_24"
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 88
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afec7c7605dafd00800000000000000
+      internalID: 1007351690505809827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_25"
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 78
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298185c6211a03f40800000000000000
+      internalID: 5706237828377614482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_26"
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 80
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67aafea70a56c8a50800000000000000
+      internalID: 6524701700084705910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_27"
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 71
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4028e28b2700590800000000000000
+      internalID: -7710036426678467398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_28"
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 65
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bd8869d98c558f0800000000000000
+      internalID: -552314800122045545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_29"
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 67
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9114bcdaac1373170800000000000000
+      internalID: 8158043996573876505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_30"
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 46
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607df42da19a8c5a0800000000000000
+      internalID: -6500760129446619386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_31"
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 63
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce50e81393e52890800000000000000
+      internalID: -7483324984889155904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_32"
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 67
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60f95b30747b0ad0800000000000000
+      internalID: -2734964323316535186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_33"
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 47
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cd773ad6b1cef10800000000000000
+      internalID: 2300243667387407429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_34"
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 53
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2173de2d3932badc0800000000000000
+      internalID: -3626765957110876398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_35"
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 57
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccecaa828a49971d0800000000000000
+      internalID: -3352484997642924340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_36"
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 49
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb822cb2f451f440800000000000000
+      internalID: 4967845265481567229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_37"
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 57
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fc0f52b1705d440800000000000000
+      internalID: 4959878377800519559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_38"
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 33
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7313066f6ecc0c0800000000000000
+      internalID: -4554011177328232499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_39"
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 49
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cda85df657ebc830800000000000000
+      internalID: 4092619047199878601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_40"
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 51
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaec36b90c4fc460800000000000000
+      internalID: 7264108328567761575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_41"
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 49
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95067c8914dfa10c0800000000000000
+      internalID: -4604089210855006119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_42"
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 33
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484e910478a285cc0800000000000000
+      internalID: -3722178331637324668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_43"
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 39
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8445a3535cae9ec60800000000000000
+      internalID: 7848061958392271944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_44"
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 22
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876d4ef78a379d370800000000000000
+      internalID: 8347830551845328504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_45"
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 31
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31de20da830ea460800000000000000
+      internalID: 7254739944473547067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_46"
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 198d7997a92fb55e0800000000000000
+      internalID: -1919674070864504687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_47"
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 17
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120746af1845f5ed0800000000000000
+      internalID: -2423125157273636831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_48"
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 17
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab6a609c0bef85e0800000000000000
+      internalID: -1905045678159402071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_49"
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 17
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b49297c35cd4000800000000000000
+      internalID: 21890436728179575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_50"
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 17
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26045c5ac40a35d20800000000000000
+      internalID: 3266130405832867938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_51"
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 17
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3a5a7bc87e613b0800000000000000
+      internalID: -5541987699870293068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Paloma mensajera en vuelo p\xEDxel_52"
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 17
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7ea9b3e602e9250800000000000000
+      internalID: 5953231415248873457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Paloma mensajera en vuelo p\xEDxel_0": 5953402460042383111
+      "Paloma mensajera en vuelo p\xEDxel_1": 1759546478874617207
+      "Paloma mensajera en vuelo p\xEDxel_10": 4178050347003765454
+      "Paloma mensajera en vuelo p\xEDxel_11": -6710695661541158097
+      "Paloma mensajera en vuelo p\xEDxel_12": 4020355967488155653
+      "Paloma mensajera en vuelo p\xEDxel_13": 2438624836668102814
+      "Paloma mensajera en vuelo p\xEDxel_14": 7156605024454756106
+      "Paloma mensajera en vuelo p\xEDxel_15": -2920190266832797924
+      "Paloma mensajera en vuelo p\xEDxel_16": -6335395646687408069
+      "Paloma mensajera en vuelo p\xEDxel_17": 6893699929906619289
+      "Paloma mensajera en vuelo p\xEDxel_18": -5071476999847843060
+      "Paloma mensajera en vuelo p\xEDxel_19": -7160870653368131907
+      "Paloma mensajera en vuelo p\xEDxel_2": 8460036279229868443
+      "Paloma mensajera en vuelo p\xEDxel_20": -4179617782554448574
+      "Paloma mensajera en vuelo p\xEDxel_21": 1213023113096502618
+      "Paloma mensajera en vuelo p\xEDxel_22": 7244974106305961081
+      "Paloma mensajera en vuelo p\xEDxel_23": 3547517729491605391
+      "Paloma mensajera en vuelo p\xEDxel_24": 1007351690505809827
+      "Paloma mensajera en vuelo p\xEDxel_25": 5706237828377614482
+      "Paloma mensajera en vuelo p\xEDxel_26": 6524701700084705910
+      "Paloma mensajera en vuelo p\xEDxel_27": -7710036426678467398
+      "Paloma mensajera en vuelo p\xEDxel_28": -552314800122045545
+      "Paloma mensajera en vuelo p\xEDxel_29": 8158043996573876505
+      "Paloma mensajera en vuelo p\xEDxel_3": 3180820466808337378
+      "Paloma mensajera en vuelo p\xEDxel_30": -6500760129446619386
+      "Paloma mensajera en vuelo p\xEDxel_31": -7483324984889155904
+      "Paloma mensajera en vuelo p\xEDxel_32": -2734964323316535186
+      "Paloma mensajera en vuelo p\xEDxel_33": 2300243667387407429
+      "Paloma mensajera en vuelo p\xEDxel_34": -3626765957110876398
+      "Paloma mensajera en vuelo p\xEDxel_35": -3352484997642924340
+      "Paloma mensajera en vuelo p\xEDxel_36": 4967845265481567229
+      "Paloma mensajera en vuelo p\xEDxel_37": 4959878377800519559
+      "Paloma mensajera en vuelo p\xEDxel_38": -4554011177328232499
+      "Paloma mensajera en vuelo p\xEDxel_39": 4092619047199878601
+      "Paloma mensajera en vuelo p\xEDxel_4": -7764798451727978707
+      "Paloma mensajera en vuelo p\xEDxel_40": 7264108328567761575
+      "Paloma mensajera en vuelo p\xEDxel_41": -4604089210855006119
+      "Paloma mensajera en vuelo p\xEDxel_42": -3722178331637324668
+      "Paloma mensajera en vuelo p\xEDxel_43": 7848061958392271944
+      "Paloma mensajera en vuelo p\xEDxel_44": 8347830551845328504
+      "Paloma mensajera en vuelo p\xEDxel_45": 7254739944473547067
+      "Paloma mensajera en vuelo p\xEDxel_46": -1919674070864504687
+      "Paloma mensajera en vuelo p\xEDxel_47": -2423125157273636831
+      "Paloma mensajera en vuelo p\xEDxel_48": -1905045678159402071
+      "Paloma mensajera en vuelo p\xEDxel_49": 21890436728179575
+      "Paloma mensajera en vuelo p\xEDxel_5": -2493745812417327129
+      "Paloma mensajera en vuelo p\xEDxel_50": 3266130405832867938
+      "Paloma mensajera en vuelo p\xEDxel_51": -5541987699870293068
+      "Paloma mensajera en vuelo p\xEDxel_52": 5953231415248873457
+      "Paloma mensajera en vuelo p\xEDxel_6": 6532200872883734541
+      "Paloma mensajera en vuelo p\xEDxel_7": -3159604278118074145
+      "Paloma mensajera en vuelo p\xEDxel_8": -4479124224153913022
+      "Paloma mensajera en vuelo p\xEDxel_9": -1199778657146338651
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
