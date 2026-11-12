@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor principal de la pantalla de inicio -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- LOGO CENTRAL -->
+    <!-- Contenedor vertical que agrupa el logotipo y el texto inferior -->
+    <LinearLayout
+        android:id="@+id/contenedorLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Imagen del logotipo principal de la aplicación -->
+        <ImageView
+            android:id="@+id/ivLogoSplash"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo_orden_auror" />
+
+        <!-- Texto identificativo situado debajo del logotipo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="serif"
+            android:letterSpacing="0.15"
+            android:text="CENTRO DE DESCIFRADO MÁGICO"
+            android:textColor="#DDB65C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- DESTELLOS MÁGICOS -->
+    <!-- Elementos decorativos que representan pequeños destellos alrededor del logotipo -->
+
+    <!-- Primer destello situado en la parte superior central -->
+    <TextView
+        android:id="@+id/destello1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="110dp"
+        android:text="✦"
+        android:textColor="#FFD76A"
+        android:textSize="30sp" />
+
+    <!-- Segundo destello situado en el lateral izquierdo -->
+    <TextView
+        android:id="@+id/destello2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="35dp"
+        android:text="✧"
+        android:textColor="#F6C453"
+        android:textSize="24sp" />
+
+    <!-- Tercer destello situado en el lateral derecho -->
+    <TextView
+        android:id="@+id/destello3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="35dp"
+        android:text="✦"
+        android:textColor="#FFD76A"
+        android:textSize="24sp" />
+
+    <!-- Cuarto destello situado en la parte inferior central -->
+    <TextView
+        android:id="@+id/destello4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="115dp"
+        android:text="✧"
+        android:textColor="#F6C453"
+        android:textSize="28sp" />
+
+</FrameLayout>
